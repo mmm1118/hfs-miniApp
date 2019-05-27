@@ -1,0 +1,55 @@
+/* 图片 */
+
+.movableAreaItem {
+  border-radius: 20rpx;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  margin-bottom: 30rpx;
+  padding: 20rpx 30rpx;
+}
+
+.recordLayout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #939393;
+}
+
+.recordLayout .recordLeft {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+}
+
+.recordLayout .recordLeft .recordImg {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+
+.recordLayout .recordLeft .smallImg {
+  width: 56rpx;
+  height: 15rpx;
+}
+
+.recordLayout .recordLeft .time {
+  margin: 0 20rpx;
+}
+
+.recordLayout .recordRight {
+  font-size: 34rpx;
+  display: flex;
+  align-items: center;
+}
+
+.movableDelPhoto {
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.movableMoveImg {
+  width: 40rpx;
+  height: 27rpx;
+}

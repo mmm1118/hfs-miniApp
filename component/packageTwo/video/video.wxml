@@ -1,0 +1,5 @@
+<view class='movableAreaItem videoLayout'>
+  <video class='uploadVideo' src=''></video>
+  <image class='movableDelPhoto' src='/images/memorial/iconDel.png'></image>
+  <image class='movableMoveImg' src='/images/memorial/iconMove.png' data-index='{{index}}' bindtouchstart='dragStart' bindtouchmove='dragMove' bindtouchend='dragEnd'></image>
+</view>

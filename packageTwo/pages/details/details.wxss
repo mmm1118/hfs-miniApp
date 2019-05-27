@@ -1,0 +1,47 @@
+.cont_bg{background:#fff;margin:26rpx 24rpx 0rpx 24rpx;border-radius:20rpx;padding:22rpx 18rpx;}
+
+.f_40{font-size:40rpx;font-weight:bold;}
+.f_26{font-size:26rpx;}
+.f_32{font-size:32rpx;font-weight:bold;}
+
+.pd_left10{padding-left:10rpx;}
+.pd_btn18{padding-bottom:18rpx;}
+.pd_btn23{padding-bottom:23rpx;}
+.pd_top20_btn20{padding-top:20rpx;padding-bottom:20rpx;}
+
+.mg_btn24{margin-bottom:24rpx;}
+
+.indent25{text-indent:50rpx;text-align: justify}
+
+.pr_top10{position:relative;top:10rpx;}
+.pr_top20{position:relative;top:30rpx;left:10rpx;}
+
+.c_939{color:#939393}
+
+.mian_img{width:80rpx;height:80rpx;}
+
+.details_img{height:350rpx;width:100%; }
+.details_logo{width:34rpx;height:39rpx;}
+.portrait{width:50rpx;height:50rpx;border-radius:100%;padding-right:6rpx; }
+
+.btnm{width:428rpx;font-size:36rpx;margin-bottom:30rpx;
+  background:#D61800;color:#fff;
+}
+
+.prot{
+    width: 560rpx;
+    background:#fff;
+    border-radius:10rpx; 
+    position:fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.prot .textareas{width:404rpx;height: 204rpx;border:1rpx solid #939393;padding: 20rpx;border-radius:10rpx;}
+.w_50{width:50%;height:90rpx;line-height:90rpx;}
+.c_red{color:#D61800;}
+.wh_40{width:40rpx;height:40rpx;}
+.title{width:440rpx;margin:0 auto;padding:26rpx 0rpx;font-size:31rpx;font-weight:bold;}
+.f_34{font-size:32rpx;}
+.pd_top10_left10{padding-right:10rpx;padding-top:10rpx;}

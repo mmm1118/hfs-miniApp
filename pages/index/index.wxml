@@ -1,0 +1,144 @@
+<!-- 引入动态模板 -->
+<import src='/pages/index/dynamic-template/dynamic-template.wxml'/>
+
+<!-- 推荐和附近按钮 -->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}">
+    <text class='listItem' data-current="0" catchtap="swichNav">推荐</text>
+  </view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}">
+    <text class='listItem' data-current="1" catchtap="swichNav">关注</text>
+  </view>
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}">
+    <text class='listItem' data-current="2" catchtap="swichNav">附近</text>
+  </view>
+</view>
+
+<!-- 推荐 -->
+<block wx:if="{{currentTab == 0}}">
+  <view style='height: 108rpx;'></view>
+
+  <!-- 轮播图 -->
+  <swiper indicator-dots='true' indicator-color='#F3F3F3' indicator-active-color='#D61800' autoplay='true'
+          interval='3000' circular='true' class='sowing_map'>
+    <block wx:for="{{bannerList}}" wx:key="id">
+      <swiper-item>
+        <image data-pages="{{item.pages}}" src='{{item.url}}' bindtap='toPage'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <!-- 分类 -->
+  <view class='classify'>
+    <view>分类</view>
+    <scroll-view scroll-x='true' class='scroll_view'>
+      <block wx:for="{{classifyList}}" wx:key="id">
+        <view class="classifyImg">
+          <image lazy-load='true' data-index='{{index}}' src='{{item.url}}' bindtap='catClassify'></image>
+          <text>{{item.title}}</text>
+        </view>
+      </block>
+    </scroll-view>
+  </view>
+
+  <!-- 动态列表 -->
+  <block wx:for="{{dynamicList}}" wx:key="id">
+    <template is='dynamicTemplate' data="{{item: item, index: index, serverStatic: serverStatic}}"/>
+  </block>
+</block>
+
+<!-- 关注 -->
+<block wx:elif="{{currentTab == 1}}">
+  <view style='height: 108rpx;'></view>
+  <!-- 关注列表 -->
+  <block wx:for="{{attentionList}}" wx:key="id">
+    <template is='dynamicTemplate' data="{{item: item, index: index, serverStatic: serverStatic}}"/>
+  </block>
+</block>
+
+<!-- 附近 -->
+<block wx:elif="{{currentTab == 2}}">
+  <map id='map' class='map' latitude='{{latitude}}' longitude='{{longitude}}' show-location="true" markers="{{markers}}"
+       bindmarkertap="openUserDateil" bindregionchange="onTapToRegion">
+    <cover-view class="swiper-tab">
+      <cover-view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}">
+        <cover-view class='listItem' data-current="0" catchtap="swichNav">推荐</cover-view>
+      </cover-view>
+      <cover-view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}">
+        <cover-view class='listItem' data-current="1" catchtap="swichNav">关注</cover-view>
+      </cover-view>
+      <cover-view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}">
+        <cover-view class='listItem' data-current="2" catchtap="swichNav">附近</cover-view>
+      </cover-view>
+    </cover-view>
+    <!-- 中心点 -->
+    <cover-image class='controls' style='{{controlsShow ? "animation: 0.5s controls ease-in-out " : ""}}'
+                 src='/images/index/core.png'></cover-image>
+    <!-- 气泡 -->
+    <cover-view class='releaseView' catchtap='bubble' wx:if="{{currentTab == 2}}">
+      <cover-image class='releaseImg' src='/images/index/bubble.png'></cover-image>
+      <cover-view>气泡</cover-view>
+    </cover-view>
+    <!-- 附近弹框气泡 -->
+    <cover-view class='mask' wx:if="{{bubbleShows}}">
+      <cover-view class='bubbleLayout'>
+        <cover-view class='bubbleTitle'>输入气泡</cover-view>
+        <cover-view class='bubbleInput'>
+          <textarea maxlength="12" auto-height bindinput='bindKeyInput' placeholder="12个字符以内"/>
+        </cover-view>
+        <cover-view class='modelButton'>
+          <cover-view catchtap='cancleBubble'>取消</cover-view>
+          <cover-view class='modelRight' catchtap='affirmBubble'>确认</cover-view>
+        </cover-view>
+      </cover-view>
+    </cover-view>
+  </map>
+</block>
+
+<!-- 发布按钮 -->
+<!-- <wxs module="toSend" src="../../component/toSend.wxs"></wxs> -->
+<include src="/component/toSend.wxml" wx:if="{{currentTab != 2}}"/>
+
+
+<!-- 邀请好友 -->
+<view class='mask' wx:if="{{maskShows}}">
+  <view class='mask_content'>
+    <block wx:if="{{popup.popType == 1}}">
+      <view class='popImg' style='background-image: url({{popup.popImg}})'>{{popup.popImg}}</view>
+      <image class='maskCancelImg' src='/images/cancel.png' bindtap='cancelMask'></image>
+    </block>
+    <block wx:else>
+      <image class='maskImg' src='/images/share_bg.png'></image>
+      <view class='maskHeadView'>登录领取汉服币成功</view>
+      <view class='currencyNum'>+
+        <span style="font-weight:bold;">{{currency}}</span>
+      </view>
+      <view class='maskButtomView'>你可以分享给好友,邀请朋友一起领取哦</view>
+      <button class='shareButton' open-type='share'>邀请好友领取</button>
+      <image class='maskCancelImg' src='/images/cancel.png' bindtap='cancelMask'></image>
+    </block>
+  </view>
+</view>
+
+<!-- 分享 -->
+<view class='mask' wx:if="{{dynamicId}}" catchtap='cancelShare'>
+  <view class='shareMask {{dynamicId?"active":""}}'>
+    <view class='shareHead'>选择分享方式</view>
+    <view class='shareContent'>
+      <view class='shareOption'>
+        <button class='shareBtn' plain='true' data-dynamicid='{{dynamicId}}' open-type='share'>
+          <image class='shareIcon' src='/images/index/share_wechat.png'></image>
+          <view class='shareViewText'>分享给朋友</view>
+        </button>
+      </view>
+      <view class='shareOption' data-openid="{{openId}}" data-nickname='{{nickName}}' data-rqcode='{{rqCode}}'
+            data-content='{{content}}' data-img='{{img}}' catchtap='toSharePage'>
+        <image class='shareIcon' src='/images/index/share_circle.png'></image>
+        <view class='shareViewText'>朋友圈</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 授权button 组建 -->
+<!-- <component authorization="{{authorization}}" bindsessionIdTap="sessionIdTap" bindsignTap="isSessionId"></component> -->

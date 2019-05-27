@@ -1,0 +1,30 @@
+/* 无礼物时 */
+
+.noGiftImg {
+  margin-top: 205rpx;
+  width: 100%;
+  display: block;
+}
+
+.giftList {
+  background: #fff;
+}
+
+.giftItem {
+  padding: 30rpx 42rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #000;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.giftItem:not(:first-child) {
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.giftItem  image {
+  width: 120rpx;
+  height: 100rpx;
+}

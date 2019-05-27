@@ -1,0 +1,38 @@
+<view class="activityLayout">
+  <block wx:for="{{activityList}}" wx:key="id">
+    <view class='activity' bindtap='toDetail' data-id="{{item.id}}" data-classId="{{item.classId}}">
+      <view class='imgLayout'>
+        <image src='/images/index/activity.png' mode='widthFix'></image>
+        <block wx:if="{{item.status == 3}}">
+          <view class='denglong'>
+            <view>已结束</view>
+            <image src='/images/index/denglong.png' mode='widthFix'></image>
+          </view>
+        </block>
+        <block wx:if="{{item.status == 1}}">
+          <view class='denglong'>
+            <view>进行中</view>
+            <image src='/images/index/denglong_s.png' mode='widthFix'></image>
+          </view>
+        </block>
+      </view>
+      <view class='textLayout'>
+        <view class='title'>{{item.title}}</view>
+        <view class='smallText'>
+          <view>
+            <image mode='widthFix' src='/images/index/time.png'></image>
+            <text>{{item.activityTime}}</text>
+          </view>
+          <view>
+            <image mode='widthFix' src='/images/index/address.png'></image>
+            <text>{{item.address}}</text>
+          </view>
+          <view>
+            <image mode='widthFix' src='/images/index/time.png'></image>
+            <text>{{item.joinNum}}/{{item.limitNumber}}人</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </block>
+</view>

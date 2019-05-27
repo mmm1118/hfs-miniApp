@@ -1,0 +1,353 @@
+<view>
+  <view>
+
+  
+    <view class='pd_top32 flex_Middle'>
+        <view>
+            <view class='flex'>
+                <image class='wh_28' src='./../../../images/my_img/Goldcoin.png'></image>
+                <view class='f_26 pd_left7'>我的汉服币</view>
+            </view>
+            <view class='f_40  pd_top25_btn20'>{{bussData.currency}}</view>
+        </view>
+    </view>
+   
+
+    <view class="flex_around c_d61 pd_btn20">
+      <view>
+        <navigator class='borbg f_24' url='/packageThere/pages/Myexchange/Myexchange' hover-class='none'>我的兑换</navigator>
+      </view>
+      <view>
+        <navigator class='borbg f_24' url='/packageThere/pages/Mygift/Mygift' hover-class='none'>我的礼物</navigator>
+      </view>
+    </view>
+
+  </view>
+
+  <view class='bg_ff mg_0_30 border_rad20 pd_20 mg_btn20'>
+
+    <view>
+      <view class="flex pd_btn17">
+        <view class='c_000'>|</view>
+        <view class='f_22 pd_left5 pr_top4'>七日签到</view>
+      </view>
+
+<!-- flex 居中 不支持苹果 机器上是正常的 -->
+ <view class='signIn'>
+      <block wx:for="{{signInList}}">
+        <view class='signInContent'>
+          <view class='{{item.offset==true?"signInContentView":"signInContentViewbg"}}'>
+            <view >
+              <view class='text' wx:if="{{item.offset}}" data-index="{{item.offset}}">已领</view>
+              <view class='text'>+{{item.num}}</view>
+            </view>
+          </view>
+          <view data-time="{{item.time}}" class=' {{item.time=="今天"?"signInContentDatebg":"signInContentDate" }}'>{{item.time}}</view>
+        </view>
+      </block>
+    </view>       
+    </view>
+  </view>
+
+
+
+  <view class='bg_ff mg_0_30 border_rad20 pd_20 mg_btn20'>
+
+    <view class="flex pd_btn17 ">
+      <view class='c_000'>|</view>
+      <view class='f_22 pd_left5 pr_top4'>日常任务</view>
+    </view>
+
+    <view class='flex_between border_btndee pd_12_0'>
+
+      <view>
+        <view class='flex'>
+          <view>评论</view>
+          <view class='flex pd_left9'>
+            <view>
+              <image class='wh_18' src='./../../../images/my_img/Goldcoin.png'></image>
+            </view>
+            <view class='f_18 pr_top7'>+50</view>
+          </view>
+        </view>
+        <view class='f_18 pr_top7 flex'>
+          <view class='Horizontalbgee pr_top13 pr'>
+            <view class='pr_top13 po ' style="top:0;width:{{comment}}%;height:5rpx;background:#D61800;">
+          </view>
+          </view>
+
+          <!-- <view class='{{selectUserTask.comment==1?"Horizontal":"Horizontalbgee"}} pr_top13'></view> -->
+          <view class='pd_left20 ' wx:if="{{selectUserTask.comment==0}}">0</view>
+          <view class='pd_left20 ' wx:if="{{selectUserTask.comment==1}}">1</view>
+          <view class='pd_left20 ' wx:if="{{selectUserTask.comment== -1}}">1</view>
+        </view>
+      </view>
+
+      <view class='pd_btn20 pr_top10'>
+        <view>
+          <view 
+          class='f_18 pd_12_23 border_d61 border_rad30 fx_active' 
+          data-taskid="{{selectUserTask.comment}}" 
+          wx:if="{{selectUserTask.comment==1}}"
+          bindtap='tapTask'
+           >领取</view>
+          <navigator 
+          open-type="switchTab" 
+          hover-class='none' 
+          url='../../../pages/index/index' 
+          wx:if="{{selectUserTask.comment==0}}">
+          <view class='f_18 c_d61 pd_12_23 border_d61 border_rad30'>评论</view>
+          </navigator>
+           <view wx:if="{{selectUserTask.comment == -1}}"  class='f_18 pd_12_23 border_d61 border_rad30 fx_activegranbg'>已领取</view>
+        </view>
+      </view>
+    </view>
+
+    <view class='flex_between  pd_12_0'>
+
+      <view>
+        <view class='flex'>
+          <view>分享</view>
+          <view class='flex pd_left9'>
+            <view>
+              <image class='wh_18' src='./../../../images/my_img/Goldcoin.png'></image>
+            </view>
+            <view class='f_18 pr_top7'>+50</view>
+          </view>
+        </view>
+        <view class='f_18 pr_top7 flex'>
+          <view class='Horizontalbgee pr_top13 pr'>
+            <view class='pr_top13 po ' style="top:0;width:{{sharenum}}%;height:5rpx;background:#D61800;">
+          </view>
+          </view>
+
+          <view class='pd_left20 ' wx:if="{{selectUserTask.comment==0}}">0</view>
+          <view class='pd_left20 ' wx:if="{{selectUserTask.share==1}}">1</view>
+          <view class='pd_left20 ' wx:if="{{selectUserTask.share== -1}}">1</view>   
+        </view>
+      </view>
+
+      <view class='pd_btn20 pr_top10'>
+        <view>
+          <view 
+          class='f_18 pd_12_23 border_d61 border_rad30 fx_active' 
+          data-taskid="{{selectUserTask.share}}" 
+          bindtap='tapTask'
+          wx:if="{{selectUserTask.share==1}}">领取</view>
+
+          <navigator 
+          open-type="switchTab" 
+          hover-class='none' 
+          url='../../../pages/index/index'
+          wx:if="{{selectUserTask.share==0}}"
+          >
+          <view class='f_18 c_d61 pd_12_23 border_d61 border_rad30' >分享</view>
+          </navigator>
+
+          <view wx:if="{{selectUserTask.share == -1}}"  class='f_18 pd_12_23 border_d61 border_rad30 fx_activegranbg'>已领取</view>
+        </view>
+      </view>
+
+    </view>
+
+
+    <view class='flex_between border_btndee pd_12_0'>
+      <view>
+        <view class='flex'>
+          <view>点赞</view>
+          <view class='flex pd_left9'>
+            <view>
+              <image class='wh_18' src='./../../../images/my_img/Goldcoin.png'></image>
+            </view>
+            <view class='f_18 pr_top7'>+60</view>
+          </view>
+        </view>
+        <view class='f_18 pr_top7 flex'>
+          <view class='Horizontalbgee pr_top13 pr'>
+            <view class='pr_top13 po ' style="top:0;width:{{numerical}}%;height:5rpx;background:#D61800;">
+          </view>
+          </view>
+          <!-- <view class='pd_left20 '>{{selectUserTask.likenumConfig}}</view> -->
+
+          <view class='pd_left20 ' wx:if="{{selectUserTask.likenumConfig==0}}">0</view>
+          <view class='pd_left20 ' wx:if="{{selectUserTask.likenumConfig==1}}">1</view>
+          <view class='pd_left20 ' wx:if="{{selectUserTask.likenumConfig >= 2}}">2</view>   
+        </view>
+      </view>
+
+      <view class='pd_btn20 pr_top10'>
+        <view>
+          <view 
+          class='f_18 pd_12_23 border_d61 border_rad30 fx_active' 
+          data-taskid="2" 
+          wx:if="{{selectUserTask.likenumConfig >= 2 && selectUserTask.likenumConfig <3 }}"
+          bindtap='tapTask'
+          >领取</view>
+          <navigator
+           open-type="switchTab" 
+           hover-class='none' 
+           url='../../../pages/index/index'
+           > 
+           <view class='f_18 c_d61 pd_12_23 border_d61 border_rad30' wx:if="{{selectUserTask.likenum == 0}}">点赞</view>
+           </navigator>
+          <view wx:if="{{selectUserTask.likenum == -1}}"  class='f_18 pd_12_23 border_d61 border_rad30 fx_activegranbg'>已领取</view>
+        </view>
+         
+      </view>
+
+    </view>
+
+    <view class='flex_between  pd_12_0'>
+      <view>
+        <view class='flex'>
+          <view>发动态</view>
+          <view class='flex pd_left9'>
+            <view>
+              <image class='wh_18' src='./../../../images/my_img/Goldcoin.png'></image>
+            </view>
+            <view class='f_18 pr_top7'>+50</view>
+          </view>
+        </view>
+        <view class='f_18 pr_top7 flex'>
+          <view class='Horizontalbgee pr_top13 pr'>
+            <view class='pr_top13 po ' style="top:0;width:{{dynamic}}%;height:5rpx;background:#D61800;">
+          </view>
+          </view>
+          <view class='pd_left20 '>{{selectUserTask.dynamic}}</view>
+        </view>
+      </view>
+
+      <view class='pd_btn20 pr_top10'>
+
+        <view 
+        class='f_18 pd_12_23 border_d61 border_rad30 fx_active' 
+        wx:if="{{selectUserTask.dynamic==1}}"
+        data-taskid="1"
+        bindtap='tapTask'
+        >领取</view>
+        <navigator
+           open-type="switchTab"
+          hover-class='none'
+           url='../../../pages/index/index'
+           wx:if="{{selectUserTask.dynamic==0}}"
+           > 
+           <view class='f_18 c_d61 pd_12_23 border_d61 border_rad30'>动态</view>
+           </navigator>     
+          <view  class='f_18 pd_12_23 border_d61 border_rad30 fx_activegranbg' wx:if="{{selectUserTask.dynamic==- 1}}" >已领取</view>
+      </view>
+    </view>
+
+
+  </view>
+
+
+  <view class='bg_ff mg_0_30 border_rad20 pd_20 '>
+    <view class='flex_between'>
+      <view class="flex pd_btn17 ">
+        <view class='c_000'>|</view>
+        <view class='f_22 pd_left5 pr_top4'>兑换奖品</view>
+      </view>
+
+      <view>
+        <view class=" pd_btn17 pr_top4">
+        
+        <navigator class='flex' url='/packageThere/pages/exchange/exchange' hover-class='none'> 
+              <view class='f_20 pr_top1'>商城</view>
+              <view>
+                <image class='w_12_21 pd_left7 pr_top1' src='./../../../images/my_img/black.png'></image>
+              </view>
+        </navigator>
+
+        </view>
+      </view>
+    </view>
+
+
+  <view class="flex_between_wrap">
+   
+    <navigator wx:for="{{pirceList}}" url='/packageThere/pages/spdetails/spdetails?goodsid={{item.goodsid}}'  hover-class='none'>
+        <view>
+          <image class='w_197h_260 border_rad20' src='{{item.acrossimageurl}}'></image>
+        </view>
+        <view class='flex_between'>
+          <view> 
+            <view class='f_22 w_110 ellipse' >{{item.goodsname}}</view>
+            <view class='f_18'><label>{{item.price}}</label><label class='c_e9e9 pd_left7'>汉服币</label> </view>
+          </view>
+            <view class='active_red' wx:if="{{item.status==2}}">兑换</view> 
+            <view class='active_wthite' wx:if="{{item.status==1}}">已兑换</view>
+            <view class='active_wthite' wx:if="{{item.status==0}}">兑换</view>
+        </view>
+    </navigator>
+
+<!-- <navigator url='/packageThere/pages/spdetails/spdetails'>
+        <view>
+          <image class='w_197h_260 border_rad20' src='./../../../images/my_img/homepage_bg.png'></image>
+        </view>
+        <view class='flex_between'>
+          <view> 
+            <view class='f_22'>古风流苏发带</view>
+            <view class='f_18'><label>6400</label><label class='c_e9e9'>汉服币</label> </view>
+          </view>
+          <view class='active_red'>兑换</view>
+        </view>
+</navigator> -->
+
+<!-- <navigator url='/packageThere/pages/spdetails/spdetails'>
+        <view>
+          <image class='w_197h_260 border_rad20' src='./../../../images/my_img/homepage_bg.png'></image>
+        </view>
+        <view class='flex_between'>
+          <view> 
+            <view class='f_22'>古风流苏发带</view>
+            <view class='f_18'><label>6400</label><label class='c_e9e9'>汉服币</label> </view>
+          </view>
+          <view class='active_wthite'>已兑换</view>
+        </view>
+</navigator>   -->
+
+   <!-- <navigator url='/packageThere/pages/spdetails/spdetails'>
+        <view>
+          <image class='w_197h_260 border_rad20' src='./../../../images/my_img/homepage_bg.png'></image>
+        </view>
+        <view class='flex_between'>
+          <view> 
+            <view class='f_22'>古风流苏发带</view>
+            <view class='f_18'><label>6400</label><label class='c_e9e9'>汉服币</label> </view>
+          </view>
+          <view class='f_22'>兑换</view>
+        </view>
+    </navigator>       -->
+
+   <!-- <navigator url='/packageThere/pages/spdetails/spdetails'>
+        <view>
+          <image class='w_197h_260 border_rad20' src='./../../../images/my_img/homepage_bg.png'></image>
+        </view>
+        <view class='flex_between'>
+          <view> 
+            <view class='f_22'>古风流苏发带</view>
+            <view class='f_18'><label>6400</label><label class='c_e9e9'>汉服币</label> </view>
+          </view>
+          <view class='f_22'>兑换</view>
+        </view>
+    </navigator> -->
+
+   <!-- <navigator url='/packageThere/pages/spdetails/spdetails'>
+        <view>
+          <image class='w_197h_260 border_rad20' src='./../../../images/my_img/homepage_bg.png'></image>
+        </view>
+        <view class='flex_between'>
+          <view> 
+            <view class='f_22'>古风流苏发带</view>
+            <view class='f_18'><label>6400</label><label class='c_e9e9'>汉服币</label> </view>
+          </view>
+          <view class='f_22'>兑换</view>
+        </view>
+    </navigator> -->
+
+    </view>
+  </view>
+
+
+
+</view>

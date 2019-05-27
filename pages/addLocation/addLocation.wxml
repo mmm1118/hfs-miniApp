@@ -1,0 +1,16 @@
+<view style='height: 10rpx;'></view>
+
+<view class='addLocationView'>
+  <image class='searchImg' src='/images/index/search.png'></image>
+  <input class='searchInput' placeholder='搜索位置' bindinput='searchLocation'></input>
+</view>
+
+<view class='locationView' data-title="" data-latitude="-1" data-longitude="-1" catchtap='addLocation'>
+  <view class='title' style='color: #939393;'>不显示我的位置</view>
+</view>
+<block wx:for="{{locationList}}">
+  <view class='locationView' data-title="{{item.title}}" data-latitude="{{item.location.lat}}" data-longitude="{{item.location.lng}}" catchtap='addLocation'>
+    <view class='title'>{{item.title}}</view>
+    <view class='address'>{{item.address}}</view>
+  </view>
+</block>

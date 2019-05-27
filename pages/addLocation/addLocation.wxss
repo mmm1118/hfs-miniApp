@@ -1,0 +1,42 @@
+page{
+  background-color: #fff;
+}
+
+.addLocationView{
+  width: 650rpx;
+  height: 34rpx;
+  margin: 0 auto 20rpx;
+  padding: 20rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20rpx;
+  box-shadow: 2px 2px 5px #E5E5E5;
+}
+
+.searchImg{
+  width: 32rpx;
+  height: 34rpx;
+}
+
+.searchInput{
+  width: 594rpx;
+  height: 34rpx;
+  padding: 0 12rpx;
+}
+
+.locationView{
+  padding: 0 30rpx 30rpx;
+  display: flex;
+  flex-direction: column;
+}
+
+.title{
+  font-size: 30rpx;
+}
+
+.address{
+  font-size: 24rpx;
+  line-height: 40rpx;
+  color: #939393;
+}

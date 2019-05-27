@@ -1,0 +1,331 @@
+<import src='/packageTwo/pages/Threecircles/dynamic-template/dynamic-template.wxml' />
+
+<view>
+
+  <view class=' circles_bg circles_header pr' style='background-image: url({{BackgroundImg}});background-repeat:no-repeat;background-size:100% 100%;'>
+
+    <view class='center'>
+      <view class='f_50'>明制少女
+        <label class='f_24'>(3人)</label>
+      </view>
+      <view class='f_30 pd_top28'>圈主：水瓶座</view>
+    </view>
+
+    <image catchtap='bindChooiceProduct' class='modifybg' src='./../../../images/circle_img/modifybg.png'></image>
+  </view>
+
+  <view class='flex_around circles_nav'>
+    <view class='center'>
+      <navigator hover-class='none'>
+        <view>
+          <image class='wh_80' src='./../../../images/circle_img/wx.png'></image>
+        </view>
+        <view>分享</view>
+      </navigator>
+    </view>
+    <view class='center' bindtap='reward'>
+      <navigator hover-class='none'>
+        <view>
+          <image class='wh_80' src='./../../../images/circle_img/Reward.png'></image>
+        </view>
+        <view>打赏</view>
+      </navigator>
+    </view>
+    <view class='center'>
+      <navigator hover-class='none' url='/packageTwo/pages/DevelopmentActivities/DevelopmentActivities'>
+        <view>
+          <image class='wh_80' src='./../../../images/circle_img/activityss.png'></image>
+        </view>
+        <view>活动</view>
+      </navigator>
+    </view>
+    <view class='center'>
+      <navigator hover-class='none' url='/packageTwo/pages/Ranking/Ranking'>
+        <view>
+          <image class='wh_80' src='./../../../images/circle_img/Ranking.png'></image>
+        </view>
+        <view>排行榜</view>
+      </navigator>
+    </view>
+  </view>
+
+
+  <view class='bg_ff flex_around'>
+    <view wx:for="{{list_nav}}" class='{{list_index==index?"active":"activetwo"}}' data-index="{{index}}" bindtap='active_click'>{{item.name}}</view>
+  </view>
+</view>
+
+<view wx:if="{{list_index==0}}">
+  <view class='dynamics'>
+    <view class='dynamic_titile'>公告</view>
+    <view class='dynamic_content'>
+      各位同袍请注意：不明组织的活动禁止在圈内发布。我们集市支持公益活动，但在群内发布必须先向管理组提交组织的介绍材料审核。不然各种组织都在群里发召集，第一形成骚扰，第二无法核实组织的真实性与安全性，第三，不明真相的同袍会以为是我们集市发起的活动。
+    </view>
+  </view>
+
+  <view class='More '>
+    <navigator hover-class='none' url='/packageTwo/pages/announcements/announcements' class='flex_end pd_right24'> 查看更多历史公告>></navigator>
+  </view>
+
+  <view class='pa_btn20 pa_top20'>
+    <block wx:for="{{dynamicList}}">
+      <template is='dynamicTemplate' data="{{item: item, index: index, serverStatic: serverStatic}}" />
+    </block>
+  </view>
+
+</view>
+
+<view wx:if="{{list_index==1}}">
+
+  <view class='activity flex activity_bg'>
+
+    <view>
+      <image class='activity_img' src='./../../../images/circle_img/bg.png'></image>
+    </view>
+
+    <view class='w_100 '>
+      <view class='pd_left34'>
+        <view class='activity_tiele'>花仙子，广州城的美丽 记忆~</view>
+        <view class='font_wei'>2019-03-13</view>
+        <view class='activity_contnt'>
+          <view class='flex'>
+            <view><image class='lookNum' src='./../../../images/memorial/lookNum.png'></image></view>
+            <view class='f_22' >208</view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+
+
+  <navigator hover-class='none' url='/packageTwo/pages/Publishing/Publishing'>
+    <image class='activity_add' src='./../../../images/my_img/xf.png'></image>
+  </navigator>
+
+  <pin-picker show="{{show}}" arraydata="{{item}}" bindtopone0="topone0" bindtopone1="topone1" bindtopone2="topone3" bindtopone3="topone4" bindonSort='onSort' bindonmack="onmack" class='pxd_top0'>
+  </pin-picker>
+</view>
+<view wx:if="{{list_index==2}}" class='Leaving_ff'>
+
+  <view class='pd_btn35'>
+    <view class='center Leaving_time'>2018年12月25日 上午10:13</view>
+    <view class='flex'>
+      <view>
+        <navigator hover-class='none' url="/packageTwo/pages/thirdpartyIndex/thirdpartyIndex"> 
+          <image class='Leaving_ff_img' src='./../../../images/my_img/redyuan.png'></image>
+        </navigator>
+      </view>
+      <view class='pd_left12'>
+        <view class='Leaving_title'>岁月神偷</view>
+        <view class='Leaving_contnet'>666</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='pd_btn35'>
+    <view class='center Leaving_time'>上午10:16</view>
+
+    <view class='flex_end'>
+      <view class='flex'>
+        <view class=''>
+          <view class='talkbubble '>这快使用背景图片</view>
+        </view>
+        <view>
+          <image class='Leaving_ff_img pd_left12' src='./../../../images/my_img/redyuan.png'></image>
+        </view>
+      </view>
+    </view>
+
+
+  <view class='pxd'>
+
+  <view class='dialogue flex'>
+      <view class='dialogue_input'>
+        <input type='text'  placeholder='留言'></input>
+      </view>
+      <view class='flex'>
+          <view class='pd_left20_right20'>
+            <view class='wh39'><image class='wh39' src=''></image></view>
+            <view>图片</view>
+          </view>
+          <view>
+            <view class='wh39'><image class='wh39' src=''></image></view>
+            <view>发送</view>          
+          </view>
+      </view>
+</view>
+
+  </view>
+
+  </view>
+
+</view>
+
+<view wx:if="{{list_index==5}}" class='bg_ff'>
+
+<view class=' flex search'>
+  <view><image class='secrch_log'  src='./../../../images/circle_img/search.png'></image></view>
+  <view class='secrch_font'><input type='text' bindfocus="focus" placeholder='搜成员'></input></view>
+</view>
+
+<view>
+
+  <view class='flex_between member_pd'>
+      <view class='flex'>
+          <view>
+            <image class='member_user' src="./../../../images/circle_img/bg.png"></image>
+          </view>
+          <view>
+            <view class='member_header'>水瓶座</view>
+            <view class='member_content'>圈主</view>
+          </view>
+      </view>
+      <view class='flex'>
+            <view class='member_red '>社长</view>
+            <view class='member_border_red mg_left10'>一级会员</view>
+            <view class='member_border_red mg_left10'>普通会员</view>
+      </view>
+  </view>
+</view>
+
+
+</view>
+<view wx:if="{{list_index==4}}" class='member_pd'>
+
+<view class='menber_bg pd_30_23_48_54 mg_top20'> 
+      <view>
+      <view class='flex_between '> 
+
+          <view wx:if="{{flng}}">
+              <view class='flex' >
+                <view class='pd_right22'><image class='w_h138' src='./../../../images/my_img/logo.png'></image></view>
+                <view class='c_ff '> 
+                    <view class='f_36'>广汉会</view>
+                    <view class='pd_top18_btn25 f_28'>社长（一级会员）</view>
+                    <view class='f_28'>NO.123456</view>
+                </view>
+              </view>
+              <view class='c_ff pd_top100 f_28'>会员期限：2020/09/28</view>
+          </view>
+
+          <view wx:else class='c_ff line50'> 
+            <view class='nav_title'>使用须知</view>
+            <view class='pd_left36'> 
+                <label>持卡人ID:123456</label>
+            </view>
+            <view>
+                <van-icon name="star" color='#fff' />
+                活动享受会员折扣价
+            </view>
+            <view>
+                <van-icon name="star" color='#fff' />
+                活动会员优先报名
+            </view>
+            <view>
+                <van-icon name="star" color='#fff' />
+                伴手礼
+            </view> 
+            <view>
+                <van-icon name="star" color='#fff' />
+                伴手礼
+            </view>           
+          </view>
+
+          <view bindtap='Refresh'><image class='wh_46' src='./../../../images/my_img/Refresh.png'></image></view>
+      </view>
+     
+    </view>
+</view>
+<view class='member_top9_btn29'>
+    <navigator hover-class='none' url='/packageTwo/pages/Editorial/Editorial' class='flex_end pd_right24'>编辑会员卡>></navigator>
+</view>
+
+
+<view>
+<view class='Anniversary center'>活动纪念卡</view>
+<view class='menber_bg pd_30_23_48_54 mg_top20'>  
+          <view>       
+                <view class='f_36 c_ff'>3月17日花朝节十二花神~</view>    
+          </view>
+          <view class='c_ff pd_top100 f_28'>
+                <view>2019-03-17</view>
+                <view>参加人：@水瓶座</view>
+          </view>
+</view>
+</view>
+</view>
+
+
+<view wx:if="{{list_index==3}}">
+<touch-gesture bind:currentGesture="onTouchGesture">
+<navigator hover-class='none' class='flex_between mg_top20' url="/packageTwo/pages/GroupDetails_two/GroupDetails_two">
+  <view class='newGrouppd_pd {{txVal?"mg_left60":"mg_left0"}}'>
+      <view><label class='newGrouppd_title'>齐胸党～</label><label class='newGrouppd_popple'>（1人）</label></view>
+  </view>
+  <view class='flex {{txVal?"mg_right0":"mg_right320"}}'>
+          <view class='w_160gray flex_Middle'> <view>删除小组</view> </view>
+          <view class='w_160red flex_Middle'><view>重命名</view> </view>
+  </view>
+</navigator>
+</touch-gesture>
+
+  <navigator hover-class='none' url='/packageTwo/pages/NewlyBuild/NewlyBuild'>
+    <image class='activity_add' src='./../../../images/my_img/xf.png'></image>
+  </navigator>
+
+<!-- 蒙版组件-->
+<popup ismask="{{ismask}}" bindonSort="onSort">
+    <view class='newGrouppd_fxd' catchtap='mk' >
+        <view class='newGrouppd_header'>小组命名</view>
+        <view>
+          <input type='text' class='newGrouppd_input' maxlength='10' placeholder='1-10个汉字'></input>
+        </view>
+        <view class='flex center'>
+          <view class='newGrouppd_bth' catchtap='cancel'>取消</view>
+          <view class='newGrouppd_bth' catchtap='NextStep'>确定</view>
+        </view>
+    </view>
+</popup>
+
+</view>
+
+
+<view wx:if="{{list_index==6}}">
+
+  <view class='pd_19_29'>
+      我在本圈昵称
+  </view>
+
+  <view><input class='set_up'  value="大明穷鬼不认输"></input> </view>
+
+  <button class='set_btn'>删除并退出圈子</button>
+
+  
+  <view class='fxd'>
+      <view class='c_9Bb'>投诉圈子</view>
+  </view>
+
+</view>
+
+
+<!-- 邀请好友 -->
+<view class='mask' wx:if="{{maskShows}}">
+  <view class='mask_content'>
+    <image class='maskImg' src='./../../../images/share_bg.png'></image>
+    <view class='maskHeadView'>加入成功，要去邀请好友吧</view>
+    <view class='maskButtomView'>每成功邀请一位好友，你即可获取10个汉服币，汉服币的奖励，邀请越多奖励越多哦~</view>
+    <button class='shareButton' open-type='share'>邀请好友领取</button>
+    <image class='maskCancelImg' src='./../../../images/cancel.png' bindtap='cancelMask'></image>
+  </view>
+</view>
+
+
+ <pin-picker show="{{reward}}" arraydata="{{rewarditem}}" bindtopone1="reward1" bindtopone2="reward2" bindonSort='onSortget' bindonmack="on_mack" class='pxd_top0'>
+  </pin-picker>
+
+  <!-- 现金打赏 -->
+  <modal-input rewardBl="{{rewardBl}}" blarray="{{content}}"  bindonval="onval"></modal-input>
+
+ <!-- 打赏汉服币 -->
+  <modal-input rewardBl="{{rewardHfb}}" blarray="{{contentHfb}}"  bindonval="onvalHfb"></modal-input>

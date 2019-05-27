@@ -1,0 +1,59 @@
+/* 文章样式 */
+
+.article {
+  padding: 0 24rpx 24rpx;
+}
+
+.article .articleItem {
+  padding: 30rpx;
+  background: #fff;
+  border-radius: 20rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25rpx;
+}
+
+.article .articleItem .imageLayout {
+  width: 280rpx;
+  height: 210rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 10rpx;
+}
+
+.article .articleItem .imageLayout image {
+  width: 100%;
+  height: 100%;
+}
+
+.article .articleItem .itemRight {
+  margin-left: 40rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
+}
+
+.article .articleItem .itemRight .contentText text {
+  font-size: 34rpx;
+  color: #000;
+}
+
+.article .articleItem .itemRight .contentText view {
+  font-size: 24rpx;
+  color: #939393;
+  margin-top: 20rpx;
+}
+
+.article .articleItem .itemRight .lookNum {
+  font-size: 22rpx;
+  color: #939393;
+}
+
+.article .articleItem .itemRight .lookNum image {
+  width: 30rpx;
+  margin-right: 15rpx;
+  height: 24rpx;
+}

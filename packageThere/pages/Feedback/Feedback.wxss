@@ -1,0 +1,25 @@
+/* packageThere/pages/Feedback/Feedback.wxss */
+.pd_0_30{margin:0 30rpx;}
+.pd_30_0{padding:28rpx 0rpx 28rpx  32rpx;}
+.pd_l32t32{padding-left:32rpx;padding-top:32rpx;padding-bottom:27rpx;}
+
+.mg_top20{margin-top:20rpx;}
+.pd_left118{padding-left:118rpx;}
+.mg_top104{margin-top:104rpx;}
+
+.btn{
+  width:428rpx;
+  height:80rpx;
+  border:none;
+  color:#fff;
+  background:#D61800;
+  font-size:30rpx;
+   }
+
+
+.f_36{font-size:36rpx;}
+.f_26{font-size:26rpx;}
+
+.bg_ff{background:#fff;}
+
+.border_radius20{border-radius:20rpx;}

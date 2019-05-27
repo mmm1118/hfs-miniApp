@@ -1,0 +1,93 @@
+/* packageThere/pages/homepage/homepage.wxss */
+page{background:#fff}
+.pd_0_40{padding:0 30rpx;}
+.w_100h_573{width:100%;height:600rpx;}
+.wh_200{width:200rpx;height:200rpx;border-radius:100%;}
+.top129{top:129rpx;}
+.c_939{color:#939393}
+.c_d61{color:#D61800}
+
+.border_rad2{border-radius:2rpx;}
+.bg_eee{ background-color: #eeeef3;}
+.bor_top{border-top:1px solid #eee;}
+
+
+.box_show{box-shadow:1rpx 5rpx 10rpx 3rpx #eee}
+.bor_rad20{border-radius:20rpx;}
+
+.h_120{height:153rpx;}
+.radial{ background: linear-gradient(to bottom, rgba(255,0,0,0), rgba(248,248,255,0.4),rgba(248,248,255,1));}
+
+.pd_l10r171{padding-left:10rpx;padding-right:171rpx;}
+.pr_top6{position:relative;top:6rpx;}
+.pr_top10{position:relative;top:10rpx;}
+.pr_top19{position:relative;top:19rpx;}
+
+.pr_tr714{position:relative;
+top:7rpx;
+right:14px;
+z-index:999;
+}
+
+
+.pd_btn10_pad_top23{padding-bottom:10rpx;padding-top:23rpx;}
+.w_529_wd{word-wrap:break-word;width:490rpx;text-align:justify;}
+
+
+.top_center{top:30rpx;left:50%;transform:translateX(-50%);}
+
+.w_2h_79{width:2rpx;height:79rpx;}
+.w_100{width:100%;}
+.w_h35{width:35rpx;height:35rpx;}
+.w_25_h38{width:25rpx;height: 38rpx;}
+.wh_30{width:30rpx;height:30rpx;}
+.w_44h_10{width:44rpx;height:10rpx;}
+.wh_150{width:150rpx;height:150rpx;}
+
+.bor_dashed1{border-right: 2rpx  dashed  #999; }
+.bg_ff{background:#fff;}
+
+
+.pd_left13{padding-left:13rpx;}
+.pd_left19{padding-left:19rpx;}
+.pd_top23{padding-top:23rpx;}
+.pd_letf20{padding-right:20rpx;}
+.pd_top46{padding-top:46rpx;}
+.pd_top26{padding-top:26rpx;}
+.pd_btn30{padding-bottom:30rpx;}
+.pd_20_30_30_30{padding:40rpx 30rpx 40rpx 30rpx;}
+.pd_20_0{padding:22rpx 0rpx;}
+
+.mg_left20{margin-left:20rpx;}
+.mg_right10{margin-right:10rpx;}
+.mg_btn24{margin-bottom:24rpx;}
+.mg_top12{margin-top:12rpx;}
+
+.f_36{font-size:36rpx;}
+.f_22{font-size:22rpx;}
+.f_28{font-size:28rpx;}
+.f_26{font-size:26rpx;}
+.f_24{font-size:24rpx;}
+.f_36{font-size:36rpx;}
+.f_40{font-size:40rpx;}
+.f_50{font-size:50rpx;}
+
+.pxd_btn0{width:100%;position:fixed;bottom:0;left:0; animation: slideContentUp 0.6s;z-index:999;
+}
+.pxd{position:fixed;top:0rpx;left:0rpx;width:100%;height:100%;background:rgba(0,0,0,0.5);z-index:999;
+}
+
+
+@keyframes slideContentUp {
+  from {
+    height: 0;
+  }
+
+  to {
+    height: 345rpx;
+  }
+}
+
+.none{animation:slideContentDown 0.8s;display:none}
+
+.shareBtn{border:none;background:#fff;}

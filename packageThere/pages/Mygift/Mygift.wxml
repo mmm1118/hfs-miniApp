@@ -1,0 +1,64 @@
+<view class='pd_0_30 '>
+  <view class='flex_around gify_header'>
+    <view bindtap='tap_active' data-index="0"  class='{{flug==0?"active_red":""}}'>日榜</view>
+    <view bindtap='tap_active' data-index="1"  class='{{flug==1?"active_red":""}}'>月榜</view>
+  </view>
+
+
+  <view class='{{flug==0?"show":"hiden"}}'> 
+  
+        <view class='flex_b3etween bor_solid1De conetnt' wx:for="{{listData}}">
+          <view class='flex'>
+              <view><image class='sunlightImg' src='{{item.avatarUrl}}'></image></view>
+              <view class='pr_top10 pd_left21'>{{item.nickName}}</view>
+          </view>
+          <view class='pr_top10 '>赠送{{item.giftNumber}}{{item.giftName}}</view>
+        </view>
+
+  
+
+  </view>
+
+  
+  <view class='{{flug==1?"show":"hiden"}}'> 
+
+        <view class='flex_between bor_solid1De conetnt pr' wx:for="{{listData}}">
+          <view class='flex'>
+              <view>
+                  <image class='brandImg' src='./../../../images/my_img/brand.png' wx:if="{{index==0}}"></image>
+                  <image class='brandImg' src='./../../../images/my_img/twopai.png' wx:if="{{index==1}}"></image>
+                  <image class='brandImg' src='./../../../images/my_img/threepai.png' wx:if="{{index==2}}"></image>
+              <image class='sunlightImg' src='{{item.avatarUrl}}'></image>
+              </view>
+              <view class='pr_top20 pd_left21'>{{item.nickName}}</view>
+          </view>
+          <view class='pr_top20 flex ' bindtap='isMack' data-presenterid="{{item.presenterId}}" data-index="{{index}}">
+            <view>赠送{{item.giftPrices}}汉服币</view>
+            <view class='flex pd_left10'>
+            <image class='eplowImg  pr_top15' wx:if="{{item.offset==false}}" src='./../../../images/my_img/upper.png'></image>
+            <image class='eplowImg pr_top15' wx:else src='./../../../images/my_img/lower.png'></image>
+            </view>          
+          </view>
+
+          <view class='po top76right0 {{item.offset==true?"show":"hiden"}}'>
+                  <view class='pr'>
+                      <image src='./../../../images/my_img/Mask.png'  class='w_250h174'></image>
+                      <view class='po ismackpo' >
+                          <view wx:for="{{listZs}}" wx:for-item="list" >
+                          <label>{{list.giftName}}</label> <label> x</label> <label>{{list.giftNumber}}</label> 
+                          </view>                      
+                      </view>
+                  </view>       
+          </view>
+        </view>
+  </view>
+
+<view class='pxd'>
+      <view wx:if="{{flug==0}}">日总计:0</view>
+      <view wx:if="{{flug==1}}">月总计:0</view>
+</view>
+
+<load wx:if="{{flug==0 && listData==''}}" tostvalue="没有礼物了"></load>
+<load wx:if="{{flug==1 && listData==''}}" tostvalue="没有礼物了"></load>
+
+</view>

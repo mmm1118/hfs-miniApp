@@ -1,0 +1,29 @@
+<view class='bg_ff pd_34_25 mg_top20'>
+
+  <view class='border_dashed pd_top25 flex_between'>
+  <view >
+    <view class='f_34'>消息通知</view>
+    <view class='f_26 c_99 pd_18_18'>关闭之后将无法接收到别的用户的私信通知</view>
+  </view>
+  <view> 
+      <view class="body-view">
+        <switch bindchange="switch1Change" />
+      </view>
+  </view>
+</view>
+
+  <view class='f_30  border_btn1e5 pd_28'>
+    <navigator url='/packageThere/pages/Blacklist/Blacklist' class='flex_between w_100' hover-class="none">
+        <view>黑名单</view>
+        <view><image class='w_16_h26' src='./../../../images/my_img/black.png'></image></view>  
+    </navigator>
+  </view>
+
+  <view class='f_30  pd_28'>
+    <navigator url='/packageThere/pages/Feedback/Feedback' class='flex_between w_100' hover-class="none"> 
+        <view>意见反馈</view>
+        <view><image class='w_16_h26' src='./../../../images/my_img/black.png'></image></view>
+    </navigator>
+  </view>
+
+</view>

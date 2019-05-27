@@ -1,0 +1,38 @@
+<view>
+
+  <view class='bg_ff flex search'>
+    <view>
+      <image class='secrch_log' src='./../../../images/circle_img/search.png'></image>
+    </view>
+    <view class='secrch_font'><input type='text' bindinput="input_val" placeholder='搜圈子'></input></view>
+  </view>
+
+  <navigator
+      wx:for="{{circleData}}"
+      wx:key="item.classid"
+      hover-class='none'
+      url='./../../packageTwo/pages/details/details'
+      class='bg_ff pd_34 border_rad20'>
+    <view class='flex '>
+      <view>
+        <image class='organizations_img' src='{{item.imageUrl}}'></image>
+      </view>
+      <view class='pd_left25'>
+        <view class='flex '>
+          <view class='organizations_title '>{{item.circleName}}</view>
+          <view>
+          <view>
+            <image class='organizations_logo pr_top5left11' wx:if="{{item.addv === 1}}" src='../../../images/circle_img/brgihtyellow.png'></image>
+            <image class='organizations_logo pr_top5left11' wx:if="{{item.addv === 2}}" src='../../../images/circle_img/Brightblue.png'></image>
+            <image class='organizations_logo pr_top5left11' wx:if="{{item.addv === 3}}" src='../../../images/circle_img/Brightred.png'></image>
+          </view>
+          </view>
+        </view>
+        <view class='organizations_text'>{{item.circlePresentation}}</view>
+      </view>
+    </view>
+  </navigator>
+
+</view>
+
+

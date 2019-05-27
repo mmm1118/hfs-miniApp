@@ -1,0 +1,77 @@
+<view wx:if="{{isNoAddress==true}}"> 
+  <view class='pd_25_40 flex_between bg_ff' bindtap='addresstwo' > 
+    <view class='flex'>
+      <view><image class='location pr_top5' src='./../../../images/my_img/location.png'></image></view>
+      <view class='f_30'>
+        <view>{{adderlist.userName}} <label class='f_24 c_66'>17677384450</label></view>
+        <view>{{adderlist.location}} {{adderlist.details}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view wx:if="{{isNoAddress==false}}">
+  <view class='pd_25_40 flex_between bg_ff' bindtap='address'>
+    <view class='flex'>
+      <view><image class='location pr_top5' src='./../../../images/my_img/location.png'></image></view>
+      <view class='f_30'>添加收货地址</view>
+    </view>
+
+    <view>
+      <image class='uapper pr_top5' src='./../../../images/my_img/orderblack.png'></image>
+    </view>
+  </view>
+</view>
+
+
+<view class='bg_ff'> 
+<view class='pd_22_40 f_28 mg_top20'>{{bussData.goodsname}}</view>
+
+<view class='bg_eef3 pd_11_40 f_28'> 
+      <view class='flex'>
+        <view> <image class='details_img' src='{{bussData.acrossimageurl}}'></image></view>
+        <view class='w_100 pd_left40 pd_top26'> 
+            <view class='pd_btn40 ellipse w_220'>{{bussData.goodsdetail}}</view>
+            <view class='flex_between'>
+              <view>{{bussData.goodscurrency}}积分</view>
+              <view>x1</view>
+            </view>
+         </view>
+      </view>
+
+</view>
+
+<view class='pd_25_40'>
+   
+    <view class='flex_between pd_btn32 pd_top32 border_solid1ee f_28'>
+        <view>运费：</view>
+        <view>{{bussData.price}}</view>
+    </view>
+
+
+    <view class='flex_between pd_btn32 pd_top32 border_solid1ee f_28'>
+        <view>汉服币：</view>
+        <view>{{bussData.goodscurrency}}</view>
+    </view>
+
+    <view class='flex_end mg_top20  '> 
+      <label>共1件商品</label>
+      <label class='pd_left26 f_24'>合计：</label>
+      <label>￥<label class='f_24'>{{bussData.price}}</label></label>
+    </view>
+
+</view>
+</view>
+
+<view class='pxd'> 
+<view class='toast f_24'  wx:if="{{isNoAddress==false}}">请添加收货地址</view>
+<view class='flex'>
+  <view class='flex_end picer_f'>
+  <label>实付款：￥<label>{{bussData.price}}</label></label>
+  </view>
+  <view class='flex_center bth_red' bindtap='wxApply'>确认兑换</view>
+</view>
+</view>
+
+
+

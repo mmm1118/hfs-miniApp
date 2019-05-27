@@ -1,0 +1,47 @@
+.attenTion {
+  background: #fff;
+}
+
+.attenItem {
+  padding: 30rpx 42rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.attenItem:not(:first-child) {
+  border-top: 1rpx solid #e5e5e5;
+}
+
+.attenItem .leftItem {
+  display: flex;
+  align-items: center;
+}
+
+.attenItem  image {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+
+.attenItem text {
+  color: #000;
+  font-size: 30rpx;
+  font-weight: bold;
+}
+
+.attenItem  .statusButton {
+  width: 157rpx;
+  height: 52rpx;
+  text-align: center;
+  line-height: 52rpx;
+  color: #333;
+  font-size: 24rpx;
+  background: #f3f3f3;
+}
+
+.attenItem  .statusButton.active {
+  color: #fff;
+  background: #d71000;
+}

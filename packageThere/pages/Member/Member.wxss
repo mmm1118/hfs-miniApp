@@ -1,0 +1,44 @@
+.pd_0_20{padding:0rpx 20rpx;}
+.bg_ff{background: #fff;}
+
+
+.w_h138{width:138rpx;height:138rpx;}
+.wh_46{width:46rpx;height:46rpx;}
+
+.c_ff{color:#fff;}
+
+.f_36{font-size:36rpx;}
+.f_28{font-size:28rpx;}
+
+.pd_30_23_48_54{padding:30rpx 23rpx 48rpx 54rpx;}
+.pd_top18_btn25{padding-top:18rpx;padding-bottom:25rpx; }
+.pd_top100{padding-top:100rpx; }
+.pd_right22{padding-right:22rpx;}
+.pd_left36{padding-left:36rpx;}
+.line50{line-height:50rpx;}
+
+.nav_title{
+  padding-left:220rpx;
+  font-size:36rpx;
+}
+
+.mg_top20{margin-bottom:20rpx;}
+
+.title-text:before, .title-text:after { 
+    content: ''; 
+    position: absolute;   /*定位背景横线的位置*/
+    top: 50%; 
+    background: #eee;   /*背景横线颜色*/
+    width: 36%;            /*单侧横线的长度*/
+    height: 1px; 
+} 
+
+.title-text:before { 
+    left: 2%;              /*调整背景横线的左右距离*/
+}
+.title-text:after { 
+    right: 2%; 
+}
+
+
+.menber_bg{background:#000;border-radius:20rpx;}

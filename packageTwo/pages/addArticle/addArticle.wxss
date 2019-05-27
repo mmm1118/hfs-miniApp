@@ -1,0 +1,12 @@
+/* packageTwo/pages/addArticle/addArticle.wxss */
+.mg_20_30{margin:20rpx 30rpx;background:#fff;padding:0rpx 30rpx;border-radius:10rpx;} 
+
+.Addarticle_one{padding:30rpx 0rpx;}
+.Addarticle_one .title{font-size:34rpx;padding-top:42rpx;padding-right:56rpx;}
+
+.Addarticle_one input{font-size:26rpx;width:300rpx;padding-left:52rpx;}
+
+.Addarticle_one .pr{position:relative;top:0rpx;font-size:34rpx;}
+
+.btn{width:428rpx;background:#D61800;color:#fff; }
+.mr_top156{margin-top:156rpx;}

@@ -1,0 +1,52 @@
+.bg_ff{background:#fff}
+.header_img{width:210rpx;height:140rpx;}
+
+.f_34{font-size:34rpx;font-weight:bold;}
+.f_26{font-size:26rpx;}
+
+
+.c_939{color:#939393}
+
+.w_44h10{width:44rpx;height:10rpx;}
+.wh_60{width:60rpx;height:60rpx; }
+.w_100{width:100%;}
+
+.btn{width:126rpx;border-radius:10rpx;background:#939393;color:#fff;font-size:22rpx;margin-top:10rpx}
+
+.pd_20_0{padding:20rpx 0rpx;}
+.pd_0_40{padding:30rpx;}
+.pd_left19{padding-left:19rpx;}
+.pd_top20{padding-top:20rpx;}
+.pd_btn30{padding-bottom:23rpx;}
+.pd_btn40{padding-bottom:45rpx}
+.pd_left10{padding-top:10rpx;}
+
+.po_mack{
+  position:absolute;
+  width:100rpx;
+  height:100rpx;
+  border-radius:10rpx;
+  top: 33rpx;
+  right: 81rpx;
+  color: #fff;
+  background:rgba(0,0,0,0.7);
+  }
+
+.title-text:before, .title-text:after { 
+    content: ''; 
+    position: absolute;   /*定位背景横线的位置*/
+    top: 50%; 
+    background: #999;   /*背景横线颜色*/
+    width: 36%;            /*单侧横线的长度*/
+    height: 1px; 
+} 
+
+.title-text:before { 
+    left: 2%;              /*调整背景横线的左右距离*/
+}
+.title-text:after { 
+    right: 2%; 
+}
+
+.fxd{position:fixed;left:0rpx;bottom:30rpx;width:100%;}
+.fxd .btns{background:#D61800;width:428rpx;color:#fff;}

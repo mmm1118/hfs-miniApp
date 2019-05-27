@@ -1,0 +1,68 @@
+<view> 
+
+<view>
+    <view> 
+      <image class='details_img' src='{{bussData.smallimageurl}}'></image>
+    </view>
+    <view class='bg_fff pd_0_40'>
+
+      <view class='details_title'>
+        <view class='f_34'>{{bussData.goodsname}}</view>
+        <view class='f_18 pd_top9 '>{{bussData.price}} <label class='c_939'>汉服币</label> </view>  
+      </view>
+
+
+      <view class='f_22 pd_btn80'  > 
+          <!-- <view class='pd_bth19'>【材质】雪纺</view> -->
+          <!-- <view class='pd_bth19'>【尺寸】长度148（不含流苏）宽度3cm左右    流苏单侧约长13cm</view> -->
+          <view>{{bussData.goodsdetail}}</view>
+      </view>
+
+      <view>
+
+
+       <navigator url='/packageThere/pages/Confirmorder/Confirmorder?goodsid={{bussData.goodsid}}' hover-class='none'>
+          <button class='bth_stylered'  wx:if="{{bussData.status==2}}">
+                      <image class='bth_img pr_top4' src='./../../../images/my_img/Stars.png'></image>
+                      {{bussData.goodscurrency}} 积分兑换             
+          </button>
+       </navigator>
+        <button class='bth_style' wx:if="{{bussData.status==0}}">
+                    <image class='bth_img pr_top4' src='./../../../images/my_img/Stars.png'></image>
+                    {{bussData.goodscurrency}} 积分兑换              
+         </button>
+
+
+
+        <button class='bth_style' wx:if="{{bussData.status==1}}">
+                    <image class='bth_img pr_top4' src='./../../../images/my_img/Stars.png'></image>
+                    已兑完             
+         </button>
+
+         <view class='center c_939 f_20 pd_top9_btn33'>近30天已兑{{bussData.exchange}}件</view>
+      </view>
+
+    </view>
+</view>
+
+
+<view class='bg_fff mg_top20 pd_0_40'>
+ 
+      <view class='pd_top10_btn20 f_34'>兑换须知</view>
+
+    <view class='line56 f_22'>
+          <view>1)兑换商品前请确定您的兑换信息正确无误，包括兑换商品型号及收件信息。成功兑换后信息不可更改。如因收件信息填写导致快递寄失等问题,责任由个人承担;</view>
+          <view>2)奖品兑换后，如非质量问题，不予退还</view>
+          <view>3)实物商品兑换并审核兑换信息后一般将在7个工作人内发出</view>
+          <view>4)奖品的发送仅限于中国大陆地区，同时请用中文填写</view>  
+    </view>
+
+
+</view>
+
+
+
+
+
+
+</view>

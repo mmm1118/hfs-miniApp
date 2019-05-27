@@ -1,0 +1,19 @@
+<view>
+
+  <navigator
+      hover-class='none'
+      wx:for="{{noticeData}}"
+      wx:key="{{item.id}}"
+      data-noticeid="{{item.id}}"
+      url="/packageTwo/pages/AnDetails/AnDetails?noticeid={{item.id}}">
+    <view class='ments_bg'>
+      <view class='title'>{{item.createTime}}</view>
+      <view class='pd_top49 f_w'>{{item.notice}}</view>
+    </view>
+  </navigator>
+
+  <view class='flex_center pxd center'>
+    <image class='add_bg' src='./../../../images/circle_img/addartilce.png'></image>
+  </view>
+
+</view>

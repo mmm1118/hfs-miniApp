@@ -1,0 +1,60 @@
+<template name='dynamicTemplate' data-demo='demo'>
+  <!-- 动态组件 -->
+  <view class="dynamic">
+    <view class="titleLayout">
+      <view class="imageLayout">
+        <image src="{{item.userinfoDTO.avatarurl}}"></image>
+        <view
+            class="absoluteImg"
+            wx:if="{{!item.isFollow}}">
+          <image
+              data-userid="{{item.userinfoDTO.userid}}"
+              data-followid="{{item.userinfoDTO.openid}}"
+              bindtap="_handleFollow"
+              src="/images/index/guanzhu_s.png"></image>
+        </view>
+      </view>
+      <view class="contentLayout">
+        <view>
+          <view class="nickName">{{item.userinfoDTO.nickname}}
+            <text class="category" wx:if="{{item.userinfoDTO.label}}">{{item.userinfoDTO.label}}</text>
+          </view>
+          <view class="time">{{item.createtime}}</view>
+        </view>
+        <view class="character">{{item.content}}</view>
+        <view class="imgList">
+          <image
+              wx:for="{{item.imagesDTOs}}"
+              wx:for-item="img"
+              src="{{img.url}}"></image>
+        </view>
+
+        <view class="opration">
+          <view class="oprationItem">
+            <image src="/images/index/pinlun.png"></image>
+            <text>{{item.commentNum}}</text>
+          </view>
+          <view class="oprationItem"
+                data-dynamicid="{{item.dynamicid}}"
+                data-islike="{{item.isLike}}"
+                bindtap="_handleLike">
+            <block>
+              <image src="{{likeIcon[item.isLike]}}"></image>
+              <text class="colorRed">{{item.liketableNum}}</text>
+            </block>
+
+          </view>
+          <view class="oprationItem" catchtap='toShare'>
+            <image src="/images/index/fenxiang.png"></image>
+          </view>
+          <view class="oprationItem"
+                data-dynamicid="{{item.dynamicid}}"
+                data-iscollect="{{item.isCollection}}"
+                bindtap="_handleCollect">
+            <image src="{{collectIcon[item.isCollection]}}"></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>

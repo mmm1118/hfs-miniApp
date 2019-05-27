@@ -1,0 +1,83 @@
+<view class='flex_around rank'>
+    <view class='rank_title {{active==0?"ran_btnbg":""}}' data-index='0'bindtap='rank_tap'>排行</view>
+    <view class='rank_title {{active==1?"ran_btnbg":""}}'
+     data-index='1' bindtap='rank_tap'>徽章</view>
+</view>
+
+<view wx:if="{{active==0}}">
+
+  <view>
+      <view class='rank_header_title center'>水瓶座本周赢得了</view>
+      <view class='flex_center'>
+        <image class='rank_header_img' src='./../../../images/circle_img/bg.png'></image>
+      </view>
+  </view>
+
+
+
+  <navigator  hover-class='none' class='flex border_box' >
+    <view>
+      <image class='nav_title_img' src='./../../../images/circle_img/bg.png'></image>
+      </view>
+    <view class='nav_portrait_left26'>
+      <view class='nav_title'>机智的少女</view>
+      <view class='flex'>
+        <view>
+        <image class='nav_portrait' src='./../../../images/circle_img/toux.png'></image>
+        </view>
+        <view class='nav_portraitCenter'>10人已参加</view>
+      </view>
+    </view>
+
+  </navigator>
+
+<view class='Invitation'>
+  <view class='Invitation_header'>邀请排行榜</view>
+  <view class='flex_around circle_pd'> 
+      <view data-index='0' bindtap='circle_tap' class='{{ac_circle==0?"circle_red":"circle"}}'>本周</view>
+      <view data-index='1' bindtap='circle_tap' class='{{ac_circle==1?"circle_red":"circle"}}'>上周</view>
+      <view data-index='2' bindtap='circle_tap' class='{{ac_circle==2?"circle_red":"circle"}}'>本月</view>
+      <view data-index='3' bindtap='circle_tap' class='{{ac_circle==3?"circle_red":"circle"}}'>总榜</view>
+  </view>
+
+  <view> 
+    <view class='flex_between RankingInvitation'>
+
+      <view class='flex'>
+          <view><image class='badge' src='./../../../images/my_img/brand.png'></image></view>
+          <view><image class='pople' src='./../../../images/my_img/logo.png'></image></view>
+          <view class='pr_top10'>水瓶座</view>
+      </view>
+      <view class='pr_top10'>242分</view>
+
+    </view>
+  </view>
+</view>
+
+<view class='fxd_btn'>
+  <button class='btn'>分享给微信好友</button>
+</view>
+
+
+</view>
+ 
+<view  wx:if="{{active==1}}">
+
+<view class='pd_0_30'>
+  <view class='pd_36_0'>
+    <label class='badge_header'>荣誉勋章</label>
+    <label class='badge_introduce'>（已获得18枚）</label> 
+  </view>
+</view>
+
+<view class='pd_0_30 flex_wrap'> 
+        <view><image class='badge_ranking' src='./../../../images/circle_img/GloryBadge.png'></image></view>
+        <view><image class='badge_ranking' src='./../../../images/circle_img/GloryBadge.png'></image></view>
+        <view><image class='badge_ranking' src='./../../../images/circle_img/GloryBadge.png'></image></view>
+        <view><image class='badge_ranking' src='./../../../images/circle_img/GloryBadge.png'></image></view>  
+
+</view>
+
+
+
+</view>

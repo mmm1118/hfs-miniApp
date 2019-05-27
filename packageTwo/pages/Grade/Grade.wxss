@@ -1,0 +1,26 @@
+.bg_ff{background:#fff;}
+.rank_title{color:#939393;}
+.ran_btnbg{color:#D61800;}
+.pd_26_0{padding:26rpx 0rpx;}
+.pd_left10{padding-left:10rpx;}
+.c_red{color:#D61800;}
+.f_bold{font-weight:bold;}
+
+.active_red{width:100rpx;height:5rpx;background:#D61800;margin:0 auto;}
+
+.Grade_ff{background:#fff;margin:17rpx 24rpx;padding:0rpx 31rpx;border-radius:20rpx;padding-top:27rpx;}
+.Grade_ff .header_title{font-size:34rpx;}
+.Grade_right{color:#939393;font-size:26rpx;padding-left:49rpx;padding-bottom:61rpx;}
+.Grade_right:first-child{padding-top:10rpx;}
+
+.add_grade{color:#D61800;font-weight:bold;}
+.pd_btn40{padding-bottom:40rpx;}
+
+.add_imgwh50{width:30rpx;height:30rpx;position:relative;top:2rpx;padding-right:5px;}
+
+.name_input{border:1px solid #939393;border-radius:10rpx;padding:0rpx 10rpx;}
+
+.add_link{padding-top:8rpx;padding-left:20rpx;}
+
+.wh_30{width:30rpx;height:30rpx;}
+.pr_topright{position:relative;top:-30rpx;right:-204px;}

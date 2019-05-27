@@ -1,0 +1,230 @@
+<!-- 发布活动页面 -->
+<view class='postActivity'>
+  <form bindsubmit="formSubmit">
+    <view class='inputItem'>
+      <view class='titleText'>活动图：</view>
+      <view class='addImg'>
+        <image src='/images/index/addPhoto.png'></image>
+      </view>
+      <view>建议尺寸为（730*300）</view>
+    </view>
+    <view class='inputItem'>
+      <view class='titleText'>活动标题</view>
+      <input placeholder='请输入标题' placeholder-style='color:#B2B2B2;'></input>
+    </view>
+    <view class='inputItemTwo'>
+      <view class='titleText'>活动时间</view>
+      <view class='timeList'>
+        <view>
+          <text>开始</text>
+          <input placeholder='请输入开始时间' placeholder-style='color:#B2B2B2;'></input>
+        </view>
+        <view>
+          <text>结束</text>
+          <input placeholder='请输入结束时间' placeholder-style='color:#B2B2B2;'></input>
+        </view>
+      </view>
+    </view>
+    <view class='inputItem'>
+      <view class='titleText'>活动地点</view>
+      <image class='dingWeiImg' src='/images/index/dingWei.png'></image>
+      <input placeholder='请输入地点或地图定位' placeholder-style='color:#B2B2B2;'></input>
+    </view>
+    <view class='inputItem'>
+      <view class='titleText'>报名截止</view>
+      <input placeholder='年 月 日' placeholder-style='color:#B2B2B2;'></input>
+    </view>
+    <view class='inputItem'>
+      <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+      <view class='titleText'>将活动同步到小程序首页活动栏</view>
+      <icon type="info" size="20" color="#09BB07" />
+    </view>
+    <view class='inputItemTwo'>
+      <view class='titleText'>收费类型</view>
+      <view class='timeList'>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>免费</text>
+        </view>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>现金</text>
+          <input style='width:120rpx;' placeholder='输入金额' placeholder-style='color:#B2B2B2;'></input>
+          <text>元</text>
+        </view>
+      </view>
+      <view style='height:40rpx;width:100%;'></view>
+      <view class='titleText'>额外收费</view>
+      <view class='timeList'>
+        <view>
+          <input placeholder='输入收费名称' placeholder-style='color:#B2B2B2;'></input>
+        </view>
+        <view>
+          <input placeholder='输入收费金额' placeholder-style='color:#B2B2B2;'></input>
+          <text>元</text>
+        </view>
+      </view>
+    </view>
+    <view class='inputItemTwo'>
+      <view class='titleText'>取消报名</view>
+      <view class='timeList'>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>不可取消报名</text>
+        </view>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>可取消报名</text>
+        </view>
+      </view>
+    </view>
+    <view class='inputItemTwo'>
+      <view class='titleText'>人数限制</view>
+      <view class='timeList'>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>不限人数</text>
+        </view>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <input style='width:120rpx;' placeholder='请输入数量' placeholder-style='color:#B2B2B2;'></input>
+          <text>人</text>
+        </view>
+      </view>
+    </view>
+    <view class='inputItemTwo'>
+      <view class='titleText'>会员设置</view>
+      <view class='timeList'>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>全员可参加</text>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>会员折扣</text>
+        </view>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>仅会员参加</text>
+          <input style='width:100rpx;' placeholder='多少' placeholder-style='color:#B2B2B2;'></input>
+          <text>折扣</text>
+        </view>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>一级会员</text>
+          <input style='width:100rpx;' placeholder='多少' placeholder-style='color:#B2B2B2;'></input>
+          <text>折扣</text>
+        </view>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>二级会员</text>
+          <input style='width:100rpx;' placeholder='多少' placeholder-style='color:#B2B2B2;'></input>
+          <text>折扣</text>
+        </view>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>三级会员</text>
+          <input style='width:100rpx;' placeholder='多少' placeholder-style='color:#B2B2B2;'></input>
+          <text>折扣</text>
+        </view>
+      </view>
+    </view>
+    <view class='inputItemTwo'>
+      <view class='titleText'>会员优先</view>
+      <view class='timeList'>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>会员优先报名</text>
+        </view>
+        <view>
+          <text>会员优先报名时间：</text>
+        </view>
+        <view>
+          <input placeholder='年/月/日' placeholder-style='color:#B2B2B2;'></input>
+        </view>
+      </view>
+    </view>
+    <view class='inputItemTwo'>
+      <view class='titleText'>席位布置</view>
+      <view class='timeList'>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>无选号，现场安排</text>
+        </view>
+        <view>
+          <radio checked='true' style='transform:scale(.8);margin-right:10rpx;'></radio>
+          <text>开启座位选号</text>
+        </view>
+        <view>
+          <input placeholder='请输入桌数' placeholder-style='color:#B2B2B2;'></input>
+          <text>10人/桌</text>
+        </view>
+      </view>
+    </view>
+    <!-- 移动区域 -->
+    <view class='movableArea'>
+      <movable-area>
+        <movable-view direction="vertical" bindchange="onChange"></movable-view>
+
+        <block wx:if="item.type=='image'">
+          <myImages></myImages>
+        </block>
+
+        <block wx:if="item.type=='text'">
+          <myText></myText>
+        </block>
+
+        <block wx:if="item.type=='record'">
+          <myRecord></myRecord>
+        </block>
+
+        <block wx:if="item.type=='vote'">
+          <myVote></myVote>
+        </block>
+
+        <block wx:if="item.type=='file'">
+          <myFile></myFile>
+        </block>
+
+        <block wx:if="item.type=='video'">
+          <myVideo></myVideo>
+        </block>
+
+      </movable-area>
+
+    </view>
+  </form>
+</view>
+
+<image class='rightImg {{showDialog?"active":""}}' src='/images/memorial/addItem.png' catchtap='showDialog'></image>
+<!-- 弹窗 -->
+<view class='diaLog {{showDialog?"active":""}}'>
+  <view class='diaLogLeftImg' catchtap='hiddenDialog'>
+    <image src='/images/memorial/iconRight.png'></image>
+  </view>
+
+  <view class='diaLogRight'>
+    <view class='diaLogRightItem' catchtap='clickItem' data-comName='image'>
+      <image src='/images/memorial/images.png'></image>
+      <text>图片</text>
+    </view>
+    <view class='diaLogRightItem' catchtap='clickItem' data-comName='text'>
+      <image src='/images/memorial/text.png'></image>
+      <text>文字</text>
+    </view>
+    <view class='diaLogRightItem' catchtap='clickItem' data-comName='video'>
+      <image src='/images/memorial/video.png'></image>
+      <text>视频</text>
+    </view>
+    <view class='diaLogRightItem' catchtap='clickItem' data-comName='vote'>
+      <image src='/images/memorial/vote.png'></image>
+      <text>投票</text>
+    </view>
+    <view class='diaLogRightItem' catchtap='clickItem' data-comName='file'>
+      <image src='/images/memorial/file.png'></image>
+      <text>导入文件</text>
+    </view>
+    <view class='diaLogRightItem' catchtap='clickItem' data-comName='record'>
+      <image src='/images/memorial/record.png'></image>
+      <text>录音</text>
+    </view>
+  </view>
+</view>

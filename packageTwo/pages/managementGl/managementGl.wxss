@@ -1,0 +1,34 @@
+.bg_ff{background:#fff;}
+.cl_header{font-size:30rpx;color:#939393;padding:23rpx 0rpx;}
+
+.c_939{color:#939393}
+.f_22{font-size: 22rpx;}
+.f_26{font-size:26rpx;}
+.f_28{font-size:28rpx;}
+.f_60{font-size:60rpx;}
+
+.cl_conten{padding:0rpx 30rpx;margin-top:20rpx;background:#fff;}
+.bordr1ee{border-bottom:1px solid #eee;padding:24rpx 0rpx;}
+.cl_pd_top39_btn_57{padding-top:39rpx;padding-bottom:57rpx;}
+.cl_pd_btn28{padding-bottom:28rpx;}
+
+.Administration{padding:0rpx 30rpx;margin-top:20rpx;background:#fff;}
+.Administration image{padding-right:17rpx;}
+.wh_40{width:40rpx;height:40rpx;} 
+.Administration navigator{padding:23rpx 0rpx;border-bottom:1px solid #eee;}
+
+.imge1{width:41rpx; height:33rpx;}
+.imge2{width:40rpx;height:40rpx;}
+.imge3{width:37rpx;height:40rpx;}
+.imge4{width:34rpx;height:40rpx;}
+.imge5{width:40rpx;height:39rpx;}
+.pr_top6{position:relative;top:6rpx;}
+
+.mg_top140{margin-top:140rpx;margin-bottom: 5rpx;}
+.coler_ff{background:#fff;color:#020202;font-size:28rpx;padding:5rpx 43rpx;margin:10rpx 0rpx; }
+
+.pr_top4{position:relative;top:4rpx;}
+
+.btn_titie:nth-child(1n){
+  color:#D61800;
+}

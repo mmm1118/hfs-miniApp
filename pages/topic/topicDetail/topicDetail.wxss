@@ -1,0 +1,7 @@
+/* 引入模板样式 */
+@import "/pages/index/dynamic-template/dynamic-template.wxss";
+
+.detail{width: 700rpx;margin: 0 auto 25rpx;}
+.detail .bannerLayout image{width: 100%;display: block;margin-bottom: 25rpx;border-radius: 16rpx;}
+.detail .gongGao{height: 80rpx;display: flex;justify-content: space-between;align-items: center;padding: 0 20rpx;background: #fff;border-radius: 16rpx;font-size: 30rpx;color: #000;font-weight: bold;margin-bottom: 25rpx;}
+.detail .gongGao image{width: 16rpx;height: 26rpx;}

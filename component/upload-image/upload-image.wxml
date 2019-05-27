@@ -1,0 +1,8 @@
+
+<view class='pr npload_img'>
+  <image class="npload_img"  bindtap="_addImage" src="{{image}}"></image>
+  <view class='po_bg flex_Middle' style='height:{{progress}}%;'>
+      <view class='{{progress==0?"none":""}}'>{{progress}}%</view>
+  </view>
+
+</view>

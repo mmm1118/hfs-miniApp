@@ -1,0 +1,151 @@
+<view>
+  <view class='header_bgs pr'>
+    <image class="header_img" src='./../../images/my_img/bg.png'></image>
+    <view class='po w_100top0 flex_between'>
+      <view class='flex pd_top50_left28'>
+        <view>
+          <image class='wh_150' src="{{bussData.avatarurl}}"></image>
+        </view>
+        
+        <view class='pd_left30'>
+        <view class='flex'>
+          <view class='f_36 c_010'>{{bussData.nickname}}</view>
+          <view class='pd_left11'>
+            <image class='w_35_h_36 pr_top7' src='{{bussData.sex==1?"./../../images/my_img/body.png":"./../../images/my_img/gril.png"}}'></image>
+          </view>
+        </view>
+        <view class='f_28 pd_top20btn9'> ID:{{bussData.userid}}</view>
+        <view class='flex'>
+          <view>
+            <navigator class='edit' hover-class='none' url='/packageThere/pages/EditingMaterials/EditingMaterials'>
+                编辑资料
+            </navigator>
+          </view>
+          <view class='pd_left10'>
+            <navigator hover-class='none' class='setup' url='/packageThere/pages/setup/setup'> 
+            <image class='w_70_h40 ' src='./../../images/circle_img/setyp.png'></image> 
+            </navigator>
+          </view>
+        </view>
+      </view>
+      
+      </view>
+      <view class='pd_top95'>
+      <navigator hover-class='none' url='/packageThere/pages/homepage/homepage'>
+      <view class='flex bg_opctibe02 bg_radius'>
+        <view class='c_ff f_22'> 查看主页</view>
+        <view class='pr_pdleft'><image class='w_146h_60' src='./../../images/memorial/iconRight.png'></image>
+      </view>  
+    </view>
+
+      </navigator>
+      </view>
+    </view>
+  </view>
+
+
+<view class='flex_between nav'>
+  <view> 
+    <navigator hover-class='none' url='/packageThere/pages/Pouch/Pouch' class='flex'>
+      <view><image class='hebao_wh pr_top4' src='./../../images/my_img/hebao.png'></image></view>
+      <view class='pd_left9'>荷包</view> 
+
+    </navigator>
+ </view>
+  <view>
+    <navigator hover-class='none' url='/packageThere/pages/Member/Member' class='flex'>
+        <view><image class='huiyuan_wh pr_top2' src='./../../images/my_img/huiyuan.png'></image></view>
+        <view class='pd_left9'>会员</view> 
+    </navigator>
+  </view>
+  <view>
+    <navigator hover-class='none' url='/packageThere/pages/activity/activity' class='flex'>
+      <view><image class='huodong_wh ' src='./../../images/my_img/huodong.png'></image></view>
+      <view class='pd_left9'>活动</view>
+    </navigator>
+  </view>
+  <view>
+    <navigator hover-class='none' url='/packageThere/pages/Collection/Collection' class='flex'> 
+        <view><image class='shouc_wh ' src='./../../images/my_img/shouc.png'></image></view>
+        <view class='pd_left9 pr_top2'>收藏</view>
+    </navigator>
+  </view>
+</view>
+
+<touch-gesture bind:currentGesture="onTouchGesture">
+<navigator hover-class='none'  url="/packageThere/pages/Official/Official" class='pr overhiden'>
+<view class='flex_between pd_40_24 border_bth1ee border_top1ee pr {{txVal?"left_40":"left_0"}}'> 
+  <view class='flex'> 
+    <view><image class='w_110_h106 border_brduis100' src='/images/index/meizi01.png'></image></view>
+    <view class='pd_left19 pd_top14 '>
+        <view class='f_30'>汉服司官方</view>
+        <view class='f_24 c_939 pd_top14'>汉服司小助手：最新消息</view>
+    </view>
+  </view>
+
+  <view class='f_24 c_939 pd_top14'> 
+      <view>下午 12：40</view>
+      <view class='pd_top14 flex_end c_red'>
+        <view class='right_raduis'></view>
+      </view>
+  </view>
+</view>
+  <view catchtap='cat_remove' class='po {{txVal?"g_remove":"g_removeRight"}}  flex_Middle'>
+    <view>删除</view>
+  </view>
+</navigator>
+</touch-gesture>
+<view> 
+
+
+<touch-gesture bind:currentGesture="sideslip"  data="{{bussDataList}}"  wx:for="{{bussDataList}}"  show="{{index}}"  data-index="{{index}}">
+<navigator hover-class='none' url="" data-id='{{item.id}}'>
+<view class='pr overhiden'>
+<view class='flex_between pd_40_24  border_bth1ee  {{item.listVal?"left_pr320":"left_pr0"}}'> 
+  <view class='flex'> 
+    <view><image class='w_110_h106 border_brduis100'  src='{{item.avatarUrl}}'></image></view>
+    <view class='pd_left19 pd_top9 '>
+        <view class='f_30 {{item.content?"":"pd_btn19"}}'>{{item.nickName}}</view>
+
+        <view wx:if="{{item.content}}">
+        <view class='f_24 c_939 pd_9_0' wx:if="{{item.type==1}}"> 给你赠送了：{{item.content}}</view>
+        </view>
+        <view wx:if="{{item.content}}">
+        <view class='f_24 c_939 pd_9_0' wx:if="{{item.type==2}}"> {{item.nickName}}@：{{item.content}}</view>
+        </view>
+        <view wx:if="{{item.content}}">
+        <view class='f_24 c_939 pd_9_0' wx:if="{{item.type==3}}"> 评论了 你的动态：{{item.content}}</view>
+        </view>
+        <view wx:if="{{item.content}}">
+        <view class='f_24 c_939 pd_9_0' wx:if="{{item.type==4}}"> 关注了你：{{item.content}}</view>
+        </view>
+        <view wx:if="{{item.content}}">
+        <view class='f_24 c_939 pd_9_0' wx:if="{{item.type==5}}"> 点赞了：{{item.content}}</view>
+        </view>
+        <view wx:if="{{item.content}}">
+        <view class='f_24 c_939 pd_9_0' wx:if="{{item.type==6}}"> 回复了 ：{{item.content}}</view>
+        </view>
+        <view class='f_20 c_939'>{{item.creatTime}}</view>
+    </view>
+  </view>
+
+  <view class='f_24 c_939 pd_top14'> 
+      <view><image class='w_110_h106 '  src='/images/index/meizi01.png'></image></view>
+  </view>
+
+</view>
+ <view class='po scall h_100 {{item.listVal?"right0":"right320"}}'>
+    <view class='w_160 bg_gray flex_Middle' catchtap='blacklist' ><label>加入黑名单</label> </view>
+    <view class='w_160 bg_red flex_Middle' catchtap='listRemove' data-remove="{{index}}" data-at="{{item.type}}" data-dynamicId='{{item.dynamicId}}' data-id='{{item.id}}'><label>删除</label></view>
+ </view> 
+</view>
+</navigator>
+</touch-gesture>
+<view class=''> 
+<image class='pfx_wh119' src='./../../images/my_img/xf.png'></image>
+</view>
+</view>
+
+</view>
+
+

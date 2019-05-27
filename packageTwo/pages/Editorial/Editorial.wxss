@@ -1,0 +1,23 @@
+.EditCard{margin:20rpx 24rpx;background:#fff;border-radius:20rpx;padding:20rpx 0rpx;}
+.EditCard .flexs{display: flex;padding-bottom:59rpx;}
+.EditCard .flexs:nth-child(3n){
+  padding-bottom:0rpx;
+}
+
+
+.bt{
+    padding-left:32rpx;
+    padding-right:65rpx;
+    position: relative;
+    top:6rpx;
+}
+
+.text_style{width:500rpx;padding-top:10rpx;}
+
+.EditCard input{width:400rpx;}
+
+.EditCard .title1{padding-top:38rpx;padding-left: 29rpx;padding-right:171rpx;}
+
+.EditCard .title2{padding-top:38rpx;padding-left: 29rpx;padding-right:82rpx;}
+
+.btn{border:none;background:#D61800;width:428rpx;font-size:36rpx;color:#fff;margin-top:50rpx;}

@@ -1,0 +1,37 @@
+<view >
+
+<touch-gesture bind:currentGesture="sideslip" wx:for="{{bussData}}" data-index="{{index}}"  show="{{index}}" data="{{bussData}}">
+
+<view class='pr'> 
+<view class='{{item.offset==true?"mg_leftf180":"mg_left0"}} '>
+<view class='pd_0_30 bg_fff mg_top20 pd_top42' >
+  <view class='bor_dashed1 exchange_title'>{{item.state==1?"已发货":"正在努力装货中"}} </view>
+    <view class='flex pd_top31bth23'>
+        <view>
+           <image class='wh_120' src='./../../../images/my_img/homepage_bg.png'></image>
+        </view>
+
+        <view class='pd_left21'>       
+          <view class='pd_top12 f_30'>{{item.goodsname}}</view>
+          <view class='pd_top9 c_a9a f_26 line38'>
+            <view> {{item.couritername}}</view>
+            <view>运单编号：{{item.couriernumber}}</view>
+            <view>兑换时间：{{item.createtime}}</view>
+            <view>发货时间：{{item.updateTime}}</view>
+          </view>
+        </view>
+    </view>
+</view>
+</view>
+<view 
+bindtap='tab_remove' 
+data-remove="{{index}}" 
+data-ordersid='{{item.ordersid}}' 
+class='po pr_remove flex_Middle {{item.offset==true?"mg_right0":"mg_right180"}}'>删除</view>
+</view>
+
+</touch-gesture>
+
+
+</view>
+

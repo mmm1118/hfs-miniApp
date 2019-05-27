@@ -1,0 +1,5 @@
+<view class='movableAreaItem imgLayout'>
+  <image class='uploadImg' src='/images/index/swiper01.png' mode='widthFix'></image>
+  <image class='movableDelPhoto' src='/images/memorial/iconDel.png'></image>
+  <image class='movableMoveImg' src='/images/memorial/iconMove.png' data-index='{{index}}' bindtouchstart='dragStart' bindtouchmove='dragMove' bindtouchend='dragEnd'></image>
+</view>

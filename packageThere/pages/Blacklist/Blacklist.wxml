@@ -1,0 +1,14 @@
+<view class='pd_0_30 bg_color_ff'> 
+  
+  <view class='flex_between border_dashed pd_19_0' wx:for="{{listdata}}">
+   <view class='flex'>  
+    <view><image class="header_img w_50_h50 border_radus100" src='{{item.avatarUrl}}'></image></view>
+    <view class='pd_left9 pr_top6'>{{item.nickName}}</view>
+  </view>
+
+  <view>
+    <image class='h_50_w_128' data-openid='{{item.openId}}' bindtap='removename' src='./../../../images/my_img/yichu.png'></image>
+  </view> 
+  </view>
+
+</view>

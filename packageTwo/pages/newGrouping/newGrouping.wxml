@@ -1,0 +1,23 @@
+<view>
+    <view class='add_title pd_top_btn'>圈主可以将成员分成小组,配置管理员进行更加全面的管理工作</view>
+    <view class='flex_center'>
+      <view hover-class='none' class='add flex_center' bindtap='show'>
+          <view><image class='add_img' src="./../../../images/circle_img/add_img.png"></image></view>
+          <view class='pd_left23'>新建分组</view>
+      </view>
+    </view>
+</view>
+
+
+<popup ismask="{{show}}" bindonSort="onSort">
+    <view class='newGrouppd_fxd' catchtap='mk' >
+        <view class='newGrouppd_header'>小组命名</view>
+        <view>
+          <input type='text' class='newGrouppd_input' maxlength='10' placeholder='1-10个汉字'></input>
+        </view>
+        <view class='flex center'>
+          <view class='newGrouppd_bth' catchtap='cancel'>取消</view>
+          <view class='newGrouppd_bth c_red' catchtap='NextStep'>确定</view>
+        </view>
+    </view>
+</popup>

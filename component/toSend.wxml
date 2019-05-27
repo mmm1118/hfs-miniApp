@@ -1,0 +1,4 @@
+<!-- 发布按钮 -->
+<view class='releaseView' catchtap='toSend'>
+  <image class='releaseImg' src='/images/index/release.png'></image>
+</view>

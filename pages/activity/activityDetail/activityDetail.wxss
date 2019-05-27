@@ -1,0 +1,502 @@
+.detailTop {
+  background: #fff;
+  color: #000;
+  font-size: 28rpx;
+}
+
+.detailTop .titleImg {
+  width: 100%;
+  display: block;
+}
+
+.detailTop .topText {
+  padding: 30rpx 22rpx;
+}
+
+.detailTop .topText .topTitle {
+  font-size: 32rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-weight: bold;
+}
+
+.detailTop .topText .topTextItem {
+  margin-top: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  align-items: center;
+}
+
+.detailTop .topText .topTextItem image {
+  width: 16rpx;
+  height: 26rpx;
+}
+
+.detailTop .topText .topTextItem text {
+  font-size: 24rpx;
+  color: #939393;
+  margin-left: 50rpx;
+}
+
+.detailTop .topText .topTextItem:last-child text {
+  margin-left: calc(50rpx + 30rpx);
+}
+
+/* 中间内容 */
+
+.centerLayout {
+  width: 690rpx;
+  margin: 70rpx auto 30rpx;
+  color: #2b2b2b;
+}
+
+.centerLayout .content {
+  text-align: center;
+}
+
+.centerLayout .content .textLayout {
+  width: 440rpx;
+  margin: 0 auto 30rpx;
+}
+
+/* 录音播放 */
+
+.centerLayout .content .audioLayout {
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 50rpx;
+  background: #fff;
+  border-radius: 5rpx;
+  align-items: center;
+  text-align: left;
+}
+
+.centerLayout .content .audioLayout image {
+  width: 76rpx;
+  height: 76rpx;
+}
+
+.centerLayout .content .audioLayout .audioRight {
+  flex: 1;
+  margin-left: 25rpx;
+  color: #939393;
+  font-size: 24rpx;
+}
+
+.centerLayout .content .audioLayout .audioRight .audioTitle {
+  color: #010101;
+  font-size: 34rpx;
+}
+
+.centerLayout .content .audioLayout .audioRight .audioText {
+  line-height: 50rpx;
+}
+
+.centerLayout .content .audioLayout .audioRight .bottomTime {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20rpx;
+  border-top: dashed 4rpx #939393;
+}
+
+.centerLayout .content .text {
+  font-size: 28rpx;
+  text-align: center;
+  line-height: 40rpx;
+}
+
+.centerLayout .content image {
+  width: 100%;
+  display: block;
+  margin-top: 30rpx;
+}
+
+/* 投票样式 */
+
+.voteLayout {
+  width: 690rpx;
+  border-radius: 5rpx;
+  margin: 0 auto 35rpx;
+  font-size: 28rpx;
+  color: #000;
+  border: solid 1rpx #d5d5d5;
+  box-sizing: border-box;
+}
+
+.voteLayout .content {
+  background: #fff;
+  padding: 25rpx 25rpx 60rpx;
+}
+
+.voteLayout .title {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.voteLayout .text {
+  font-size: 24rpx;
+  color: #939393;
+  margin-top: 20rpx;
+}
+
+.voteLayout .radio-group {
+}
+
+.voteLayout .radio-group .radio {
+  display: flex;
+  margin-top: 35rpx;
+}
+
+.voteLayout .radio-group .radio text {
+  margin-left: 20rpx;
+}
+
+.voteLayout .voteButton {
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-size: 34rpx;
+  background: #d71000;
+}
+
+/* 投票后样式 */
+
+.voteLayoutTwo {
+  width: 690rpx;
+  border-radius: 5rpx;
+  margin: 0 auto 35rpx;
+  font-size: 28rpx;
+  color: #000;
+  border: solid 1rpx #d5d5d5;
+  box-sizing: border-box;
+}
+
+.voteLayoutTwo .content {
+  background: #fff;
+  padding: 25rpx 25rpx 60rpx;
+}
+
+.voteLayoutTwo .title {
+  font-size: 34rpx;
+  font-weight: bold;
+}
+
+.voteLayoutTwo .text {
+  font-size: 24rpx;
+  color: #939393;
+  margin-top: 20rpx;
+}
+
+.voteLayoutTwo .progressList {
+  color: #939393;
+  font-size: 28rpx;
+}
+
+.voteLayoutTwo .progressList .progressItem {
+  margin-top: 20rpx;
+}
+
+.voteLayoutTwo .progressList .progressItem:first-child {
+  margin-top: 45rpx;
+}
+
+.voteLayoutTwo .itemTop {
+  color: #000;
+}
+
+.voteLayoutTwo .itemBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.voteLayoutTwo .itemBottom  .progress {
+  width: 500rpx;
+}
+
+.voteLayoutTwo .voteButton {
+  width: 100%;
+  line-height: 100rpx;
+  text-align: center;
+  color: #d71000;
+  font-weight: bold;
+  font-size: 34rpx;
+  background: #fff;
+  border: dashed 1rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.voteLayoutTwo .voteButton image {
+  width: 40rpx;
+  height: 38rpx;
+}
+
+/* 视频 */
+
+.videoLayout {
+  text-align: center;
+}
+
+.videoLayout video {
+  width: 690rpx;
+}
+
+/* 已报名人数 */
+
+.applyLayout {
+  width: 700rpx;
+  margin: 50rpx auto;
+}
+
+.applyLayout .people {
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.applyLayout .applyList {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20rpx;
+  padding: 22rpx;
+  background: #fff;
+  margin-top: 15rpx;
+}
+
+.applyLayout .applyList .applyItem:not(:nth-child(6n)) {
+  margin-right: 35rpx;
+}
+
+.applyLayout .applyList image {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+}
+
+/* 评分 */
+
+.grade {
+  width: 690rpx;
+  margin: 0 auto 80rpx;
+  display: flex;
+  align-items: center;
+  font-size: 32rpx;
+}
+
+.grade view {
+  margin-right: 50rpx;
+  font-weight: bold;
+}
+
+.grade image {
+  width: 50rpx;
+  height: 48rpx;
+  display: block;
+  margin-right: 30rpx;
+}
+
+.grade text {
+  color: #d71000;
+}
+
+/* 分享统计 */
+
+.shareLayout {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  height: 100rpx;
+  background: #fff;
+}
+
+.shareLayout .shareLeft {
+  width: 290rpx;
+  font-size: 28rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.shareLayout image {
+  width: 200rpx;
+  height: 100%;
+  display: block;
+  border-left: solid 1rpx;
+  border-right: solid 1rpx;
+  color: #d5d5d5;
+}
+
+.shareLayout .shareRight {
+  flex: 1;
+  font-size: 32rpx;
+  color: #fff;
+  height: 100%;
+  background: #d71000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 弹窗 */
+
+.mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 99;
+}
+
+.seatMapLayout {
+  width: 600rpx;
+  height: 940rpx;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: fixed;
+  z-index: 101;
+  background-color: #f6f6f6;
+  border-radius: 50rpx;
+  overflow: hidden;
+}
+
+.seatMapLayout .tipText {
+  font-size: 36rpx;
+  color: #000;
+  text-align: center;
+  margin-top: 30rpx;
+  font-weight: bold;
+}
+
+.seatMapTop {
+  margin: 15rpx auto 30rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+  color: #000;
+}
+
+.seatMapTop image {
+  width: 50rpx;
+  height: 47rpx;
+}
+
+/* 轮播图选座 */
+
+.sowing_map {
+  width: 580rpx;
+  height: 585rpx;
+  margin: 0 auto;
+}
+
+.mapList {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.mapList .leftImg {
+  width: 30rpx;
+  height: 523rpx;
+}
+
+.mapList .mapRight {
+  flex: 1;
+  height: 523rpx;
+  margin-left: 15rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.mapList .mapRight .imgLayout {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapList .mapRight .imgLayout image {
+  width: 44rpx;
+  height: 43rpx;
+}
+
+.seatMapLayout .bottomText {
+  position: absolute;
+  width: 100%;
+  bottom: 140rpx;
+  text-align: center;
+  color: #000;
+}
+
+.seatMapLayout .bottomText text {
+  color: #d71000;
+}
+
+.seatMapLayout .payment {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+}
+
+.seatMapLayout .payment view {
+  width: 50%;
+  height: 110rpx;
+  background: #fff;
+  color: #939393;
+  text-align: center;
+  font-size: 36rpx;
+  line-height: 110rpx;
+}
+
+.seatMapLayout .payment .paymentButton {
+  background: #d71000;
+  color: #fff;
+}
+
+/* canvas门票 */
+
+.canvasModel {
+  width: 750rpx;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  top: 0;
+  right: 0;
+  position: fixed;
+  z-index: 98;
+  overflow: hidden;
+}
+
+.canvas {
+  width: 750rpx;
+  height: 452px;
+  overflow: hidden;
+}
+
+.saveView {
+  width: 332rpx;
+  height: 88rpx;
+  background-color: #d61800;
+  line-height: 88rpx;
+  text-align: center;
+  font-size: 36rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  margin: 40rpx auto 0;
+}

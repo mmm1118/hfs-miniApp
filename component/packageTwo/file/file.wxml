@@ -1,0 +1,10 @@
+<view class='movableAreaItem FileLayout'>
+  <image class='leftImg' src='/images/memorial/addItem.png'></image>
+  <view class='fileRight'>
+    <text>最新活动.docx</text>
+    <view>320.8KB</view>
+  </view>
+  <view></view>
+  <image class='movableDelPhoto' src='/images/memorial/iconDel.png'></image>
+  <image class='movableMoveImg' src='/images/memorial/iconMove.png' data-index='{{index}}' bindtouchstart='dragStart' bindtouchmove='dragMove' bindtouchend='dragEnd'></image>
+</view>

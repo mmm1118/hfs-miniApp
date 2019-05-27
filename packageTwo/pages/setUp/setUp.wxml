@@ -1,0 +1,62 @@
+<view>
+  <view class='bg_ff flex search'>
+    <view>
+      <image class='secrch_log' src='./../../../images/circle_img/search.png'></image>
+    </view>
+    <view class='secrch_font'>
+      <input type='text' bindfocus="focus" placeholder='搜圈子'></input>
+    </view>
+  </view>
+
+    <view class='setup_content'>
+          <view>管理员权限：管理员权限等同于圈主。</view>
+          <view>圈主不可将管理员直接提出圈子，必须先取消管理员才可移除。</view>
+          <view>设为圈主：将成员设置为圈主即可转让圈子，转让之后原圈主成为普通成员，圈主只能设置一个。</view>
+      </view>
+
+  <view class='menber_join bg_ff'>  
+            <view class='flex_between border1eee pd_15_0'>
+                <view class='flex'>
+                  <view><image class='logo pr_top10' src='./../../../images/circle_img/bg.png'></image> </view>
+                  <view class='pr_top16'>管理员</view>
+                </view>
+                <view class='flex btn_lenth'>
+                   
+                    <view class='btn' bindtap='setCircle'>设为圈主</view>
+                    <view class='btn_d16'>管理员</view>
+                </view>
+          </view>
+  </view>
+
+    <view class='menber_join bg_ff'>  
+            <view class='flex_between border1eee pd_15_0'>
+                <view class='flex'>
+                  <view><image class='logo pr_top10' src='./../../../images/circle_img/bg.png'></image> </view>
+                  <view class='pr_top16'>管理员</view>
+                </view>
+                <view class='flex btn_lenth'>
+                   
+                    <view class='btn'>设为圈主</view>
+                    <view class='btn_d16'>取消管理员</view>
+                </view>
+          </view>
+  </view>
+
+
+
+    <view class='menber_join bg_ff'>  
+            <view class='flex_between border1eee pd_15_0'>
+                <view class='flex'>
+                  <view><image class='logo pr_top10' src='./../../../images/circle_img/bg.png'></image> </view>
+                  <view class='pr_top16'>管理员</view>
+                </view>
+                <view class='flex btn_lenth'>
+                   
+                    <view class='btn'>设为圈主</view>
+                    <view class='btn_d16' bindtap='setmeber'>设为管理员</view>
+                </view>
+          </view>
+  </view>
+
+
+</view>

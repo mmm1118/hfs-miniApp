@@ -1,0 +1,132 @@
+/* 图片 */
+
+.voteLayout {
+  position: relative;
+}
+
+.movableAreaItem {
+  border-radius: 20rpx;
+  overflow: hidden;
+  background: #fff;
+  margin-bottom: 30rpx;
+  padding: 20rpx 30rpx;
+  display: flex;
+}
+
+.movableAreaItem.itemTwo {
+  flex-direction: column;
+}
+
+.itemTop {
+  display: flex;
+  align-items: center;
+}
+
+.itemBottom {
+  display: flex;
+  align-items: center;
+  margin-top: 50rpx;
+}
+
+.voteLeft {
+  font-size: 34rpx;
+  color: #000;
+  font-weight: bold;
+  margin-right: 30rpx;
+}
+
+.voteRight {
+  flex: 1;
+}
+
+.voteRight .picker {
+  position: relative;
+}
+
+.voteRight .picker::after {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  left: 100rpx;
+  top: 16rpx;
+  border-style: solid;
+  border-width: 10rpx;
+  border-color: #000 transparent transparent;
+}
+
+.radioItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 26rpx;
+  color: #000;
+  margin-top: 50rpx;
+}
+
+.radioItem>view {
+  display: flex;
+  align-items: center;
+}
+
+.radioItem radio {
+  margin-right: 20rpx;
+}
+
+.smallDel {
+  width: 30rpx;
+  height: 30rpx;
+}
+
+.addSelect {
+  width: 170rpx;
+  height: 30rpx;
+  margin-top: 60rpx;
+  margin-left: 60rpx;
+}
+
+.movableDelPhoto {
+  width: 40rpx;
+  height: 40rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 20rpx;
+}
+
+.movableMoveImg {
+  width: 40rpx;
+  height: 27rpx;
+  position: absolute;
+  right: 20rpx;
+  bottom: 20rpx;
+}
+
+.pickerLayout {
+  position: fixed;
+  width: 100%;
+  height: 600rpx;
+  bottom: -600rpx;
+  left: 0;
+  background: #fff;
+  z-index: 2;
+  transition: all 0.5s;
+}
+
+.pickerLayout.active {
+  bottom: 0rpx;
+}
+
+.pickerView {
+  width: 700rpx;
+  height: 520rpx;
+  padding: 0 25rpx;
+}
+
+.pickerTop {
+  padding: 0 25rpx;
+  display: flex;
+  justify-content: space-between;
+  line-height: 80rpx;
+  background: #f8f8f8;
+  font-size: 28rpx;
+}

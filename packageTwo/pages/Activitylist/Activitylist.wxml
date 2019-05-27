@@ -1,0 +1,41 @@
+<view>
+  <view class='activity flex activity_bg'
+        wx:for="{{activityData}}"
+        wx:key="{{index}}"
+  >
+    <view>
+      <image class='activity_img' src='{{item.logo}}'></image>
+    </view>
+
+    <view class='w_100 flex_between'>
+      <view class='pd_left19'>
+        <view class='activity_tiele'>{{item.title}}</view>
+        <view class='activity_contnt'>
+          <view>{{item.createtime}}</view>
+          <view>报名人数：{{item.joinNum}}人</view>
+        </view>
+      </view>
+
+      <view>
+        <view class='flex_end' bindtap='show_hidemack'>
+          <image class='activity_logo pr_25' src='./../../../images/my_img/gnegduo.png'></image>
+        </view>
+        <view class=' btn_red'>{{item.status >= 0 ? activitystatus[item.status]:activitystatus[4]}}</view>
+      </view>
+    </view>
+
+  </view>
+</view>
+
+
+<pin-picker
+    show="{{show}}"
+    arraydata="{{item}}"
+    bindtopone0="topone0"
+    bindtopone1="topone1"
+    bindtopone2="topone3"
+    bindtopone3="topone4"
+    bindonSort='onSort'
+    bindonmack="onmack"
+    class='pxd_top0'>
+</pin-picker>

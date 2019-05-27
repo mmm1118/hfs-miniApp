@@ -1,0 +1,78 @@
+page {
+  background-color: #fff;
+}
+
+.atFriendsView {
+  width: 650rpx;
+  height: 34rpx;
+  margin: 0 auto 20rpx;
+  padding: 20rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20rpx;
+  box-shadow: 2px 2px 5px #e5e5e5;
+}
+
+.searchImg {
+  width: 32rpx;
+  height: 34rpx;
+}
+
+.searchInput {
+  width: 594rpx;
+  height: 34rpx;
+  padding: 0 12rpx;
+}
+
+.topicView {
+  padding: 0 24rpx;
+}
+
+.topicItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 85rpx;
+  border-bottom: solid 1rpx #e5e5e5;
+  color: #000;
+  font-size: 34rpx;
+}
+
+.topicItem .itemLeft {
+  display: flex;
+  align-items: center;
+}
+
+.topicItem .itemLeft image {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  margin-right: 10rpx;
+}
+
+.topicItem .centerText {
+  color: #939393;
+}
+
+.topicItem .rightText {
+  font-size: 28rpx;
+}
+
+/* 底部按钮 */
+
+.bottomButton {
+  position: fixed;
+  bottom: 30rpx;
+  left: 50%;
+  margin-left: -240rpx;
+  width: 480rpx;
+  height: 80rpx;
+  background: #D71000;
+  line-height: 80rpx;
+  font-size: 38rpx;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 20rpx;
+  text-align: center;
+}

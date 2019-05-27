@@ -1,0 +1,17 @@
+.mask{
+  position:fixed;
+  top:0rpx;
+  left: 0rpx;
+  height: 100%;
+  width:100%;
+  background:rgba(0,0,0, 0.5);
+  z-index:999;
+  }
+
+  .px_center{
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-left:-25%;
+    margin-top:-25%;
+    }

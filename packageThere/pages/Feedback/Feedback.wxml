@@ -1,0 +1,17 @@
+<view>
+
+<view class='flex pd_0_30 bg_ff border_radius20 pd_30_0 mg_top20'>
+  <view class='f_36'>标题</view>
+  <view class='pd_left118'><input class='f_26' type='text' value='{{titles}}' bindinput='in_title' placeholder='请输入标题'></input></view>
+</view>
+
+<view class='pd_0_30 mg_top20 bg_ff border_radius20'> 
+  <view class='pd_l32t32'>请详细描述您的问题</view>
+  <view class='pd_30_0'>
+    <textarea class='f_26' bindinput='textval'   value='{{texts}}' placeholder='如果您对汉服司有什么问题和意见，欢迎反馈'></textarea>
+  </view>
+</view>
+
+<button class='btn mg_top104' bindtap='submission'>提交</button>
+
+</view>

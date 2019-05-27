@@ -1,0 +1,80 @@
+<template name='dynamicTemplate'>
+    <!-- 动态组件 -->
+    <view class="dynamic">
+        <image class='setTopImg' src='/images/index/setTop.png' wx:if='{{item.sort}}'></image>
+        <view class="titleLayout">
+            <view class="imageLayout">
+                <image src="{{item.userinfoDTO.avatarurl}}" bindtap="toThirdHome" data-openId="{{item.openid}}"></image>
+                <view class="absoluteImg" wx:if="{{!item.isFollow}}">
+                    <image src="/images/index/guanzhu_s.png"></image>
+                </view>
+            </view>
+            <view class="contentLayout">
+                <view>
+                    <view class="nickName">{{item.userinfoDTO.nickname}}
+                        <text class="category">{{item.userinfoDTO.label}}</text>
+                    </view>
+                    <view class="time">{{createtime}}</view>
+                </view>
+                <view class="character">{{item.content}}</view>
+                <view class="imgList" catchtap='toStateDetail' data-url='{{item.dynamicid}}'>
+                    <image wx:for="{{item.imagesDTOs}}" wx:for-item="subItem" wx:key="imagesid"
+                           src="{{subItem.url}}"></image>
+                    <!--<image src="/images/index/meizi01.png"></image>-->
+                </view>
+                <view class="address" catchtap="openLocation" data-latitude="{{item.latitude}}"
+                      data-longitude="{{item.longitude}}">
+                    <image src="/images/index/dingWei.png"></image>
+                    <text>{{item.location}}</text>
+                </view>
+                <view class="classifyTwo">
+                    <text wx:for="{{item.topictableDTOs}}">{{item.topicname}}</text>
+                </view>
+                <view class="circle">
+                    <image class="leftImg" mode="aspectFill" src="/images/index/meizi01.png"></image>
+                    <view class="text">
+                        <view>{{item.circleClassDTO.circleName}}</view>
+                        <text>{{item.circleClassDTO.number||'0'}}人已参与</text>
+                    </view>
+                    <image class="rightImg" src="/images/index/right.png"></image>
+                </view>
+                <view class="opration">
+                    <view class="oprationItem">
+                        <image src="/images/index/pinlun.png"></image>
+                        <text>{{item.commentNum}}</text>
+                    </view>
+                    <view class="oprationItem" catchtap='toStateDetail' data-url='{{item.dynamicid}}'>
+                        <block wx:if="{{item.liketableNum <= 0}}">
+                            <image src="/images/index/dianzan.png"></image>
+                            <text>{{item.liketableNum}}</text>
+                        </block>
+                        <block wx:else>
+                            <image src="/images/index/dianzan_s.png"></image>
+                            <text class="colorRed">{{item.liketableNum}}</text>
+                        </block>
+                    </view>
+                    <view class="oprationItem" catchtap='toShare'>
+                        <image src="/images/index/fenxiang.png"></image>
+                    </view>
+                    <view class="oprationItem">
+                        <image src="/images/index/collect.png" wx:if="{{item.isCollection == 0}}"></image>
+                        <image src="/images/index/collect_s.png" wx:else></image>
+                    </view>
+                </view>
+                <view class="comment" catchtap='toStateDetail' data-url='{{item.dynamicid}}'>
+                    <block wx:for="{{item.commentReplyDTO}}" wx:if="{{idx < 3}}" wx:for-index="idx" wx:for-item="item2">
+                        <view wx:if="{{item2.nickname}}">
+                            <text>{{item2.nickname}}：</text>
+                            {{item.content}}~
+                        </view>
+                        <view wx:elif="{{item2.userName}}">
+                            <text>{{item2.userName}} 回复 @{{item2.beUserName}}：</text>
+                            {{item.content}}
+                        </view>
+                    </block>
+                </view>
+            </view>
+        </view>
+        <view class="moreBtn" catchtap='toStateDetail' data-url='{{item.dynamicid}}'>查看更多 >></view>
+    </view>
+</template>

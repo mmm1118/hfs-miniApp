@@ -1,0 +1,27 @@
+<!-- 引入自定义组件 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='detailLayout' style='padding-top: {{height}}px'></view>
+
+<!-- 报名人员列表 -->
+<view style='height: 20rpx;'></view>
+
+<view class='atFriendsView'>
+  <image class='searchImg' src='/images/index/search.png'></image>
+  <input class='searchInput' placeholder='输入昵称或者ID搜索' bindinput='searchFriends'></input>
+</view>
+
+<view class='topicView'>
+  <block wx:for="{{peopleList}}">
+    <view class='topicItem'>
+      <view class='itemLeft' bindtap='toUserCenter'>
+        <image src='{{item.userImg}}'></image>
+        <text>{{item.name}}</text>
+      </view>
+      <view class='centerText'>ID：{{item.idNum}}</view>
+      <view class='rightText' wx:if="{{item.seatNumber}}">{{item.seatNumber}}</view>
+      <view class='rightText' wx:else>{{item.buyTime}}</view>
+    </view>
+  </block>
+  
+  <view class='bottomButton' bindtap='toSeatMap'>席位图</view>
+</view>

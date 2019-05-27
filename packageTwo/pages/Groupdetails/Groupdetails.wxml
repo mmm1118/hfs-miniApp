@@ -1,0 +1,39 @@
+<view>
+
+  <view class='page'>
+      <view class='grounp_name '>分组名称</view>
+      <view class='flex grounp_top30'> 
+        <view> 
+          <image class='Group_img' src='./../../../images/circle_img/grounpname.png'></image>
+        </view>
+        <view class='f_36 grounp_left24'>分组名称</view>
+      </view>
+  </view>
+
+<view class='grounp_plope'>分组成员(1人)</view>
+
+<touch-gesture bind:currentGesture="onTouchGesture" >
+<view class='Grouping_0_30 bg_ff flex_between'>
+  <view class=' flex pd_15_30'>
+    <view>
+      <image class='Grouping_img' src='./../../../images/circle_img/bg.png'></image>
+    </view>
+    <view class='pd_left10'>
+      <view class='Grouping_hrader'>达浪达浪~</view>
+      <view class='Grouping_time'>2018-12-25加入</view>
+    </view>
+  </view>
+  <view class='{{txVal?"pr_btnshow":"pr_btn"}}'>管理员</view>
+
+  <view catchtap='remov_click'  class='{{txVal?"remove_show":"remove_class"}} flex_Middle'> 
+  <view>删除</view>
+  </view>
+</view>
+ </touch-gesture>
+
+
+<view class='fxd_th'> 
+  <button class='btn' catchtap='addMember'>添加成员</button>
+</view>
+
+</view>

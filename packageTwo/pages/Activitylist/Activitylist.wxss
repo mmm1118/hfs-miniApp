@@ -1,0 +1,29 @@
+.activity_bg{background:#fff;margin-top:20rpx; padding:30rpx;}
+.activity_img{width:210rpx;height:140rpx;}
+.activity_tiele{font-size:34rpx;font-weight:bold;}
+.activity_contnt{color:#939393;font-size:26rpx;padding-top:39rpx;}
+.activity_logo{width:44rpx;height:10rpx;}
+.w_100{width:100%;}
+.pd_left19{padding-left:19rpx;}
+.pr_25{position:relative;top:25rpx;}
+.btn_red{
+  background:#D61800;
+  color:#fff;
+  border-radius:10rpx;
+  position:relative;
+  top:76rpx;
+  font-size:24rpx;
+  padding:13rpx 28rpx;
+  }
+.btn_gray{
+  background:#939393;
+  color:#fff;
+  border-radius:10rpx;
+  position:relative;
+  top:76rpx;
+  font-size:24rpx;
+  padding:13rpx 28rpx;
+  }
+
+  .to_red{color:#D61800;font-size:22rpx;padding:20rpx 30rpx;}
+  .activity_add{width: 119rpx;height:119rpx;position: fixed;bottom:20%;right:27rpx;}

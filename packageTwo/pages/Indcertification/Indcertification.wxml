@@ -1,0 +1,30 @@
+<view class='ind_gk'>请完善您的认证信息，方便工作人员登记信息</view>
+
+<view class='ing_contnt'> 
+
+<view class='flex'>
+    <view class='title'>负责人</view>
+    <view> <input type='text' placeholder='请输入您的姓名'></input> </view>
+</view>
+
+<view class='flex'>
+    <view class='title'>身份证号</view>
+    <view> <input type='text' placeholder='请输入您的身份证号'></input> </view>
+</view>
+
+<view class='flex'>
+    <view class='title'>联系方式</view>
+    <view> <input type='text' placeholder='请输入您的联系方式'></input> </view>
+</view>
+
+
+<view class='flex'>
+    <view class='title'>社会信用代码</view>
+    <view> <input type='text' placeholder='请输入您的统一社会信用代码'></input> </view>
+</view>
+
+
+
+</view>
+
+<button class='submit_btn'>提交</button>

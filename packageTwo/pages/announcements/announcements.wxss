@@ -1,0 +1,11 @@
+/* packageTwo/pages/announcements/announcements.wxss */
+.ments_bg{background:#fff;margin:20rpx 24rpx;padding:22rpx; border-radius:20rpx;}
+.pd_top49{padding-top:49rpx;color:#939393}
+
+.title{font-size:30rpx;font-weight:bold;}
+
+.f_w{font-size:28rpx;}
+
+.add_bg{width:97rpx;height:97rpx;}
+
+.pxd{position:fixed;bottom:30rpx;left:0rpx;width: 100%;}

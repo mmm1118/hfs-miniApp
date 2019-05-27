@@ -1,0 +1,28 @@
+
+<view class='pd_11_43 '>
+  <view class='flex_between_wrap' >
+
+        <navigator wx:for="{{pirceList}}" url='/packageThere/pages/spdetails/spdetails?goodsid={{item.goodsid}}&goodTitle={{item.goodsname}}'  hover-class='none' >
+          <view>
+             <image class='commodity_img' src='{{item.acrossimageurl}}'></image>
+          </view>
+
+          <view class='flex_between'>
+            <view> 
+              <view class='f_24 pd_top20 pd_bth8'>{{item.goodsname}}</view>
+              <view class='f_20 '><label>{{item.price}}</label><label class='c_e9e pd_left14'>汉服币</label> </view>
+            </view>
+  
+            <view class='f_18 active_red pd_top20 ative_gray pr_top28' wx:if="{{item.status==0}}"> 无法兑换</view>
+              <view class='f_18 active_red pd_top20 ative_gray pr_top28' wx:if="{{item.status==1}}"> 已兑完</view>
+<view class='f_18 active_red pd_top20 ative_red pr_top28' wx:if="{{item.status==2}}">兑换</view>
+
+          </view>
+        </navigator>    
+
+
+
+  </view>
+
+</view>
+

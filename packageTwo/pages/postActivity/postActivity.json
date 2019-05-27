@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "myImages": "/component/packageTwo/images/images",
+    "myText": "/component/packageTwo/text/text",
+    "myVideo": "/component/packageTwo/video/video",
+    "myVote": "/component/packageTwo/vote/vote",
+    "myFile": "/component/packageTwo/file/file",
+    "myRecord": "/component/packageTwo/record/record"
+  },
+  "navigationBarTitleText": "发布活动"
+}

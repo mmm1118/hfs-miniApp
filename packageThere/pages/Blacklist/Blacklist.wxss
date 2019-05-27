@@ -1,0 +1,25 @@
+/* pages/EditingMaterials/EditingMaterials.wxss */
+
+.pr_top6{position:relative;top:6rpx;}
+
+.w_50_h50{width:50rpx;height:50rpx;}
+.h_50_w_128{width:128rpx;height:50rpx;}
+
+.pd_0_30{padding:0 30rpx;}
+.pd_19_0{padding:19rpx 0;}
+.border_radus100{border-radius:100%;}
+
+.pd_34_25{padding:0rpx 25rpx;}
+.pd_left9{padding-left:9rpx;}
+
+.mg_top20{margin-top:20rpx;}
+
+
+.f_30{font-size:30rpx;}
+
+.border_dashed{border-bottom: 2px  dashed  #999;}
+.border_btn1e5{border-bottom:1px solid #E5E5E5}
+
+.bg_color_ff{background:#fff;}
+
+.border_dashed:last-child{border:none;}

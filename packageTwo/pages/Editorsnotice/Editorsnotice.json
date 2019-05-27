@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "MenyUpload-image":"/component/MenyUpload-image/MenyUpload-image"
+  },
+  "navigationBarTitleText": "公告编辑"
+}

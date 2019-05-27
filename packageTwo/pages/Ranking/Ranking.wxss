@@ -1,0 +1,71 @@
+/**
+排行
+*/
+page{background:#fff;}
+.rank{box-shadow:0px 1px 10px #ccc;}
+.rank_title{padding:26rpx 0rpx;}
+.ran_btnbg{border-bottom:2px solid #D61800;color:#D61800;}
+
+.rank_header_title{font-size:30rpx;padding-top:50rpx;padding-bottom:16rpx;}
+.rank_header_img{width:178rpx;height:198rpx;}
+
+.nav_title{font-size:32rpx;}
+.nav_title_img{width:70rpx;height:70rpx;}
+.nav_portrait{width:26rpx;height:22rpx;}
+.nav_portrait_left26{padding-left:26rpx;}
+.border_box{
+  padding:18rpx;
+  box-shadow:3rpx 4rpx 5rpx 1rpx #eee;
+  margin:43rpx 30rpx 39rpx 30rpx;
+  border-radius:10rpx;}
+  .nav_portraitCenter{
+    font-size:24rpx;
+    color:#939393;
+    position:relative;
+    top:4rpx;
+    left:10rpx;
+}
+.Invitation{margin:0rpx 30rpx;}
+.Invitation_header{font-size:30rpx;}
+.circle_pd{padding:26rpx 0rpx;}
+
+.circle{
+  padding:13rpx 28rpx;
+  border-radius:18rpx;
+  border:1px solid #939393;
+  color:#939393;
+  transition: all 0.2s
+   }
+.circle_red{
+  padding:13rpx 28rpx;
+  border-radius:18rpx;
+  border:1px solid #D61800;
+  color:#D61800;
+  transition: all 0.2s
+   }
+
+.RankingInvitation{padding:5rpx 0rpx;border-bottom: 1rpx solid #eee;}
+.badge{width:54rpx;height:69rpx;}
+.pople{width:60rpx;height:60rpx;padding-left:10rpx;padding-right:10rpx;position:relative;top:4rpx;}
+
+.pr_top10{position:relative;top:18rpx;font-size:28rpx}
+.fxd_btn{position:fixed;bottom: 0rpx;left: 0rpx;width: 100%;}
+.fxd_btn .btn{
+  width:428rpx;
+  font-size:36rpx;
+  border-radius:20rpx;
+  background:#D61800;
+  color:#fff;
+  margin-bottom:20rpx;
+  }
+
+  /**
+  徽章样式
+  */
+.pd_0_30{padding:0rpx 30rpx}
+.pd_36_0{padding:36rpx 0rpx}
+.badge_header{font-size:30rpx;}
+.badge_introduce{font-size:30rpx;color:#939393;}
+.badge_ranking{width:192rpx;height:297rpx; }
+.pd_0_30 view{margin-right:57rpx;margin-bottom:43rpx;}
+.pd_0_30 view:nth-child(3n){margin-right:0rpx;}

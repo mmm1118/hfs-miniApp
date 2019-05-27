@@ -1,0 +1,28 @@
+<!-- 引入自定义组件 .wxml -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='detailLayout' style='padding-top: {{height}}px'></view>
+
+<!-- 关注 -->
+<view class='attenTion'>
+  <view class='attenItem'>
+    <view class='leftItem'>
+      <image src='/images/index/meizi01.png'></image>
+      <text>白羊白羊座</text>
+    </view>
+    <view class='statusButton'>相互关注</view>
+  </view>
+  <view class='attenItem'>
+    <view class='leftItem'>
+      <image src='/images/index/meizi01.png'></image>
+      <text>金牛</text>
+    </view>
+    <view class='statusButton active'>关注</view>
+  </view>
+  <view class='attenItem'>
+    <view class='leftItem'>
+      <image src='/images/index/meizi01.png'></image>
+      <text>射手座</text>
+    </view>
+    <view class='statusButton'>已关注</view>
+  </view>
+</view>

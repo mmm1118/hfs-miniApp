@@ -1,0 +1,76 @@
+<view>
+
+  <view>
+    <image class='details_img' src="{{detailData.imageUrl}}"></image>
+  </view>
+
+  <view class='cont_bg'>
+    <view class='flex'>
+      <view class='f_40 pd_btn18'>{{detailData.circleName }}</view>
+      <view class='pd_left10'>
+        <image class='details_logo pr_top10' wx:if="{{detailData.addv === 1}}"
+               src='../../../images/circle_img/brgihtyellow.png'></image>
+        <image class='details_logo pr_top10' wx:if="{{detailData.addv === 2}}"
+               src='../../../images/circle_img/Brightblue.png'></image>
+        <image class='details_logo pr_top10' wx:if="{{detailData.addv === 3}}"
+               src='../../../images/circle_img/Brightred.png'></image>
+      </view>
+    </view>
+    <view class='flex'>
+      <view>
+        <image
+            class='portrait'
+            wx:for="{{userCircleDTOs}}"
+            wx:key="{{item.id}}"
+            src="{{item.userinfoDTO.avatarurl}}"></image>
+      </view>
+      <view class='c_939 f_26 pd_left10 pr_top10' wx:if="{{userCircleDTOsLen>3}}">等{{userCircleDTOsLen}}人已参加</view>
+    </view>
+  </view>
+
+
+  <view class='cont_bg'>
+
+    <view class='f_40'>圈主介绍</view>
+    <view class='flex pd_top20_btn20'>
+      <view class='pd_left10'>
+        <image class='mian_img pr_top10' src='{{detailData.avatarurl}}'></image>
+      </view>
+      <view class='f_32 pr_top20'>{{detailData.nickname}}</view>
+
+    </view>
+    <view class='c_939 f_26 pd_left10'>{{detailData.masterPresentation}}</view>
+  </view>
+
+</view>
+
+
+<view class='cont_bg'>
+  <view class='f_32 pd_btn23'>圈子介绍</view>
+  <view class='c_939 f_26 pd_left10'>{{detailData.circlePresentation}}</view>
+</view>
+
+<view class='cont_bg mg_btn24'>
+  <view class='f_32 pd_btn23'>圈子公告</view>
+  <view class='c_939 f_26  indent25'>{{detailData.notice}}</view>
+</view>
+
+<view>
+  <button class='btnm' bindtap='_addCircle' style='font-szie:36rpx;'>立即加入</button>
+</view>
+
+<popup ismask="{{show}}" bindonSort="onSort">
+  <view class='prot' catchtap='mk'>
+    <view class='flex_end'>
+      <image catchtap='remove_cancel' class='wh_40 pd_top10_left10' src='./../../../images/cancel.png'></image>
+    </view>
+    <view class='title'>进入该圈子需要圈主或管理员 审核哦，给他们发个申请消息吧</view>
+    <view class='flex_center'>
+      <textarea class='textareas' bindinput="_setAddCircleText" placeholder='输入申请消息'></textarea>
+    </view>
+    <view class='flex center f_34'>
+      <view class='c_939 w_50' catchtap='cancel'>取消</view>
+      <view class='c_ff0 w_50 c_red' catchtap='NextStep'>发送</view>
+    </view>
+  </view>
+</popup>

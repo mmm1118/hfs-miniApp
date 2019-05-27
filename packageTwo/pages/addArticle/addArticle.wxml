@@ -1,0 +1,24 @@
+<view class='mg_20_30'>
+    
+    <view class='flex Addarticle_one'> 
+        <view class='title'>添加图片</view>
+        <view>
+          <upload-image bindonSuccess="onSuccess"></upload-image>
+        </view>
+    </view>
+
+    <view class='flex Addarticle_one'> 
+        <view class='pr'>添加标题</view>
+        <view> <input type='text' placeholder='请输入标题'></input> </view>
+    </view>
+
+    <view class='flex Addarticle_one'>
+        <view class='pr'>添加公众号链接</view>
+        <view> <input type='text' placeholder='请输入链接'></input></view>
+    </view>
+
+</view>
+
+<view class='mr_top156'>
+    <button class='btn'>提交</button>
+</view>

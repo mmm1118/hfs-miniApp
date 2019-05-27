@@ -1,0 +1,7 @@
+.ind_gk{font-size:30rpx;padding:34rpx 34rpx 10rpx 34rpx}
+
+.ing_contnt{margin:0rpx 24rpx;background:#fff;border-radius:10rpx;}
+.flex{padding:30rpx 0rpx;}
+.title{padding-right:84rpx; padding-left: 36rpx;padding-top:8rpx;}
+.pd_top37{padding-top:37rpx;padding-right:84rpx; padding-left: 36rpx;}
+.submit_btn{width:428rpx;background:#D61800;color:#fff; margin-top:84rpx;}

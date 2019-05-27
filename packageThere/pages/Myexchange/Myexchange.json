@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "touch-gesture": "/component/touch-gesture/touch-gesture"
+  },
+  "backgroundColor": "#ccc",
+  "enablePullDownRefresh": true,
+  "navigationBarTitleText": "我的兑换"
+}

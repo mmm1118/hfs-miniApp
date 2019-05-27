@@ -1,0 +1,100 @@
+<form bindsubmit="formSubmit">
+  <!-- 动态内容输入 -->
+  <view class='dynamicContent'>
+    <textarea value='{{textareaValue}}' name='textareaValue' class='textareaClass' maxlength='-1' placeholder='记录你的美好生活～' placeholder-class='placeholderClass' bindinput='textInput' bindconfirm='textConfirm'>
+    </textarea>
+  </view>
+
+  <!-- 其他功能 -->
+  <view class='otherFunction'>
+    <view class='fun' catchtap='addTopic'># 话题</view>
+    <view class='fun' catchtap='toAtFriends'>@ 好友</view>
+  </view>
+
+  <!-- 照片 -->
+  <view class='photoList'>
+    <block wx:if="{{photoList.length > 0}}">
+      <block wx:for="{{photoList}}">
+        <block wx:if="{{photoType == 1}}">
+          <view class='addPhoto'>
+            <image class='photoImg' mode='aspectFill' src='{{item}}'></image>
+            <image class='delPhoto' src='/images/index/delPhoto.png' data-index="{{index}}" catchtap='delPhoto'></image>
+          </view>
+        </block>
+        <block wx:elif="{{photoType == 2}}">
+          <view class='addPhoto'>
+            <video class='photoImg' src='{{item}}'>
+              <cover-image class='delPhoto' src='/images/index/delPhoto.png' data-index="{{index}}" catchtap='delPhoto'></cover-image>
+            </video>
+          </view>
+        </block>
+      </block>
+    </block>
+    <block wx:if='{{photoType == 0 || photoType == 1 && photoList.length < 9 || photoType == 2 && photoList.length < 3}}'>
+      <view class='addPhoto' catchtap='addPhoto'>
+        <image class='addPhotoImg' src='/images/index/addPhoto.png'></image>
+      </view>
+    </block>
+  </view>
+
+  <!-- 位置 -->
+  <view class='location'>
+    <image class='locationImg' src='/images/index/dingWei.png'></image>
+    <block wx:if='{{address != ""}}'>
+      <view class='locationText' catchtap='toAddLocation'>{{address}}</view>
+      <view class='delLocationView'>
+        <image class='delLocationImg' src='/images/index/delLocation.png' catchtap='delLocation'></image>
+      </view>
+    </block>
+    <block wx:else>
+      <view class='locationText' catchtap='toAddLocation'>你在哪儿？</view>
+    </block>
+    <input style='display: none;' name='title' value='{{location.title}}'></input>
+    <input style='display: none;' name='latitude' value='{{location.latitude}}'></input>
+    <input style='display: none;' name='longitude' value='{{location.longitude}}'></input>
+  </view>
+
+  <!-- 可见的人 -->
+  <view class='radioGreen'>
+    <view class='radioTop' catchtap="radioTap">
+      <radio checked wx:if="{{isShowCircle}}"></radio>
+      <radio wx:else></radio>
+      <text>仅圈子可见</text>
+    </view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class='radioBottom'>
+        <text>{{array[index]?array[index]:"您还没有加入圈子"}}</text>
+        <image src='/images/index/rightTwo.png'></image>
+      </view>
+    </picker>
+  </view>
+
+  <!-- 发布按钮 -->
+  <view class='send'>
+    <button form-type='submit' class='sendBtn'>发 布</button>
+  </view>
+</form>
+
+<!-- 显示热门话题 -->
+<block wx:if="{{isAddTopic}}">
+  <view class='topicView'>
+    <block wx:for="{{topicList}}" wx:key="topicid">
+      <view class='topic' data-topicname="{{item.topicname}}" data-topicid="{{item.topicid}}" catchtap='choiceTopic'>
+        <text class='topicName'>＃{{item.topicname}}</text>
+        <text class='topicHot'>{{item.topicnum}}</text>
+      </view>
+    </block>
+  </view>
+</block>
+
+<!--分享mask  -->
+<block wx:if='{{typeShow}}'>
+  <view class='mask'>
+    <view class='mask_two' bindtap='cancalShare'></view>
+    <view class='share_top'>
+      <view class='share_top_one' catchtap='choicePhoto'>添加照片</view>
+      <view class='share_top_two' catchtap='choiceVideo'>添加视频</view>
+    </view>
+    <view class='share_bottom' catchtap='cancalShare'>取消</view>
+  </view>
+</block>

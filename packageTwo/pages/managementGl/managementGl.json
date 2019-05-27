@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "bth-picker":"/component/bth-picker/bth-picker"
+  },
+  "navigationBarTitleText": "管理后台"
+}

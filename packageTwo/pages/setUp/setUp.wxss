@@ -1,0 +1,85 @@
+.bg_ff {
+  background: #fff;
+}
+
+.search {
+  margin: 16rpx 20rpx;
+  padding: 17rpx 22rpx;
+  border-radius: 20rpx;
+}
+
+.secrch_log {
+  width: 46rpx;
+  height: 46rpx;
+}
+
+.secrch_font {
+  color: #939393;
+  font-size: 30rpx;
+  padding-left: 23rpx;
+}
+
+.secrch_font input {
+  width: 550rpx;
+}
+
+.setup_content {
+  padding: 30rpx 20rpx;
+  font-size: 28rpx;
+  line-height: 22px;
+}
+
+.menber_join {
+  padding: 0rpx 30rpx;
+  margin-bottom: 10rpx;
+}
+
+.pd_15_0 {
+  padding: 15rpx 0rpx;
+}
+
+.border1eee {
+  border-bottom: 1rpx solid #eee;
+}
+
+.menber_join .logo {
+  width: 50rpx;
+  height: 50rpx;
+  border-radius: 100%;
+  padding-right: 9rpx;
+}
+
+.btn_lenth .btn {
+  border: 1px solid #d61800;
+  color: #d61800;
+  border-radius: 10rpx;
+  width: 146rpx;
+  padding: 14rpx 0rpx;
+  font-size: 26rpx;
+  margin-right: 10rpx;
+  text-align: center
+}
+
+.btn_d16 {
+  background: #d61800;
+  color: #fff;
+  border-radius: 10rpx;
+  width: 146rpx;
+  padding: 14rpx 0rpx;
+  font-size: 26rpx;
+  margin-right: 10rpx;
+  text-align: center
+}
+
+.btn_lenth .btn:nth-child(2) {
+  margin-right: 0rpx;
+}
+
+.pr_top16 {
+  position: relative;
+  top: 16rpx;
+}
+.pr_top10 {
+  position: relative;
+  top: 8rpx;
+}

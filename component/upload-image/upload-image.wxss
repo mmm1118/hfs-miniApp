@@ -1,0 +1,13 @@
+.npload_img{width:116rpx;height:116rpx;}
+.pr{position:relative}
+.none{display:none;}
+.po_bg{
+  position:absolute;
+  top:0;
+  left:0;
+  color:#fff;
+  height: 100%;
+  width:116rpx;
+  background: rgba(0, 0, 0, 0.6);
+  }
+.flex_Middle{display:flex;align-items:center;justify-content:center;}

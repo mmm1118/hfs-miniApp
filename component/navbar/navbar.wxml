@@ -1,0 +1,49 @@
+<view class='nav-wrap' style='height: {{height*2 + 20}}px;'>
+  <!-- 导航栏 中间的标题 -->
+  <view class='nav-title' style='line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</view>
+  <view style='display: flex; justify-content: space-around;flex-direction: column'>
+    <!-- 导航栏  左上角的返回按钮 和home按钮 -->
+    <!-- 其中wx:if='{{navbarData.showCapsule}}' 是控制左上角按钮的显示隐藏，首页不显示 -->
+    <view class='nav-capsule' wx:if='{{navbarData.showCapsule}}'>
+      <!-- 左上角的返回按钮，wx:if='{{!share}}'空制返回按钮显示 -->
+      <!-- 从分享进入小程序时 返回上一级按钮不应该存在 -->
+      <view bindtap='_navback' wx:if='{{!share}}'>
+        <image src='/images/index/fanhui.png' mode='aspectFill' class='back-pre'></image>
+      </view>
+      <view class='navbar-v-line' wx:if='{{!share}}'></view>
+      <view bindtap='_backhome'>
+        <image src='/images/index/home.png' mode='aspectFill' class='back-home'></image>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 自定义标题组件使用方法 -->
+<!-- 引入自定义组件 .wxml -->
+<!-- <nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='detailLayout' style='padding-top: {{height}}px'></view> -->
+
+<!-- 页面配置 .json -->
+<!-- {
+  "usingComponents": {
+    "nav-bar": "/component/navbar/navbar"
+  },
+  "navigationStyle":"custom"
+} -->
+
+<!-- 引入js .js -->
+<!-- //获取应用实例
+const app = getApp()
+Page({
+
+  /**
+   * 页面的初始数据
+   */
+  data: {
+nvabarData: {
+      showCapsule: 1, //是否显示左上角图标   1表示显示    0表示不显示
+      title: '详情', //导航栏 中间的标题
+    },
+    // 此页面 页面内容距最顶部的距离
+    height: app.globalData.height * 2 + 20,
+  } -->

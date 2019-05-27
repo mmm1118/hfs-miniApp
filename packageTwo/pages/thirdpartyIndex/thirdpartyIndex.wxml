@@ -1,0 +1,167 @@
+<view class="thirdIndex">
+  <image class='bgImg' src='/images/my_img/homepage_bg.png'></image>
+  <image class='bgImgTwo' src='/images/thirdIndex/thribeBg.png'></image>
+  <view class='nav-wrap' style='height: {{height*2 + 20}}px;'>
+    <!-- 导航栏 中间的标题 -->
+    <view class='nav-title' style='line-height: {{height*2 + 44}}px;'>{{navbarData.title}}</view>
+    <view style='display: flex; justify-content: space-around;flex-direction: column'>
+      <!-- 导航栏  左上角的返回按钮 和home按钮 -->
+      <!-- 其中wx:if='{{navbarData.showCapsule}}' 是控制左上角按钮的显示隐藏，首页不显示 -->
+      <view class='nav-capsule' wx:if='{{navbarData.showCapsule}}'>
+        <!-- 左上角的返回按钮，wx:if='{{!share}}'空制返回按钮显示 -->
+        <!-- 从分享进入小程序时 返回上一级按钮不应该存在 -->
+        <view bindtap='_navback' wx:if='{{!share}}'>
+          <image src='/images/index/fanhui.png' mode='aspectFill' class='back-pre'></image>
+        </view>
+        <view class='navbar-v-line' wx:if='{{!share}}'></view>
+        <view bindtap='_backhome'>
+          <image src='/images/index/home.png' mode='aspectFill' class='back-home'></image>
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- 主页 -->
+  <view class='thirdLayout'>
+    <view class='userImgLayout'>
+      <image src='/images/index/meizi01.png'></image>
+    </view>
+    <view class='userText'>
+      <text>水 瓶 座</text>
+      <image src='/images/thirdIndex/girl.png'></image>
+    </view>
+    <view class='labelText'>岂曰无衣，与子同袍</view>
+    <view class='userBottom'>
+      <navigator url="/packageTwo/pages/thirdpartyIndex/attenTion/attenTion" class='usBottomItem'>
+        <text>3</text>
+        <view>关注</view>
+      </navigator>
+      <navigator url="/packageTwo/pages/thirdpartyIndex/fans/fans" class='usBottomItem'>
+        <text>2</text>
+        <view>粉丝</view>
+      </navigator>
+      <navigator url="/packageTwo/pages/thirdpartyIndex/gift/gift" class='usBottomItem'>
+        <text>99</text>
+        <view>礼物榜</view>
+      </navigator>
+    </view>
+    <view class='rightImgLayout'>
+      <view class='leftText'>
+        {{whetherAtten?"已":""}}关注
+      </view>
+      <image class='postionImg' src='/images/thirdIndex/aiXin{{whetherAtten?"_s":""}}.png'></image>
+    </view>
+  </view>
+</view>
+<!-- 动态 -->
+<view class='noDynamic'>
+  <!-- 暂无动态 -->
+  <image src='/images/thirdIndex/noDynamic.png'></image>
+  <!-- 有动态 -->
+  <view class='dynamicLayout'>
+
+    <view class='dynamicItem'>
+      <view class='itemTop'>
+        <image src='/images/thirdIndex/circle.png'></image>
+        <text>今天</text>
+        <view class='positionText'>十分钟前</view>
+      </view>
+      <view class='itemBottom'>
+        <view class='contentText'>
+          关关雎鸠，在河之洲。 窈窕淑女，君子好逑。
+        </view>
+        <view class='contentImg'>
+          <image src='/images/index/meizi01.png'></image>
+          <image src='/images/index/meizi01.png'></image>
+          <image src='/images/index/meizi01.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='dynamicItem'>
+      <view class='itemTop'>
+        <image src='/images/thirdIndex/circle.png'></image>
+        <text>今天</text>
+        <view class='positionText'>十分钟前</view>
+      </view>
+      <view class='itemBottom'>
+        <view class='contentText'>
+          关关雎鸠，在河之洲。 窈窕淑女，君子好逑。
+        </view>
+        <view class='contentImg'>
+          <image src='/images/index/meizi01.png'></image>
+          <image src='/images/index/meizi01.png'></image>
+          <image src='/images/index/meizi01.png'></image>
+        </view>
+      </view>
+    </view>
+
+  </view>
+</view>
+<!-- 私聊和赠礼 -->
+<view style="height:100rpx;"></view>
+<view class='privateGift'>
+  <image src='/images/thirdIndex/private.png' catchtap='toPrivate'></image>
+  <view class='privateLine'></view>
+  <image src='/images/thirdIndex/gift.png' catchtap='showGift'></image>
+</view>
+
+<!-- 底部礼物列表 -->
+<view class='mask' catchtap='hiddenGift' style='height:{{showGift?"100%":"0%"}}'>
+  <view class='giftList {{showGift?"active":""}}'>
+    <scroll-view class='scrollView' scroll-y>
+      <view class='giftTop'>
+
+        <view class='giftItem {{checkedIndex==index?"active":""}}' wx:for="{{giftData}}" data-index='{{index}}' catchtap='checkedGift'>
+          <view class='giftImgLayout'>
+            <image src='/images/thirdIndex/giftImg.png' mode='aspectFit'></image>
+          </view>
+          <view class='giftName'>荷包</view>
+          <view class='giftMoney'>500汉服币</view>
+        </view>
+
+      </view>
+    </scroll-view>
+    <view class='giftBottom'>
+      <view>
+        <image src='/images/thirdIndex/money.png'></image>
+        <text>5200</text>
+      </view>
+      <view class='present' wx:if="{{!checkedItem}}">赠送</view>
+      <view class='givePresent' wx:else>
+        <view class='presentLeft' catchtap='showAmount'>
+          <view>1</view>
+          <image class='{{showAmount?"active":""}}' src='/images/thirdIndex/aiXin_s.png'></image>
+        </view>
+        <view class='presentRight' catchtap='presentBtn'>赠送</view>
+        <view class='numberList' wx:if="{{showAmount}}">
+          <view class='customNumber'>自定义</view>
+          <scroll-view scroll-y class='smallScroll'>
+            <view class='numberItem'>
+              <text>520</text>
+              <text>我爱你</text>
+            </view>
+            <view class='numberItem'>
+              <text>188</text>
+              <text>要抱抱</text>
+            </view>
+            <view class='numberItem'>
+              <text>66</text>
+              <text>一切顺利</text>
+            </view>
+            <view class='numberItem'>
+              <text>10</text>
+              <text>十全十美</text>
+            </view>
+            <view class='numberItem'>
+              <text>5</text>
+              <text>想你</text>
+            </view>
+            <view class='numberItem'>
+              <text>1</text>
+              <text>一路顺风</text>
+            </view>
+          </scroll-view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

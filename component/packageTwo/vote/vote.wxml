@@ -1,0 +1,78 @@
+<view class='voteLayout'>
+  <view class='movableAreaItem'>
+    <view class='voteLeft'>
+      <text>投票主题</text>
+    </view>
+    <view class='voteRight'>
+      <input placeholder='请 输入投票主题'></input>
+      <view class='radioItem'>
+        <view>
+          <radio checked='true'></radio>
+          <input placeholder='选项1'></input>
+        </view>
+      </view>
+      <view class='radioItem'>
+        <view>
+          <radio checked='true'></radio>
+          <input placeholder='选项2'></input>
+        </view>
+      </view>
+      <view class='radioItem'>
+        <view>
+          <radio checked='true'></radio>
+          <input placeholder='选项3'></input>
+        </view>
+        <image class='smallDel' src='/images/memorial/smallDel.png'></image>
+      </view>
+      <image class='addSelect' src='/images/memorial/addSelect.png'></image>
+    </view>
+  </view>
+  <view class='movableAreaItem itemTwo'>
+    <view class='itemTop'>
+      <view class='voteLeft'>
+        <text>截止时间</text>
+      </view>
+      <view class='voteRight'>
+        <text catchtap='showDate'>{{myDate?myDate:'无截止时间'}}</text>
+        <view class='pickerLayout {{getDate?"active":""}}'>
+          <view class='pickerTop'>
+            <view catchtap='hiddenDate'>取消</view>
+            <view>投票截止时间</view>
+            <view catchtap='hiddenDate'>确定</view>
+          </view>
+          <picker-view class='pickerView' indicator-style="height: 50px;" value="{{value}}" bindchange="bindChange">
+            <picker-view-column>
+              <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+            </picker-view-column>
+            <picker-view-column>
+              <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+            </picker-view-column>
+            <picker-view-column>
+              <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+            </picker-view-column>
+            <picker-view-column>
+              <view wx:for="{{hours}}" style="line-height: 50px">{{item}}时</view>
+            </picker-view-column>
+            <picker-view-column>
+              <view wx:for="{{minutes}}" style="line-height: 50px">{{item}}分</view>
+            </picker-view-column>
+          </picker-view>
+        </view>
+      </view>
+    </view>
+    <view class='itemBottom'>
+      <view class='voteLeft'>
+        <text>投票类型</text>
+      </view>
+      <view class='voteRight'>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+          <view class="picker">
+            {{array[index]}}
+          </view>
+        </picker>
+      </view>
+    </view>
+  </view>
+  <image class='movableDelPhoto' src='/images/memorial/iconDel.png'></image>
+  <image class='movableMoveImg' src='/images/memorial/iconMove.png' data-index='{{index}}' bindtouchstart='dragStart' bindtouchmove='dragMove' bindtouchend='dragEnd'></image>
+</view>

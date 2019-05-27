@@ -1,0 +1,53 @@
+/* packageThere/pages/Mygift/Mygift.wxss */
+.pd_0_30{padding:0rpx 30rpx;background: #fff;}
+.gify_header{color:#939393;}
+
+.w_250h174{width:250rpx;height:216rpx;}
+
+.active_red{color:#D61800;border-bottom:2px solid #D61800;padding-bottom:14rpx;}
+.sunlightImg{width:60rpx;height:60rpx;border-radius:100%;}
+.brandImg{width:54rpx;height:69rpx;padding-right:20rpx;}
+
+.bor_solid1De{border-bottom:1px solid #DEDEDE}
+.bor_solid1De:last-child{border-bottom:none;}
+
+.pr_top10{position:relative;top:10rpx;}
+.pr_top15{position:relative;top:15rpx;}
+.pr_top20{position:relative;top:20rpx;}
+
+.pd_left10{padding-left:10rpx;}
+.pd_left21{padding-left:21rpx;}
+
+.eplowImg{width:26rpx;height:15rpx;}
+
+.conetnt{
+  font-size:28rpx;
+  padding:10rpx 0rpx;
+  }
+
+
+.top76right0{top:76rpx;right:0rpx;}
+
+.ismackpo{
+  top:22rpx;
+  color:#fff;
+  left:16rpx;
+  width:230rpx;
+  word-wrap:break-word;
+  z-index:999;
+}
+
+.show{display:block;}
+.hiden{display:none;}
+
+.pxd{
+  position:fixed;
+  bottom:10rpx;
+  right: 0;
+  width:100%;
+  text-align:center;
+}
+
+.bg_active{
+  background-image:url(https://dfile.hfs.luoshuchuanmei.com/icebartech-hanfusi/190523175428-539.png);
+  }

@@ -1,0 +1,17 @@
+<view class='movableAreaItem recordLayout'>
+  <view class='recordLeft'>
+    <image class='recordImg' src='/images/memorial/record1.png' mode='widthFix'></image>
+    <image class='recordImg' src='/images/memorial/record2.png' mode='widthFix'></image>
+    <image class='recordImg' src='/images/memorial/record3.png' mode='widthFix'></image>
+    <image class='smallImg' src='/images/memorial/record4.png' mode='widthFix'></image>
+    <view class='time'>0:07</view>
+    <image class='smallImg' src='/images/memorial/record5.png' mode='widthFix'></image>
+    <text>点击录音</text>
+  </view>
+  <view class='recordRight'>
+    <view>取消</view>
+    <view>完成</view>
+    <image class='movableDelPhoto' src='/images/memorial/iconDel.png'></image>
+    <image class='movableMoveImg' src='/images/memorial/iconMove.png' data-index='{{index}}' bindtouchstart='dragStart' bindtouchmove='dragMove' bindtouchend='dragEnd'></image>
+  </view>
+</view>

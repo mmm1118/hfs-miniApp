@@ -1,0 +1,38 @@
+.pd_0_30{padding:0rpx 30rpx;}
+
+.bor_btneee{border-bottom:1px solid #eee}
+.bg_ff{background:#fff;}
+.c_4d4{color:#4D4D4D}
+
+.wh_101{width:101rpx;height:101rpx;} 
+.w_157_52{width:157rpx;height:52rpx;}
+
+.b_radius100{border-radius:100%;}
+
+.pd_left32{padding-left:32rpx;}
+.pr_top42{position:relative;top:42rpx;}
+.pr_top63{position:relative;top:63rpx;}
+
+
+.f_30{font-size:30rpx;}
+.f_24{font-size:24rpx;}
+
+.pd_30_0{padding:30rpx 0rpx;}
+
+.mutual{top:50%;
+        left:50%;
+        width:120rpx;
+        font-size:24rpx;
+        margin-top:-14rpx;
+        margin-left:-46rpx;
+}
+
+.follow{
+  top:50%;
+  left:50%;
+  width:120rpx;
+  font-size:24rpx;
+  margin-top:-14rpx;
+  margin-left:-26rpx;
+  color: #fff;
+}

@@ -1,0 +1,257 @@
+<!-- 引入自定义组件 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='detail' style='padding-top: {{height}}px'>
+    <!-- 活动详情顶部 -->
+    <view class='detailTop'>
+        <image class='titleImg' src='{{activityInfo.logo}}' mode='widthFix'></image>
+        <view class='topText'>
+            <view class='topTitle'>{{activityInfo.title}}</view>
+            <view class='topTextItem'>
+                <view>活动时间
+                    <text>{{activityInfo.startTime}} ~ {{activityInfo.overTime}}</text>
+                </view>
+            </view>
+            <view class='topTextItem' data-longitude='{{activityInfo.longitude}}'
+                  data-latitude='{{activityInfo.latitude}}'
+                  data-name='{{activityInfo.address}}' bindtap='toLocation'>
+                <view>活动地点
+                    <text>{{activityInfo.address}}</text>
+                </view>
+                <image src='/images/index/right.png'></image>
+            </view>
+            <view class='topTextItem'>
+                <view>活动费用
+                    <text>{{activityInfo.entryFee}}/{{activityInfo.extraContent}}</text>
+                </view>
+            </view>
+            <view class='topTextItem'>
+                <view>报名截止
+                    <text>{{activityInfo.activityTime}}</text>
+                </view>
+            </view>
+            <view class='topTextItem'>
+                <view>主办方
+                    <text>{{activityInfo.circleName}}</text>
+                </view>
+                <image src='/images/index/right.png'></image>
+            </view>
+        </view>
+    </view>
+    <!-- 中间内容 -->
+    <view class='centerLayout'>
+        <view class='content'>
+            <view class='textLayout'>
+                <view class='text'>{{activityInfo.activityContent}}</view>
+                <image src='{{activityInfo.logo}}' mode='widthFix'></image>
+            </view>
+            <view class='audioLayout'>
+                <image src='/images/index/pause.png' wx:if="{{playing === true}}" bindtap='stopRecord'></image>
+                <image src='/images/index/bofangqi.png' wx:if="{{playing === false}}" bindtap="playRecord"></image>
+                <view class='audioRight'>
+                    <view class='audioTitle'>哈哈哈</view>
+                    <view class='audioText'>来自XXX社团</view>
+                    <view class='bottomTime'>
+                        <text>{{currentTime}}</text>
+                        <text>{{duration}}</text>
+                    </view>
+                </view>
+            </view>
+
+        </view>
+    </view>
+    <!-- 投票模块 -->
+    <view wx:if="{{!checkActivity}}" class='voteLayout'>
+        <view class='content'>
+            <view class='title'>{{activityInfo.circleActivityVoteDTO.content}}</view>
+            <view class='text'>截止时间：{{ activityInfo.circleActivityVoteDTO.endTime }}（{{activityInfo.circleActivityVoteDTO == 1 ? '单选' : '多选'}}）</view>
+            <radio-group wx:if="{{activityInfo.circleActivityVoteDTO == 1}}" class="radio-group"
+                         bindchange="radioChange">
+                <radio class="radio" wx:for="{{activityInfo.circleActivityVoteDTO.circleActivityVoteItemDTOs}}"
+                       wx:key="id" value="{{item.id}}">
+                    <view>{{item.content}}</view>
+                </radio>
+            </radio-group>
+            <checkbox-group wx:elif="{{activityInfo.circleActivityVoteDTO == 2}}" class="radio-group"
+                            bindchange="radioChange">
+                <checkbox class="radio" wx:for="{{activityInfo.circleActivityVoteDTO.circleActivityVoteItemDTOs}}"
+                          wx:key="id" value="{{item.id}}">
+                    <view>{{item.content}}</view>
+                </checkbox>
+            </checkbox-group>
+        </view>
+        <view class='voteButton' bindtap="activityAddVoteUser">投票</view>
+    </view>
+    <!-- 投票模块投票后 -->
+    <view wx:else class='voteLayoutTwo'>
+        <view class='content'>
+            <view class='title'>{{activityInfo.circleActivityVoteDTO.content}}</view>
+            <view class='text'>截止时间：{{ activityInfo.circleActivityVoteDTO.endTime }}</view>
+            <view class='progressList'>
+                <view class='progressItem'
+                      wx:key="id"
+                      wx:for="{{activityInfo.circleActivityVoteDTO.circleActivityVoteItemDTOs}}">
+                    <text class='itemTop'>{{item.content}}（已投）</text>
+                    <view class='itemBottom'>
+                        <view class='progress'>
+                            <progress percent="20" color="#d71000" active/>
+                        </view>
+                        <text>{{item.num}}票</text>
+                        <view>20%</view>
+                    </view>
+                </view>
+                <view class='progressItem'>
+                    <text class='itemTop'>2号花神小姐姐</text>
+                    <view class='itemBottom'>
+                        <view class='progress'>
+                            <progress percent="30" color="#d71000" active/>
+                        </view>
+                        <text>3票</text>
+                        <view>30%</view>
+                    </view>
+                </view>
+                <view class='progressItem'>
+                    <text class='itemTop'>3号花神小姐姐</text>
+                    <view class='itemBottom'>
+                        <view class='progress'>
+                            <progress percent="10" color="#d71000" active/>
+                        </view>
+                        <text>1票</text>
+                        <view>10%</view>
+                    </view>
+                </view>
+                <view class='progressItem'>
+                    <text class='itemTop'>4号花神小姐姐</text>
+                    <view class='itemBottom'>
+                        <view class='progress'>
+                            <progress percent="40" color="#d71000" active/>
+                        </view>
+                        <text>4票</text>
+                        <view>40%</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class='voteButton'>
+            <text>共有{{ activityInfo.circleActivityVoteDTO.voteNum }}人投票（您已投票）</text>
+            <image src='/images/index/bigShare.png'></image>
+        </view>
+    </view>
+    <!-- 视频 -->
+    <view class='videoLayout'>
+        <video class='photoImg'
+               src='http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400'></video>
+    </view>
+    <!-- 已报名人数 -->
+    <view class='applyLayout'>
+        <view class='people'>已报名 6 人</view>
+        <view class='applyList' bindtap='toApplyList'>
+            <view class='applyItem'>
+                <image src='/images/index/meizi01.png'></image>
+            </view>
+            <view class='applyItem'>
+                <image src='/images/index/meizi01.png'></image>
+            </view>
+            <view class='applyItem'>
+                <image src='/images/index/meizi01.png'></image>
+            </view>
+            <view class='applyItem'>
+                <image src='/images/index/meizi01.png'></image>
+            </view>
+            <view class='applyItem'>
+                <image src='/images/index/meizi01.png'></image>
+            </view>
+            <view class='applyItem'>
+                <image src='/images/index/meizi01.png'></image>
+            </view>
+            <view class='applyItem'>
+                <image src='/images/index/meizi01.png'></image>
+            </view>
+            <view class='applyItem'>
+                <image src='/images/cancel.png'></image>
+            </view>
+        </view>
+    </view>
+    <!-- 活动评分 -->
+    <!-- <view class="grade">
+      <view>活动评分</view>
+      <image src="/images/xing_s.png"></image>
+      <image src="/images/xing_s.png"></image>
+      <image src="/images/xing_s.png"></image>
+      <image src="/images/xing_s.png"></image>
+      <image src="/images/xing.png"></image>
+      <text class="class">好</text>
+    </view> -->
+    <view style='height:100rpx;'></view>
+    <!-- 底部分享统计 -->
+    <view class='shareLayout'>
+        <view class='shareLeft'>
+            <text>剩余 {{ activityInfo.leftPeople }} 个名额</text>
+        </view>
+        <view data-openid="{{openId}}" data-nickname='{{nickName}}' data-rqcode='{{rqCode}}' data-content='{{content}}'
+              data-img='{{img}}' catchtap='toSharePage'>
+            <image src='/images/index/share.png'></image>
+        </view>
+        <view class='shareRight' catchtap='applyButton'>
+            <text>报名（￥{{ activityInfo.totalPrice }}）</text>
+        </view>
+    </view>
+
+</view>
+
+<!-- 座位表弹框 -->
+<view class='mask' wx:if="{{seatShows}}">
+    <view class='seatModel'>
+
+        <!-- 座位表页面 -->
+        <view class="seatMapLayout">
+            <view class='tipText'>请选择你的座位号</view>
+            <view class='seatMapTop'>
+                <image src='/images/index/seat.png'></image>
+                <view>可选</view>
+                <image style="margin-left:55rpx;" src='/images/index/seat_s.png'></image>
+                <view>已售</view>
+            </view>
+            <!-- 座位表轮播 -->
+            <swiper indicator-dots='true' indicator-color='#B4B4B4' indicator-active-color='#000' circular='true'
+                    class='sowing_map'>
+                <block wx:for="{{seatList}}">
+                    <swiper-item>
+                        <view class='mapList'>
+                            <image class='leftImg' src='/images/index/leftNum.png'></image>
+                            <view class='mapRight'>
+                                <block wx:for="{{item}}" wx:for-item="itemName">
+                                    <view class='imgLayout' catchtap='clickSeat'>
+                                        <image wx:if="{{index+1==12}}" src='/images/index/seat01_s.png'></image>
+                                        <image wx:elif="{{itemName.click}}"
+                                               src='/images/index/seat01_click.png'></image>
+                                        <image wx:else src='/images/index/seat01.png'></image>
+                                    </view>
+                                </block>
+                            </view>
+                        </view>
+                    </swiper-item>
+                </block>
+            </swiper>
+
+            <!-- 底部提示语 -->
+            <view class='bottomText'>
+                您已选择45、46号，共
+                <text>￥116</text>
+                元
+            </view>
+            <view class='payment'>
+                <view catchtap='canclePayment'>取 消</view>
+                <view class='paymentButton' catchtap='confirmPayment'>支 付</view>
+            </view>
+
+        </view>
+    </view>
+</view>
+
+<!-- 支付成功生成图片 -->
+<view class='mask' wx:if="{{paymentBill}}" catchtap='cancelSave'>
+    <view class='canvasModel' style='top:{{height}}px'>
+        <canvas class='canvas' canvas-id='canvasId'></canvas>
+        <view class='saveView' catchtap='catchtapSave'>保存到手机</view>
+    </view>
+</view>

@@ -1,0 +1,25 @@
+<view class="wal center">每天可以提现一次，最低1元，最大金额为10000元</view>
+
+<view class='wal_bg'>
+      <view class='flex inp_val'>
+        <view class='title'>提现用途</view>
+        <view><input type='text' placeholder='请输入提现用途（可不填）'></input> </view>
+      </view>
+      <view class='flex inp_val'>
+        <view class='title'>提现金额</view>
+        <view><input type='number' placeholder='请输入提现用途（可不填）'></input> </view>
+      </view>
+
+      <view class='momery'>可提现金额 0.00 元</view>
+</view>
+
+<view>
+  <view class='cash'>
+    <view class='text'>1.提现到微信余额，到账时间T+1。 </view>
+    <view class='text cash_top20'>2.遇到任何问题，请联系官方客服微信：HANFUSI</view>
+  </view>
+
+  <view>
+     <button class='cash_btn' bindtap='cashWithdrawal'>确认提现</button>
+  </view>
+</view>

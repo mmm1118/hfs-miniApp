@@ -1,0 +1,16 @@
+<view class='pd_0_30'>
+
+  <view>
+    <view class='center header_time'>2018年12月25日 上午10:13</view>
+    <view class='flex'>
+      <view><image class='Headportrait' src='./../../../images/my_img/homepage_bg.png'></image></view>
+      <view>
+        <view class='bac_title'>汉服司官方小助手</view>
+        <view class='bac_text'>又有一个新社团加入啦~</view>
+      </view>
+    </view>
+  </view>
+
+<navigator class="btn_fxd center" url='/packageThere/pages/Feedback/Feedback'>意见反馈</navigator> 
+
+</view>

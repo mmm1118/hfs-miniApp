@@ -1,0 +1,64 @@
+
+.c_red{color:#D61800}
+.add_img {
+  width: 38rpx;
+  height: 38rpx;
+  position: relative;
+  top: 4rpx;
+}
+
+.add {
+  font-size: 36rpx;
+  background: #d61800;
+  border-radius: 20rpx;
+  display: flex;
+  color: #fff;
+  width: 428rpx;
+  padding: 23rpx 0rpx;
+  text-align: center;
+}
+
+.add_title {
+  font-size: 32rpx;
+  color: #939393;
+  padding: 0rpx 85rpx;
+  text-align: center;
+  line-height:64rpx;
+}
+
+.pd_left23 {
+  padding-left: 23rpx;
+}
+
+.pd_top_btn {
+  padding-top: 348rpx;
+  padding-bottom: 48rpx;
+}
+
+
+.newGrouppd_fxd{background:#ffff;
+width:562rpx;
+position:fixed;
+top:50%;
+left:50%;
+transform: translate(-50%, -50%);
+border-radius:10rpx;
+}
+
+.newGrouppd_input{
+  border-radius:20rpx;
+  border:1px solid #eee;
+  margin:10rpx 60rpx;
+  padding:10rpx 40rpx;
+  text-align: center;
+}
+
+.newGrouppd_header{
+  text-align:center;
+  padding-top:40rpx;
+}
+
+.newGrouppd_bth{
+  width:50%;
+  padding:20rpx 0rpx;
+}

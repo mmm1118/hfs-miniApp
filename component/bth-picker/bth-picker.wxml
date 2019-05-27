@@ -1,0 +1,9 @@
+<!-- 这是一个底部弹窗组建 -->
+<view class='pxd_bg' data-mack='{{show}}'  catchtap='ismack' wx:if="{{show}}">
+ <view wx:if="{{show}}" class='f_34 bg_eee pxd_top0'>
+    <view class="order-box {{show== true ? 'up' : 'down'}}">
+        <view class='btn_titie conw_{{index}} ctwo_{{index}}' wx:for="{{arraydata}}" data-index='{{index}}' catchtap='Bubbling'>{{item}} </view>
+        <view class='cancel' data-showoffset='{{show}}' bindtap='payNow'>取消</view>
+    </view>
+  </view>
+</view>

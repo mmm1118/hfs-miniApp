@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "upload-image": "/component/upload-image/upload-image"
+  },
+  "navigationBarTitleText": "添加文章"
+}

@@ -1,0 +1,16 @@
+.activityLayout{
+  width: 700rpx;
+  margin: 0 auto 24rpx;
+}
+.activity{width: 100%;border-radius: 20rpx;overflow: hidden;margin-top: 24rpx;background: #fff;}
+.activity .imgLayout{position: relative;}
+.activity .imgLayout image{width: 100%;display: block;}
+.activity .imgLayout .denglong{width: 99rpx;height: 205rpx;position: absolute;top: 0;right: 40rpx;font-size: 24rpx;color: #fff;}
+.activity .imgLayout .denglong image{width: 100%;height: 100%;}
+.activity .imgLayout .denglong view{position: absolute;width: 100%;text-align: center;top: 75rpx;}
+.activity .textLayout{padding: 40rpx;}
+.activity .textLayout .title{font-size: 32rpx;color: #000;font-weight: bold;letter-spacing:8rpx}
+.activity .textLayout .smallText{font-size: 24rpx;color: #939393;}
+.activity .textLayout .smallText>view:first-child{margin-top: 20rpx;}
+.activity .textLayout .smallText>view{margin-top: 5rpx;}
+.activity .textLayout .smallText image{width: 22rpx;margin-right: 20rpx;}

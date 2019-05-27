@@ -1,0 +1,4 @@
+<!--自定义蒙版 组建-->
+<view class='mask' wx:if="{{ismask}}" data-showoffset='{{ismask}}' catchtap='disappear'>
+    <slot></slot>
+</view>

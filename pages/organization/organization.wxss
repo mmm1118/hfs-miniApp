@@ -1,0 +1,57 @@
+.atFriendsView {
+  width: 650rpx;
+  height: 34rpx;
+  margin: 0 auto 20rpx;
+  padding: 20rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20rpx;
+  box-shadow: 2rpx 2rpx 5px #e5e5e5;
+  background-color: #fff;
+}
+
+.searchImg {
+  width: 32rpx;
+  height: 34rpx;
+}
+
+.searchInput {
+  width: 594rpx;
+  height: 34rpx;
+  padding: 0 12rpx;
+}
+
+.topicView {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding-left: 22rpx;
+}
+
+.topicImg {
+  width: 340rpx;
+  height: 220rpx;
+  margin-right: 22rpx;
+  margin-bottom: 20rpx;
+  border-radius: 20rpx;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.topicText {
+  position: absolute;
+  width: 300rpx;
+  padding: 0 20rpx;
+  line-height: 60rpx;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 26rpx;
+  text-align: center;
+  bottom: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

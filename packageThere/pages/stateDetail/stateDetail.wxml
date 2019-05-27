@@ -1,0 +1,172 @@
+<view class="titleLayout">
+  <view class="imageLayout">
+    <image src="{{bussData.rqcode}}"></image>
+    <view class="absoluteImg">
+      <image src="/images/index/guanzhu_s.png"></image>
+    </view>
+  </view>
+  <view class="contentLayout">
+    <view>
+      <view class="nickName">{{bussData.location}}</view>
+      <view class="time">{{bussData.createtime}}</view>
+    </view>
+    <view class="character">{{bussData.content}}</view>
+    <view class="imgList">
+      <image  wx:for="{{bussData.imagesDTOs}}" bindtap='previewImg'  data-index='{{index}}' data-imagesDTOs="{{bussData.imagesDTOs}}"  src="{{item.url}}"></image>
+    </view>
+    <view class="address">
+      <image src="/images/index/dingWei.png"></image>
+      <text bindtap='chooseLn'>{{address}}</text>
+    </view>
+    <view class="classifyTwo">
+      <text wx:for="{{bussData.topictableDTOs}}" wx:for-item="labIndex">#{{labIndex.topicname}}#</text>
+    </view>
+    <view class="circle">
+      <image class="leftImg" mode="aspectFill" src="/images/index/meizi01.png"></image>
+      <view class="text">
+        <view>明制少女</view>
+        <text>10人已参与</text>
+      </view>
+      <image class="rightImg" src="/images/index/right.png"></image>
+    </view>
+  </view>
+</view>
+
+<!-- 评论内容 -->
+<!-- <block wx:if="{{dynamic.commentNum > 0}}"> -->
+<view class='commentContent'>
+  <view class='commentTitle'>{{bussData.commentNum}}条评论</view>
+  <view>
+    <image class='commentLine' src='/images/index/commentLine.png'></image>
+  </view>
+  <block wx:for="{{dynamicIdlist}}" wx:for-item="comment">
+    <view class='commentContentView'>
+      <view class='commentUserInfo'>
+        <image class='userHead' data-openid='{{comment.openId}}' src='{{comment.avatarurl}}' catchtap='toUserDetail'></image>
+        <view class='userInfo'>
+          <view class='userName'>{{comment.nickname}}</view>
+          <view class='commentDate'>{{comment.createtime}}</view>
+        </view>
+      </view>
+
+      <!-- 评论内容 -->
+      <view class='comment' data-beopenid="{{comment.openId}}" data-commentid="{{comment.commentid}}" data-nickname='{{comment.nickName}}' catchlongpress="delComment" data-index="{{index}}" catchtap='content_reply'>{{comment.content}}</view>
+
+        <view class='flex pixed_inptwo' wx:if="{{comment.ofset1}}"> 
+        <input class='sendInput' 
+                focus="true" 
+                value="{{valthree}}" 
+                placeholder='{{plaval_htree}}' 
+                placeholder-class='placeholderClass' 
+                bindblur="inputBlurthree" 
+                bindinput='valthree'></input>
+
+          <view class='sendTextTwo' 
+                data-beopenid='{{comment.beopenid}}' 
+                data-commentid='{{comment.commentid}}'  
+                data-dynamicid="{{comment.dynamicid}}" 
+          
+                data-index='{{index}}'
+                catchtap='commentSendOut'>发送</view>
+       </view>
+
+
+      <!-- 回复 -->
+      <block wx:for="{{comment.replyDTOs}}" wx:for-item="reply" >
+        <view class='reply' catchtap="keyboard" data-btncommentid="{{comment.commentid}}"  data-index='{{index}}' data-replyDTOs="{{comment.replyDTOs}}">
+          <view class='replyView' 
+          data-replyid="{{reply.replyId}}" 
+          data-beopenid="{{reply.openId}}" 
+          data-commentid="{{comment.commentId}}" 
+          data-nickname='{{reply.nickName}}' 
+          catchlongpress="delReply">
+
+            <text class='name'>{{reply.userName}}</text> 回复
+            <text class='name'>{{reply.beUserName}}</text>: {{reply.content}}
+          </view>
+        </view>
+
+        <view class='flex pixed_inptwo' catchtap='maopao' wx:if="{{reply.ofset2}}"> 
+        <input class='sendInput' 
+                focus="true" 
+                value="{{contenttwo}}" 
+                placeholder='{{plaval}}' 
+                placeholder-class='placeholderClass' 
+                bindblur="inputBlurtwo" 
+                bindinput='input_valtwo'></input>
+
+          <view class='sendTextTwo' 
+                data-openid='{{reply.openid}}' 
+                data-commentid='{{reply.commentid}}'  
+                data-dynamicid="{{reply.dynamicid}}" 
+                data-btncommentid="{{comment.commentid}}"
+                data-index='{{index}}'
+                catchtap='SendOut'>发送</view>
+       </view>
+
+      </block>
+    </view>
+
+  </block>
+</view>
+<!-- </block>
+<block wx:else>
+  <view style='height: 76rpx;'></view>
+</block> -->
+
+<!-- 评论输入框 -->
+<form bindsubmit="formSubmit">
+  <view class='inputView'>
+    <input class='sendInput' name='content' value="{{content}}" placeholder='说点什么？' placeholder-class='placeholderClass' bindfocus="inputFocus" bindblur="inputBlur" bindinput='input_val'></input>
+    <input style='display: none;' name='commentId' value='{{commentId}}'></input>
+    <input style='display: none;' name='beOpenId' value='{{beOpenId}}'></input>
+    
+    <!-- 评论点赞 -->
+    <view class="opration" wx:if="{{!focusShow}}">
+      <view class="oprationItem" bindtap='addLiketable'>
+          <view>  
+              <image src="/images/index/dianzan.png"  wx:if="{{addlick==0}}" ></image>
+              <image src="/images/index/bigZan_s.png" wx:else></image>
+          </view>
+             <text class="colorRed">{{liketableNum}}</text>
+      </view>
+      <view class="oprationItem">
+          <view bindtap='Collection'>
+            <image src="/images/index/bigCollect.png" wx:if="{{isCollection==0}}"></image>
+            <image src='/images/index/collect_s.png' wx:else></image>
+          </view>
+        <!-- <image src="/images/index/collect_s.png"></image> -->
+        <!-- "是否收藏，0未收藏，1已收藏" -->
+        <text class="colorRed" data-reck="{{bussData.isCollection}}">收藏</text>
+      </view>
+      <view class="oprationItem" catchtap='toShare'>
+        <image src="/images/index/bigShare.png"></image>
+        <text class="colorRed">分享</text>
+      </view>
+    </view>
+
+    <button class='sendView' form-type='submit' form-type="submit" wx:else>
+      <view class='sendText'>发送</view>
+    </button>
+  </view>
+
+</form>
+
+<!-- 分享 -->
+<view class='mask' wx:if="{{dynamicId}}" catchtap='cancelShare'>
+  <view class='shareMask {{dynamicId?"active":""}}'>
+    <view class='shareHead'>选择分享方式</view>
+    <view class='shareContent'>
+      <view class='shareOption'>
+        <button class='shareBtn' plain='true' data-dynamicid='{{dynamicId}}' open-type='share'>
+          <image class='shareIcon' src='/images/index/share_wechat.png'></image>
+          <view class='shareViewText'>分享给朋友</view>
+        </button>
+      </view>
+      <view class='shareOption' data-openid="{{openId}}" data-nickname='{{nickName}}' data-rqcode='{{rqCode}}' data-content='{{content}}' data-img='{{img}}' catchtap='toSharePage'>
+        <image class='shareIcon' src='/images/index/share_circle.png'></image>
+        <view class='shareViewText'>朋友圈</view>
+      </view>
+    </view>
+  </view>
+</view>

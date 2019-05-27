@@ -1,0 +1,32 @@
+<view>
+<view class='bg_ff flex search'>
+  <view><image class='secrch_log'  src='./../../../images/circle_img/search.png'></image></view>
+  <view class='secrch_font'><input type='text' bindfocus="focus" placeholder='搜圈子'></input></view>
+</view>
+ 
+ <view class='pd_0_30'>
+<view wx:for="{{list}}" class='flex'>
+    <view>
+        <view class='pr_top23' bindtap='Selection' data-index="{{index}}"> 
+          <image class='select_wh40' src="./../../../images/circle_img/Selection.png" wx:if="{{item.chenck}}"></image>
+          <image class='select_wh40' src="./../../../images/circle_img/Unchecked.png" wx:else></image>        
+        </view>
+       
+    </view>
+    <view class='addmenber_cr flex_between'>
+        <view class='flex'>
+            <view><image class='addmember_img' src='{{item.imgage}}'></image> </view>
+            <view> <view class='addmenber_name'>{{item.name}}</view></view>
+        </view>
+        <view class='addmember_time'>{{item.tim}}</view>
+
+    </view>
+</view>
+
+</view>
+
+<view class='pxd '> 
+  <button class='subimt' bindtap='complete'>完成（1）</button>
+</view>
+
+</view>

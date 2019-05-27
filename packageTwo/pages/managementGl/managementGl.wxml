@@ -1,0 +1,98 @@
+<view class="cl_header center bg_ff">圈子编号：123456</view>
+
+<view class='cl_conten'>
+  <view class='flex_between bordr1ee'>
+    <view>昨日数据报告</view>
+    <view class='c_939 f_22 pr_top4'>数据更新至2018-12-26</view>
+  </view>
+
+  <view class='flex_around cl_pd_top39_btn_57'>
+      <view>
+          <view class='center f_60'>5</view>
+          <view class='c_939 f_26'>访问/人</view>
+      </view>
+       <view>
+          <view class='center f_60'>5</view>
+          <view class='c_939 f_26'>评论/条</view>       
+       </view>
+        <view>
+          <view class='center f_60'>5</view>
+          <view class='c_939 f_26'>点赞/条</view>
+        </view>
+  </view>
+
+  <view class='flex_around cl_pd_btn28'>
+        <view>
+          <view class='center f_60'>1</view>
+          <view class='c_939 f_26'>新成员/人</view>       
+       </view>
+        <view>
+          <view class='center f_60'>3</view>
+          <view class='c_939 f_26'>新成员/人</view>
+        </view>   
+  </view>
+</view>
+
+<view class='Administration'>
+    <navigator hover-class='noen' class='flex_between' url='/packageTwo/pages/MemberManagement/MemberManagement'>
+      <view class='flex'>
+        <view><image class='imge1' src='./../../../images/circle_img/menber.png'></image> </view>
+        <view>成员管理</view>
+      </view>
+      <view><image  class='wh_40' src='./../../../images/circle_img/bg.png'></image> </view>
+    </navigator>
+    <navigator hover-class='noen'  url='/packageTwo/pages/newGrouping/newGrouping'>
+      <view class='flex'>
+        <view><image class='imge2' src='./../../../images/circle_img/Grouping.png'></image> </view>
+        <view class='pr_top6'>分组管理</view>
+      </view>
+     
+    </navigator>
+    <navigator hover-class='noen' url='/packageThere/pages/activity/activity'>
+      <view class='flex'>
+        <view><image class='imge3' src='./../../../images/circle_img/activity.png'></image> </view>
+        <view>活动管理</view>
+      </view>
+      
+    </navigator>
+    <navigator hover-class='noen' bindtap='Authentication'>
+      <view class='flex'>
+        <view><image class='imge4' src='./../../../images/circle_img/Authentication.png'></image> </view>
+        <view>认证</view>
+      </view>
+      
+    </navigator>
+    <navigator hover-class='noen'  url='/packageTwo/pages/myProfit/myProfit'>
+      <view class='flex'>
+        <view><image class='wh_40' src='./../../../images/circle_img/Profit.png'></image> </view>
+        <view>收益</view>
+      </view>
+      
+    </navigator>
+    <navigator hover-class='noen'  url='/packageTwo/pages/circleSetup/circleSetup'>
+      <view class='flex'>
+        <view><image class='imge5' src='./../../../images/circle_img/setyp.png'></image> </view>
+        <view>设置</view>
+      </view>
+    </navigator>
+
+</view>
+
+<view  class='center mg_top140'>
+    <view class='f_28 c_939'>电脑端管理后台</view>
+    <view class='flex_center'>
+        <view class='coler_ff '>wbe.hanfusi.com</view>   
+    </view>
+    <view class='f_26 c_939'>复制链接到电脑浏览器即可访问</view>
+</view>
+
+<bth-picker 
+ show="{{show}}" 
+ arraydata="{{arraydata}}"  
+ bindonmack="onmack"
+ bindtopone1="topone1"
+ bindtopone2="topone2"
+ bindtopone3="topone3"
+ >
+
+ </bth-picker>

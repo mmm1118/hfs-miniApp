@@ -1,0 +1,33 @@
+.loginView{
+  width: 600rpx;
+  height: 300rpx;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 20rpx;
+  z-index: 1;
+}
+
+.loginContent{
+  height: 220rpx;
+  line-height: 220rpx;
+  text-align: center;
+}
+
+.loginBtn{
+  height: 80rpx;
+  display: flex;
+  flex-direction: row;
+}
+
+.confirmBtn{
+  font-size: 28rpx;
+  color: #1AAC19;
+  background-color: #fff;
+}
+
+.confirmBtn::after{
+  border: 0;
+}

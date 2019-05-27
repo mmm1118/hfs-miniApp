@@ -1,0 +1,48 @@
+page{
+  background-color: #fff;
+}
+
+.atFriendsView{
+  width: 650rpx;
+  height: 34rpx;
+  margin: 0 auto 20rpx;
+  padding: 20rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20rpx;
+  box-shadow: 2px 2px 5px #E5E5E5;
+}
+
+.searchImg{
+  width: 32rpx;
+  height: 34rpx;
+}
+
+.searchInput{
+  width: 594rpx;
+  height: 34rpx;
+  padding: 0 12rpx;
+}
+
+.atFriends{
+  padding: 0 40rpx;
+  margin-bottom: 10rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.avatarUrl{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 50%;
+  margin-right: 36rpx;
+}
+
+.notFriends{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

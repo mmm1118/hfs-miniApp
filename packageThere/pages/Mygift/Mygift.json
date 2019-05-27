@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "load":"/component/load/load"
+  },
+  "navigationBarTitleText": "我的礼物"
+}

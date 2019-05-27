@@ -1,0 +1,10 @@
+.wal{padding-bottom:38rpx;padding-top:20rpx;color:#939393;font-size:24rpx;}
+.wal_bg{margin:0rpx 24rpx;background:#fff;border-radius:20rpx;font-size:34rpx; }
+.wal_bg input{font-size:26rpx;}
+.inp_val{padding:25rpx 32rpx;}
+.inp_val .title{padding-right:50rpx;}
+.momery{color:#939393;font-size:26rpx;padding:24rpx 0rpx;padding-left:56rpx;}
+
+.cash{margin:24rpx 54rpx 157rpx 54rpx;font-size:26rpx;color:#939393;}
+.cash_top20{margin-top:20rpx;}
+.cash_btn{width:428rpx;background:#D61800;color:#fff;}

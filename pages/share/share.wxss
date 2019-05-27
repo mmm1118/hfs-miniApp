@@ -1,0 +1,26 @@
+.canvas{
+  width: 290px;
+  height: 453px;
+  margin: 0 auto;
+  border-radius: 20rpx;
+}
+
+.saveView{
+  width: 540rpx;
+  height: 80rpx;
+  background-color: #D61800;
+  line-height: 80rpx;
+  text-align: center;
+  font-size: 38rpx;
+  color: #fff;
+  border-radius: 10rpx;
+  margin: 36rpx auto 0;
+}
+
+.blackView{
+  width: 80rpx;
+  color: #D61800;
+  font-size: 38rpx;
+  text-align: center;
+  margin: 30rpx auto 0;
+}

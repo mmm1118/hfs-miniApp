@@ -1,0 +1,16 @@
+
+<view class='flex_wrap'>
+    <view wx:for="{{images}}" class='imges'>
+        <view  class='pr'>
+        <image class='npload_img' src='{{item.path}}'></image>
+          <view class='po_bg flex_Middle' style='height:{{item.progress}}%;'>
+          </view>
+          <image src='./../../images/cancel.png' data-index="{{index}}" bindtap="_remove" class='po_tr'></image>
+          </view>
+    </view>
+    
+    <view bindtap='uploadpic' wx:if="{{images.length<9}}">
+            <image class='npload_img' src='./../../images/circle_img/upload.png'></image>
+    </view>
+  
+</view>

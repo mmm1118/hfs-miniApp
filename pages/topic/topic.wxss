@@ -1,0 +1,81 @@
+/* pages/topic/topic.wxss */
+
+.atFriendsView {
+  width: 650rpx;
+  height: 34rpx;
+  margin: 0 auto 20rpx;
+  padding: 20rpx 30rpx;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-radius: 20rpx;
+  box-shadow: 2px 2px 5px #e5e5e5;
+  background-color: #fff;
+}
+
+.searchImg {
+  width: 26rpx;
+  height: 42rpx;
+}
+
+.searchInput {
+  width: 594rpx;
+  height: 34rpx;
+  padding: 0 12rpx;
+}
+
+/* 话题列表 */
+
+.topicView {
+  background: #fff;
+}
+
+.topicView .topicItem {
+  padding: 30rpx 20rpx;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.topicView .topicItem image {
+  width: 120rpx;
+  display: block;
+}
+
+.topicView .topicItem image.hotImg {
+  width: 29rpx;
+  height: 38rpx;
+  position: absolute;
+  right: 20rpx;
+  top: 50rpx;
+}
+
+.topicView .topicItem:not(:first-child) {
+  border-top: solid 1rpx #eee;
+}
+
+.topicView .topicItem .topiciRight {
+  color: #000;
+  font-size: 34rpx;
+  margin-left: 23rpx;
+}
+
+.topicView .topicItem .topiciRight .text {
+  color: #a9a9a9;
+  font-size: 26rpx;
+  margin-top: 45rpx;
+}
+
+.topicView .topicItem .topiciRight .rightText {
+  color: #d61800;
+  margin-left: 50rpx;
+}
+
+/* 搜索无结果 */
+
+.searchOver {
+  text-align: center;
+  margin-top: 250rpx;
+  font-size: 24rpx;
+  color: #939393;
+}

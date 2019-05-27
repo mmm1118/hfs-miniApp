@@ -1,0 +1,17 @@
+/* packageThere/pages/Official/Official.wxss */
+.pd_0_30{padding:0rpx 30rpx;}
+.Headportrait{width:60rpx;height:60rpx;border-radius:100%;}
+.header_time{font-size:24rpx;color:#939393;padding-top:19rpx;padding-bottom:25rpx; }
+.bac_title{font-size:20rpx;color:#939393;padding-left:10rpx; }
+.bac_text{font-size:28rpx;color:#000;padding-left:28rpx;padding-top:18rpx;}
+
+.btn_fxd{
+        position:fixed;
+        width:100%;
+        border:none;
+        background:#fff;
+        bottom:0rpx;
+        left:0rpx;
+        height:100rpx;
+        line-height:100rpx;
+  }

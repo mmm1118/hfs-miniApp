@@ -1,0 +1,73 @@
+<view class='flex_around rank bg_ff'>
+    <view class='rank_title' data-index='0' bindtap='rank_tap'>
+        <view class='pd_26_0 center {{active==0?"ran_btnbg":""}}'> 收益</view>
+        <view class='{{active==0?"active_red":""}}'></view>
+    </view>
+    <view class='rank_title' data-index='1' bindtap='rank_tap'>
+      <view class='pd_26_0 center {{active==1?"ran_btnbg":""}}'>财务</view>
+      <view class='{{active==1?"active_red":""}}'></view>
+    </view>
+</view>
+
+<view  wx:if="{{active==0}}">
+
+  <view class='flex Grade_ff pd_27_0'>
+      <view class='profit_title'>起止时间</view>
+      <view class='flex_between w_100'>
+          <view>
+            <view class='profit_btn65'> <label class='profit_star'>开始</label> <label class='profit_time'>年/月/日</label> </view>
+            <view> <label class='profit_end'>结束</label> <label class='profit_time'>年/月/日</label></view>
+          </view>
+          <view class='Seebtn'>查看</view>
+      </view>
+  </view>
+
+<view class='Grade_ff mg_top20 f_34 line_height65 pd_30_0'>
+  <view><label>活动报名费收款:</label> <label class='c_939'>  9999.00 </label> <label>元</label></view>
+  <view><label>成员打赏收款:</label> <label class='c_939'> 55.60 </label> <label>元</label></view>
+  <view><label>会员费收款:</label> <label class='c_939'>  1688.00 </label> <label>元</label></view>
+   <view><label>累计收款:</label> <label class='c_939'>  2742.600 </label> <label>元</label></view>
+</view>
+
+<view class='Amount_top90 '>
+    <view class='Amount center'>实时总金额（元）</view>
+    <view class='Amount_money center'>2742.6</view>
+    <view class=' flex_center'>
+      <navigator hover-class='none' url='/packageTwo/pages/withdrawal/withdrawal'>
+          <view class='Reflect'>提现</view>
+      </navigator>
+    </view>
+</view>
+
+<view class='flex_center'> 
+ <view class='bottomsty center'>成员支付3天后才可提现哦，汉服币直接进入汉服币账户不在此显示</view>
+</view>
+</view>
+
+
+<view  wx:if="{{active==1}}" >
+  
+  <view class='Finance'>
+        <view class='flex_around header center'>
+          <view class='w_33'>提现用途</view>
+          <view class='w_33'>提现金额</view>
+          <view class='w_33'>提现时间</view>
+        </view>
+        <view class='content'>
+            <view  class='flex_around'>
+                <view class='w_33 center'>社团经费</view>
+                <view class='w_33 center'>480.00元</view>
+                <view class='w_33 center'>2019-03-12</view>
+            </view>  
+              <view class='flex_around'>
+                  <view class='w_33 center'>社团经费</view>
+                  <view class='w_33 center'>500.00元</view>
+                  <view class='w_33 center'>2019-03-12</view>
+              </view>
+        </view>
+
+
+ 
+  </view>
+
+</view>

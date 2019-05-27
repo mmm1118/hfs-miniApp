@@ -1,0 +1,40 @@
+<view class='bg_ff mg_top20'>
+
+<view wx:if="{{active==1}}">
+  <touch-gesture bind:currentGesture="sideslip"  data="{{bussDataList}}"   wx:for="{{bussData}}"  show="{{index}}"  data-index="{{index}}">
+    <view class='flex_between listaddres {{item.offset==true?"mg_leftf180":"mg_left0"}}' bindtap='tabChoice' data-index="{{index}}"> 
+      <view class='w_90 '>{{item.location}}{{item.details}} <label wx:if="{{item.isDefault==1}}" class='active_red'>默认</label></view>
+      <view class='w_10'><image class='w_16_h21 pr_top21left41' src='./../../../images/my_img/black.png'></image></view>
+    </view>
+    <view catchtap='adder_btn' data-index='{{index}}'  data-id='{{item.id}}' class='po bg_center flex_Middle {{item.offset==true?"mg_right0":"mg_right180"}}'>删除</view>
+  </touch-gesture>
+</view>
+
+
+
+<view wx:else>
+<touch-gesture bind:currentGesture="sideslip"  data="{{bussDataList}}"   wx:for="{{bussData}}"  show="{{index}}"  data-index="{{index}}">
+<navigator hover-class='none' url='/packageThere/pages/addressID/address?id={{item.id}}' class='pr'>
+  <view class='flex_between listaddres {{item.offset==true?"mg_leftf180":"mg_left0"}}'> 
+    <view class='w_90 '>{{item.location}}{{item.details}} <label wx:if="{{item.isDefault==1}}" class='active_red'>默认</label></view>
+    <view class='w_10'><image class='w_16_h21 pr_top21left41' src='./../../../images/my_img/black.png'></image></view>
+  </view>
+  <view catchtap='adder_btn' data-index='{{index}}'  data-id='{{item.id}}' class='po bg_center flex_Middle {{item.offset==true?"mg_right0":"mg_right180"}}'>删除</view>
+</navigator>
+</touch-gesture>
+</view>
+
+
+    <view class='listaddres'> 
+    <navigator   url='/packageThere/pages/address/address' class='flex' hover-class='none'>
+          <view class='pd_right36'><image class='w_h36' src='./../../../images/my_img/add.png'></image></view>
+          <view>新增收货地址</view>
+    </navigator>
+  </view>
+</view>
+
+<view>
+<navigator url='/packageThere/pages/address/address'  hover-class='none'>
+    <button class='btn' style='font-size:36rpx;'>下一步</button>
+</navigator>
+</view>

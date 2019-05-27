@@ -1,0 +1,96 @@
+<view> 
+  <view class='pr pd_btn30'>
+    <image class='w_100h_573' src='./../../../images/my_img/homepage_bg.png'></image>
+    <view class='po top129 center w_100'> 
+        <view> <image class='wh_200' src='{{bussData.avatarurl}}'></image></view>
+        <view class='flex_center'>
+            <view class='f_36'>{{bussData.nickname}}</view>
+            <view>
+              <image class='w_h35 pd_left13 pr_top6' wx:if="{{bussData.sex==2}}" src='./../../../images/my_img/gril.png'></image>
+              <image class='w_h35 pd_left13 pr_top6' wx:if="{{bussData.sex==1}}" src='./../../../images/my_img/body.png'></image>
+            </view> 
+        </view>
+
+        <view class='flex_center pd_top23 '> 
+          <view class='f_28'>
+            <input type='text' confirm-type="done" disabled='{{offsetinp}}' bindinput='iputval' bindblur="bindblur"  focus="{{focus}}" value='{{label}}' bindconfirm="Determine"></input> 
+          </view>
+          <view class='pr_tr714' bindtap='active'>
+          <image class='w_25_h38' src='./../../../images/my_img/bi.png'> </image> </view>
+        </view>
+
+        <view class=' h_120 radial'>
+        <view class='flex_around pd_top46'> 
+          <view>
+            <navigator url='/packageThere/pages/follow/follow?userid={{bussData.userid}}' hover-class='none'>
+              <view class='f_50'>{{follow}}</view>
+              <view class='f_28'>关注</view>            
+            </navigator>
+          </view>
+
+          <view>
+            <view class='w_2h_79 bg_ee bor_dashed1 pr_top19'></view>
+          </view>
+
+          <view>
+
+          <navigator url='/packageThere/pages/Fans/Fans?userid={{bussData.userid}}' hover-class='none'> 
+            <view class='f_50'>{{fans}}</view>
+            <view class='f_28'>粉丝</view>          
+          </navigator>
+          
+          </view>
+        </view>
+        </view>
+    </view>
+  </view>
+
+
+  <view class='pd_0_40 mg_btn24' wx:for="{{prt_listdata}}" > 
+  <navigator hover-class='none'  url='/packageThere/pages/stateDetail/stateDetail?dynamicid={{item.dynamicid}}'>
+    <view class=' pd_btn10_pad_top23 pr'>
+        <view class='flex'> 
+          <view><image class='wh_30 pr_top10'  src='./../../../images/my_img/redyuan.png'></image></view>
+          <view class='f_40 pd_l10r171'>{{item.week}}</view>
+        </view>
+        <view class='f_24 po top_center'>{{item.timeMin}}</view> 
+    </view>
+
+    <view class='box_show bor_rad20 pd_20_30_30_30 mg_left20 mg_right10 flex_between'>  
+        <view>
+          <view class='c_939 f_28 pr_top6 w_529_wd '>{{item.content}}</view>
+            <view class='pd_top26' wx:if="{{item.imagesDTOs.length}}">
+            <image class='wh_150  pd_letf20 border_rad2' wx:for="{{item.imagesDTOs}}"  wx:for-item="itemImg"  catchtap='previewImg'  data-index='{{index}}' data-imagesDTOs="{{item.imagesDTOs}}"  src='{{itemImg.url}}'></image>
+          </view>
+        </view>
+
+        <view>
+          <view catchtap='share' data-index='{{index}}'>  
+            <image   class='w_44h_10' src='./../../../images/my_img/gnegduo.png'></image>
+          </view>
+        </view>
+ 
+    </view>
+     </navigator>
+
+  <view class=' {{item.offset?"pxd":"none"}}' bindtap='cal_qx'>
+      <view class='center  bg_eee f_28 {{item.offset?"pxd_btn0":"none"}}' catchtap='stop_cal'>
+      <button class='shareBtn ' data-dynamicid="{{item.dynamicid}}" style='border:none;background:#fff;font-size:28rpx;color:#000;padding:7rpx 0rpx;' plain='true' ddata-index="{{index}}"  catchtap='stop_cal'  open-type='share'>
+        <!-- <view class='bg_ff pd_20_0 bor_top' data-index="{{index}}"  catchtap='stop_cal'>微信好友</view> -->
+        微信好友
+      </button>
+      
+
+        <view class='bg_ff pd_20_0 bor_top' data-index="{{index}}" data-opti='2' catchtap='stop_cal'>朋友圈</view>
+        <view class='bg_ff pd_20_0 c_d61 bor_top' data-opti='3' data-dynamicid="{{item.dynamicid}}" data-index="{{index}}"  catchtap='stop_cal'>删除</view>
+        <view catchtap='share' class='mg_top12 bg_ff pd_20_0'>取消</view>
+      </view>
+  </view>
+    
+
+  </view>
+  
+
+  <!-- <view class='pd_btn30 center c_939 f_22'>已加载全部</view> -->
+
+</view>

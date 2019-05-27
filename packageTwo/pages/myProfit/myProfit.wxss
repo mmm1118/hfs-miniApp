@@ -1,0 +1,41 @@
+.bg_ff{background:#fff;}
+.rank_title{color:#939393;}
+.ran_btnbg{color:#D61800;}
+.pd_26_0{padding:26rpx 0rpx;}
+.c_red{color:#D61800;}
+.f_34{font-size:32rpx;}
+
+.active_red{width:100rpx;height:5rpx;background:#D61800;margin:0 auto;}
+
+.w_100{width:100%;padding-top:10rpx;}
+.mg_top20{margin-top:20rpx;}
+.pd_27_0{padding:27rpx 0rpx;}
+.Grade_ff{background:#fff;margin:17rpx 24rpx;padding:30rpx 31rpx;border-radius:20rpx;}
+.profit_title{width:210rpx;font-size:34rpx;padding-right:40rpx;padding-top:4rpx;}
+.profit_star{font-size:26rpx;padding-right:40rpx;}
+.profit_btn65{padding-bottom:65rpx;}
+.profit_end{font-size:26rpx;padding-right:20px;}
+.profit_time{font-size:26rpx;color:#939393;}
+.Seebtn{border:1rpx solid #D61800;
+height:50rpx;
+line-height:50rpx;
+padding:0rpx 37rpx;
+border-radius:5rpx;
+color:#D61800;
+margin-top:20px;
+}
+
+.line_height65{line-height:65rpx;}
+.c_939{color:#D61800;font-size:30rpx; }
+
+.Amount_top90{margin-top:99rpx;}
+.Amount{font-size:30rpx;}
+.Amount_money{font-size:60rpx;color:#D61800;padding-top:10rpx;padding-bottom:5rpx;}
+.Reflect{background:#D61800;padding:24rpx 68rpx;border-radius:10rpx;color:#fff;}
+.bottomsty{width:398rpx;font-size:24rpx;margin-top:113rpx;color:#939393}
+
+.Finance{background:#fff;padding:0rpx 31rpx;margin-top:20rpx;}
+.w_33{width: 33%;}
+.Finance .header{font-size:34rpx;padding:30rpx 0rpx;border-bottom:1rpx solid #eee;}
+.content{font-size:28rpx;color:#939393;}
+.content .center{padding:30rpx 0rpx;border-bottom:1rpx solid #eee;}

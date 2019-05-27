@@ -1,0 +1,35 @@
+<view style='height: 20rpx;'></view>
+
+<view class='atFriendsView'>
+  <image class='searchImg' src='/images/index/jing.png'></image>
+  <input class='searchInput' placeholder='请输入社团名称' bindinput='searchFriends'></input>
+</view>
+
+<!-- 默认内容 -->
+<view class='topicView'>
+
+  <navigator class="topicItem" url="/pages/topic/topicDetail/topicDetail">
+    <image src="/images/index/meizi01.png" mode="widthFix"></image>
+    <view class="topiciRight">
+      <view class="title">汉服司地表打卡活动</view>
+      <view class="text">
+        <text>讨论0.5千</text>
+        <text class="rightText">官方话题</text>
+      </view>
+      <image class="hotImg" src="/images/index/hotImg.png"></image>
+    </view>
+  </navigator>
+
+  <navigator class="topicItem" url="/pages/topic/topicDetail/topicDetail">
+    <image src="/images/index/meizi01.png" mode="widthFix"></image>
+    <view class="topiciRight">
+      <view class="title">汉服司地表打卡活动</view>
+      <view class="text">
+        <text>讨论0.5千</text>
+      </view>
+    </view>
+  </navigator>
+
+</view>
+<!-- 搜索无内容时 -->
+<view class='searchOver'>暂无这个话题，赶快去新建一个吧~</view>

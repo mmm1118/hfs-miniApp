@@ -1,0 +1,21 @@
+<!-- 引入自定义组件 .wxml -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='detailLayout' style='padding-top: {{height}}px'></view>
+
+<!-- 礼物榜为空时 -->
+<image class='noGiftImg' src='/images/thirdIndex/noDynamic.png'></image>
+<!-- 礼物列表 -->
+<view class='giftList'>
+  <view class='giftItem'>
+    <image mode='aspectFill' src='/images/index/meizi01.png'></image>
+    <text>收到一个冠冕</text>
+  </view>
+  <view class='giftItem'>
+    <image mode='aspectFill' src='/images/index/meizi01.png'></image>
+    <text>收到一把团扇</text>
+  </view>
+  <view class='giftItem'>
+    <image mode='aspectFill' src='/images/index/meizi01.png'></image>
+    <text>收到一个荷包</text>
+  </view>
+</view>

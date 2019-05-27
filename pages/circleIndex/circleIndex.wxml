@@ -1,0 +1,138 @@
+<view class='bg_ff flex search'>
+  <view>
+    <image class='secrch_log' src='./../../images/circle_img/search.png'></image>
+  </view>
+  <view class='secrch_font'><input type='text' bindfocus="focus" placeholder='搜圈子'></input></view>
+</view>
+
+<view class='pd_0_25 '>
+
+  <view class='cirle_title'>我加入的圈子</view>
+  <view>
+
+  </view>
+
+  <scroll-view scroll-x='true' class='scroll_view'>
+    <!-- <view class='flex' >  -->
+    <view bindtap='Eject' class='add_img'>
+      <image class=' cirle_Newly' src='./../../images/circle_img/Newlybuild.png'></image>
+    </view>
+    <view
+        class='bg_ff cirle_bg'
+        wx:for="{{circledata}}"
+        data-circleName = "{{item.circleName}}"
+        data-classid = "{{item.classid}}"
+        bindtap='tocircleDetail'>
+      <view class='title'>{{item.circleName}}</view>
+      <view class='flex'>
+        <image class='cirle_xlogo' src='./../../images/circle_img/people.png'></image>
+        <image class='organizations_logo pr_top5left11' wx:if="{{item.addv === 1}}"
+               src='./../../images/circle_img/brgihtyellow.png'></image>
+        <image class='organizations_logo pr_top5left11' wx:if="{{item.addv === 2}}"
+               src='./../../images/circle_img/Brightblue.png'></image>
+        <image class='organizations_logo pr_top5left11' wx:if="{{item.addv === 3}}"
+               src='./../../images/circle_img/Brightred.png'></image>
+      </view>
+    </view>
+  </scroll-view>
+  <!-- </view> -->
+
+</view>
+
+
+<view>
+
+  <view class='flex pd_top50 flex_between pd_0_25 pd_btn16'>
+
+    <view class='flex'>
+      <view class='association_font'>认证社团</view>
+      <view class='pr'>
+        <view bindtap='ismack'>
+          <image class='association_img' src='./../../images/circle_img/careful.png'></image>
+        </view>
+        <view class='association_po po' wx:if="{{flng}}">
+          <view class='center pd_top12 f_26'>官方忍者社团圈子说明</view>
+          <view class='f_20 line36 pd_left18'>
+            <view>1 蓝v为政府登记社团</view>
+            <view>2 黄v为社会公益社团</view>
+            <view>3 红v为个体商户</view>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class='more' data-fetch='_findCircleClassAuthByPage' bindtap="_handleMore">查看更多>></view>
+
+  </view>
+
+  <navigator
+      wx:for="{{circleClassAuth}}"
+      wx:key="item.classid"
+      hover-class='none'
+      url='./../../packageTwo/pages/details/details?classid={{item.classid}}&name={{item.circleName}}'
+      class='bg_ff pd_34 border_rad20'>
+    <view class='flex '>
+      <view>
+        <image class='organizations_img' src='{{item.imageUrl}}'></image>
+      </view>
+      <view class='pd_left25'>
+        <view class='flex '>
+          <view class='organizations_title '>{{item.circleName}}</view>
+          <view>
+            <image class='organizations_logo pr_top5left11' wx:if="{{item.addv === 1}}"
+                   src='./../../images/circle_img/brgihtyellow.png'></image>
+            <image class='organizations_logo pr_top5left11' wx:if="{{item.addv === 2}}"
+                   src='./../../images/circle_img/Brightblue.png'></image>
+            <image class='organizations_logo pr_top5left11' wx:if="{{item.addv === 3}}"
+                   src='./../../images/circle_img/Brightred.png'></image>
+          </view>
+        </view>
+        <view class='organizations_text'>{{item.circlePresentation}}</view>
+      </view>
+    </view>
+  </navigator>
+
+</view>
+
+
+<view>
+
+  <view class='flex_between pd_top50 pd_0_25 pd_btn16'>
+    <view class='association_font'>精彩推荐</view>
+    <view class='more' data-fetch='_findCircleClassNoAuthByPage' bindtap="_handleMore">查看更多>></view>
+
+  </view>
+
+  <navigator
+      wx:for="{{circleClassNoAuth}}"
+      wx:key="item.classid"
+      url='./../../packageTwo/pages/details/details?classid={{item.classid}}&name={{item.circleName}}'
+      hover-class='none'
+      class='bg_ff pd_34 border_rad20'>
+    <view class='flex '>
+      <view>
+        <image class='organizations_img' src='{{item.imageUrl}}'></image>
+      </view>
+      <view class='pd_left25'>
+        <view>
+          <view class='organizations_title '>{{item.circleName}}</view>
+        </view>
+        <view class='organizations_text'>{{item.circlePresentation}}</view>
+      </view>
+    </view>
+  </navigator>
+
+  <popup ismask="{{is_flng}}" bindonSort="onSort">
+    <view class='prot f_36' catchtap='mk'>
+      <view class='title center'>新建圈子</view>
+      <view class='flex_center'>
+        <input type='string' bindinput="input_val" maxlength='15' class='f_30 c_939' placeholder='{{text_val}}'></input>
+      </view>
+      <view class='flex center'>
+        <view class='c_939 w_50' catchtap='cancel'>取消</view>
+        <view class='c_ff0 w_50' catchtap='NextStep'>下一步</view>
+      </view>
+    </view>
+  </popup>
+
+</view>
+

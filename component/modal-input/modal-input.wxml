@@ -1,0 +1,18 @@
+<view class='fxd' wx:if="{{rewardBl}}">
+
+  <view class='mask'>
+    <view class='title'>{{blarray[0]}}</view>
+    <view class='flex'>
+      <view>
+      <input type='number' placeholder='请输入金额' bindinput="text" class='bindinput'></input>
+      </view>
+      <view class='yuan'>{{blarray[1]}}</view>
+     
+    </view>
+    <view class='flex_t'>
+        <view class='c_939' catchtap='cancel'>取消</view>
+        <view class='queding'catchtap="dataamine">确定</view>
+    </view>
+  </view>
+
+</view>

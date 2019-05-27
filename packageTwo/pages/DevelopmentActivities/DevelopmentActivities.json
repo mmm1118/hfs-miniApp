@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+      "pin-picker": "./../../../component/bth-picker/bth-picker"
+  },
+  "navigationBarTitleText": "活动"
+}

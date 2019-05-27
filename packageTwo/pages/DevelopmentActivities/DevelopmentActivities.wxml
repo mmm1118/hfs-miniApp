@@ -1,0 +1,96 @@
+<view> 
+
+<view> 
+  <view class='pr mg_top20 pd_20_0'>
+      <view class='title-text center'>我的会员卡</view>
+  </view>
+
+  <view class='bg_ff pr'>
+
+    <view class='flex_between pd_0_40'>
+      <view class='flex'>
+          <view><image class="header_img" src='./../../../images/my_img/homepage_bg.png'></image></view>
+          <view class='pd_left19'>
+              <view class='f_34 pd_btn30'>3月17日花朝节十二花神~</view>
+              <view class='c_939 f_26'>2019-03-17</view>
+              <view class='c_939 f_26 pd_left10'>报名人数：200人</view>
+          </view>
+      </view>
+
+      <view>
+        <view class='pd_btn40 pd_top20 flex_end'  bindtap='show_hidemack'>
+              <image class='w_44h10' src='./../../../images/my_img/share.png'></image>
+        </view>
+        <view class='flex_end'>
+              <image class='wh_60' src='./../../../images/my_img/QRcode.png'></image>
+        </view>
+      </view>
+    </view>
+ 
+        <view class="po_mack" wx:if="{{offset}}">
+          1231312
+        </view>
+  </view>
+
+
+</view>
+
+<view> 
+  <view class='pr mg_top20 pd_20_0'>
+      <view class='title-text center'>已结束活动</view>
+  </view>
+
+
+<view class='bg_ff'>
+    <view class='flex pd_0_40'>
+      <view>
+          <view><image class="header_img" src='./../../../images/my_img/homepage_bg.png'></image></view>
+      </view>
+
+      <view class='w_100'>
+          <view class='pd_left19'> 
+              <view class='flex_between'>
+                    <view class='f_34 pd_btn30'>3月17日花朝节十二花神~</view>
+                    <view  bindtap='uppater' >
+                        <image class='w_44h10'src='./../../../images/my_img/share.png'></image>
+                    </view>
+              </view>
+
+              <view class='flex_between'> 
+                  <view>
+                      <view class='c_939 f_26'>2019-03-17</view>
+                      <view class='c_939 f_26'>报名人数：200人</view>                  
+                  </view>
+                  <view>
+                      <button class='btn'>已结束</button>
+                  </view>
+              </view>
+      </view>
+
+      </view>
+    </view>
+
+  </view>
+
+</view>
+
+</view>
+
+<view class='fxd'>
+  <navigator hover-class='none' url='/packageTwo/pages/postActivity/postActivity'>
+      <button class='btns'>发布活动</button>
+  </navigator>
+</view>
+
+<pin-picker 
+    show="{{show}}"
+    arraydata="{{item}}"
+    bindtopone0="topone0" 
+    bindtopone1="topone1" 
+    bindtopone2="topone3"
+    bindtopone3="topone4"
+    bindonSort='onSort' 
+    bindonmack="onmack"
+    class='pxd_top0'>
+</pin-picker>
+

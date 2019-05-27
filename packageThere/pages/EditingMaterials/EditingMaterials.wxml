@@ -1,0 +1,42 @@
+<view>
+
+    <view class='pr'>
+        <image class="header_img" src='./../../../images/my_img/bg.png'></image>
+        <view class='po top84 w_100Center'>
+          <image class='wh_150' src="{{bussData.avatarurl}}"></image>
+        </view>
+    </view>
+
+    <view class='f_30 '>
+        <view class='pd_36_41 flex_between bg_color_ff mg_top20'>
+          <view>呢称</view>
+          <view class='c_939'><input class='textRight' type='text' bindinput='bind_name' maxlength='8' value='{{bussData.nickname}}'></input></view>
+        </view>
+
+        <view class='pd_22_36 flex_between bg_color_ff mg_top20'>
+          <view class='pr_top13 '>性别</view>
+          <view class='flex'>
+            <view class='pd_right58' data-sex="{{sex}}" bindtap='sex_tap'>
+            <image class='w_56_h_56 ' wx:if="{{sex==2}}" src='./../../../images/my_img/gril.png'></image>
+            <image class='w_56_h_56' wx:else src='./../../../images/my_img/bg_gril.png'></image>
+            </view>
+            <view data-sex="{{sex}}" bindtap='sex_tap'>
+              <image class='w_56_h_56' wx:if="{{sex==1}}" src='./../../../images/my_img/body.png'></image>
+              <image class='w_56_h_56' wx:else src='./../../../images/my_img/bg_body.png'></image>
+            </view>
+          
+            
+          </view>
+        </view>
+
+        <view class='pd_36_41 flex_between bg_color_ff mg_top20'>
+          <view>个性签名</view>
+          <view class='c_939'> 
+            <input type='text' class='text_right' bindinput='bind_autograph' value='{{bussData.label || "请输入个性签名"}}'></input>
+          </view>
+        </view>
+    </view>
+
+    <button class='btn' disabled="{{setoff}}" bindtap='Submission'>保存</button>
+  
+</view>

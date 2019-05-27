@@ -1,0 +1,23 @@
+
+<!-- 引入自定义组件 .wxml -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+<view class='detailLayout' style='margin-top: {{height}}px'></view>
+
+<view style='height: 20rpx;'></view>
+
+<view class='atFriendsView'>
+  <image class='searchImg' src='/images/index/search.png'></image>
+  <input class='searchInput' placeholder='输入要@的昵称' bindinput='searchFriends'></input>
+</view>
+
+<block wx:if="{{friendsList.length > 0}}">
+  <block wx:for="{{friendsList}}">
+    <view class='atFriends' data-openid='{{item.openId}}' data-nickname='{{item.nickName}}' catchtap='atFriends'>
+      <image class='avatarUrl' src='{{item.avatarUrl}}'></image>
+      <view class='nickName'>{{item.nickName}}</view>
+    </view>
+  </block>
+</block>
+<block wx:else>
+  <text class='notFriends'>暂无好友信息</text>
+</block>

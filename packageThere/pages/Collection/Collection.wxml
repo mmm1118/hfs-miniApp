@@ -1,0 +1,52 @@
+
+<navigator wx:for="{{listbussData}}" hover-class='none' url='/packageThere/pages/stateDetail/stateDetail?dynamicid={{item.dynamicid}}'>
+ <view class="dynamic" >
+    <view class="titleLayout">
+      <view class="imageLayout">
+        <image src="{{item.rqcode}}"></image>
+        <view class="absoluteImg">
+          <image src="/images/index/guanzhu_s.png"></image>
+        </view>
+      </view>
+      <view class="contentLayout">
+        <view>
+
+          <view class="nickName">{{item.location}}<text class="category">{{item.topictableDTOs[0].topicname}}</text></view>
+
+          <view class="time">{{item.createtime}}</view>
+        </view>
+        <view class="character">{{item.content}}~</view>
+        <view class="imgList" >
+          <image wx:for="{{item.imagesDTOs}}" wx:for-item="list" src="{{list.url}}"></image>
+        </view>
+
+        <view class="opration">
+          <view class="oprationItem">
+            <image src="/images/index/pinlun.png"></image>
+            <text>{{item.commentNum}}</text>
+          </view>
+          <view class="oprationItem">
+
+            <!-- <block>
+              <image src="/images/index/dianzan.png"></image><text>311</text>
+            </block> -->
+
+            <block>
+              <image src="/images/index/dianzan_s.png" wx:if="{{item.isLike==1}}"></image>
+              <image src="/images/index/dianzan.png"  wx:else></image>
+             <text class="colorRed">{{item.liketableNum}}</text>
+            </block>
+
+          </view>
+          <view class="oprationItem" catchtap='toShare'>
+            <image src="/images/index/fenxiang.png"></image>
+          </view>
+          <view class="oprationItem">
+            <image src="/images/index/collect.png" wx:if="{{item.isShow}}"></image>
+            <image src="/images/index/collect_s.png" wx:else></image>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  </navigator>

@@ -1,0 +1,35 @@
+<!-- 引入动态模板组件 -->
+<import src='/pages/memorialIndex/article/article.wxml' />
+
+<!-- 轮播图 -->
+<swiper indicator-dots='true' indicator-color='#F3F3F3' indicator-active-color='#D61800' autoplay='true' interval='3000' circular='true' class='sowing_map'>
+  <block wx:for="{{bannerList}}">
+    <swiper-item>
+      <image data-pages="{{item.pages}}" src='{{item.imgUrl}}' catchtap='toPage'></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<!-- tab栏 -->
+<view class='scrollLayout'>
+  <scroll-view scroll-x="true" class='swiper-tab'>
+    <view wx:for="{{allZouzheType}}" class="swiper-tab-list {{currentTab==item.id ? 'on' : ''}}">
+      <text data-current="{{item.id}}" catchtap="swichNav">{{item.content}}</text>
+    </view>
+  </scroll-view>
+</view>
+
+<view style='height:430rpx;'></view>
+
+<block>
+  <!-- 文章列表 -->
+  <view class='article'>
+
+    <view wx:for="{{articleList}}" 
+          data-id="{{item.id}}"
+          data-zouzhe-Type-Id="{{item.zouzheTypeId}}" catchtap="clickZouzhe">
+      <template is='articleItem' data="{{item: item, index: index}}" />
+    </view>
+
+  </view>
+</block>

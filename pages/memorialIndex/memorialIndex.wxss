@@ -1,0 +1,61 @@
+/* 轮播图 */
+
+.sowing_map {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 350rpx;
+}
+
+.sowing_map image {
+  width: 100%;
+  height: 100%;
+}
+
+/* 推荐和关注附近按钮 */
+
+.scrollLayout {
+  width: 100%;
+  height: 80rpx;
+  background-color: #fff;
+  position: fixed;
+  z-index: 99;
+  top: 350rpx;
+  left: 0;
+}
+
+.swiper-tab {
+  white-space: nowrap;
+}
+
+.swiper-tab-list {
+  width: 182rpx;
+  display: inline-block;
+  font-size: 32rpx;
+  letter-spacing: 10rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #939393;
+  position: relative;
+  font-weight: bold;
+}
+
+.on {
+  color: rgb(214, 24, 0);
+}
+
+.on::after {
+  content: '';
+  position: absolute;
+  bottom: 6rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 4rpx;
+  width: 40rpx;
+  background: rgb(214, 24, 0);
+}
+
+/* 文章样式 */
+
+@import "/pages/memorialIndex/article/article.wxss"

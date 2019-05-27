@@ -1,0 +1,34 @@
+.mg_31_0{margin:0rpx 31rpx;}
+.f_36{font-size:36rpx;}
+.pd_top20_btn12{padding-bottom:12rpx;padding-top:20rpx;}
+.inp_val{background:#fff;border-radius:20rpx;padding:25rpx 35rpx;font-size:28rpx;}
+
+.border_1ee{border-bottom:1px solid #eee;padding-bottom:21rpx;}
+.CircleSetup{background:#fff;border-radius:20rpx;padding:25rpx 35rpx;}
+.CircleSetup_f28{font-size:28rpx;margin-bottom:50rpx;}
+.radio{display:block;font-size:28rpx;}
+.radio .pd_left52{padding-left:42rpx;color:#939393;}
+.radio:nth-child(1){margin-bottom:42rpx;}
+.w_h32{width:32rpx;height:32rpx;}
+
+.pd_top29btn52{padding-bottom:52rpx;padding-top:29rpx;}
+.pd_left49{padding-left:49rpx;}
+
+.pd_top5{padding-top:5rpx;}
+.cashxj{padding-top:9rpx;
+padding-left:20rpx;
+padding-right:60rpx;
+}
+.c_939{color:#939393;}
+
+.introduce{
+  margin:20rpx 50rpx;
+  font-size:28rpx;
+  color:#939393;
+}
+
+.btn_top138{padding-top:138rpx;}
+.mg_btn18{margin-bottom:18rpx;}
+.mg_btn52{margin-bottom:52rpx;}
+.btn_red{background:#D61800;color:#fff;width:428rpx;}
+.btn_gray{background:#939393;color:#fff;width:428rpx;}

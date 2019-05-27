@@ -1,0 +1,5 @@
+<view class='movableAreaItem textLayout'>
+  <textarea placeholder='请输入文字' placeholder-style='color:#B2B2B2;' maxlength="-1"></textarea>
+  <image class='movableDelPhoto' src='/images/memorial/iconDel.png'></image>
+  <image class='movableMoveImg' src='/images/memorial/iconMove.png' data-index='{{index}}' bindtouchstart='dragStart' bindtouchmove='dragMove' bindtouchend='dragEnd'></image>
+</view>

@@ -1,0 +1,17 @@
+<template name="articleItem">
+  <navigator url='/pages/memorialIndex/webView/webView?webUrl={{item.webUrl}}&title={{item.title}}' class='articleItem'>
+    <view class='imageLayout'>
+      <image src='{{item.images}}'></image>
+    </view>
+    <view class='itemRight'>
+      <view class='contentText'>
+        <text>{{item.title}}</text>
+        <view>{{item.content}}</view>
+      </view>
+      <view class='lookNum'>
+        <image src='/images/memorial/lookNum.png'></image>
+        <text>{{item.lookNum}}</text>
+      </view>
+    </view>
+  </navigator>
+</template>

@@ -1,0 +1,34 @@
+/* 图片 */
+
+.movableAreaItem {
+  border-radius: 20rpx;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  margin-bottom: 30rpx;
+}
+
+.imgLayout {
+  width: 100%;
+}
+
+.imgLayout .uploadImg {
+  width: 100%;
+  display: block;
+}
+
+.movableDelPhoto {
+  position: absolute;
+  top: 20rpx;
+  right: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.movableMoveImg {
+  position: absolute;
+  bottom: 20rpx;
+  right: 30rpx;
+  width: 40rpx;
+  height: 27rpx;
+}

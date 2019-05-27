@@ -1,0 +1,22 @@
+<view class='article'>
+
+  <view  class='articleItem'>
+    <view class='imageLayout'>
+      <image src='./../../../images/circle_img/bg.png'></image>
+    </view>
+
+    <view class='itemRight '>
+      <view class='contentText'>
+        <view class='flex_end'> <image bindtap='add_tap' src='./../../../images/circle_img/remove.png'></image></view>
+          <view class='text'>花仙子，广州城的美丽记忆</view>
+          <view class='val'>花仙子，广州城的美丽记忆 欢迎大家来广州哦~</view>
+      </view>
+    </view>
+  </view>
+
+  <view class='fxd_add'> 
+    <navigator hover-class='none' url='/packageTwo/pages/addArticle/addArticle'>
+        <image src='./../../../images/circle_img/addartilce.png'></image>
+    </navigator>
+  </view>
+</view>

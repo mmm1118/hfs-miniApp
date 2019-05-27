@@ -1,0 +1,184 @@
+<view class='flex_around rank bg_ff'>
+    <view class='rank_title {{active==0?"ran_btnbg":""}}' data-index='0' bindtap='rank_tap'>成员列表</view>
+        <view class='rank_title {{active==1?"ran_btnbg":""}}' data-index='1' bindtap='rank_tap'>待审核</view>
+    <view class='rank_title {{active==2?"ran_btnbg":""}}' data-index='2' bindtap='rank_tap'>已拒绝</view>
+</view>
+    <view>
+      <view class='bg_ff flex search'>
+      <view><image class='secrch_log'  src='./../../../images/circle_img/search.png'></image></view>
+      <view class='secrch_font'><input type='text' bindfocus="focus" placeholder='搜圈子'></input></view>
+    </view>
+
+<view wx:if="{{active==0}}"> 
+
+
+    <view class='menber_join bg_ff'>
+          <view class='flex_between border1eee pd_15_0'>
+                <view class='flex'>
+                  <view><image class='logo pr_top10' src='./../../../images/circle_img/bg.png'></image> </view>
+                  <view class='pr_top16'>管理员</view>
+                </view>
+                <view class='flex btn_lenth'>
+                    <view class='btn'>副社长</view>
+                    <view class='btn'>一级会员</view>
+                    <view class='btn_d16'>管理员</view>
+                </view>
+          </view>
+
+        <view class='border1eee pd_15_0 time_sty'>
+            <view class='flex_between time_sbtn20'>
+              <view>加入时间</view>
+              <view>2018-12-25 14：29</view>
+            </view>
+            <view class='flex_between'>
+              <view>会员到期时间</view>
+              <view>2019-12-25</view>
+            </view>
+        </view>
+
+        <view class='flex_between center'>
+            <view class='w_50  afters'  bindtap='pickOut'>踢出圈子</view>
+            <view class='w_50' catchtap='protsRightBtn'>设置会员等级/身份</view>
+        </view>
+    </view>
+
+
+<popup ismask="{{show}}" bindonSort="onSort" catchtap="mk">
+     <view class='prots f_36' catchtap='mk'>
+      <view class='center title'>提示</view>
+      <view class='center header'>该成员是付费成员，踢该成员需要退还人圈费</view>
+      <view wx:for="{{list}}" class='flex pd_btn10_left40'>
+          <view>
+              <view class='pr_top23' bindtap='Selection' data-index="{{index}}"> 
+                <van-icon name="checked"  size="24px" color="#09bb07" wx:if="{{item.chenck}}"></van-icon> 
+                <van-icon name="circle"  size="24px" color='#dddddd' wx:else></van-icon> 
+              </view>
+          </view>
+          <view>
+              <view>
+                  <view> <view class='addmenber_name'>{{item.name}}</view></view>
+              </view>
+          </view>
+      </view>
+      <view class='center tuimomey'> 一共需要退还 50.00 元 </view>
+        <view class='flex center'>
+            <view class='w_50' catchtap='cancel'>取消</view>
+            <view class='c_ff0 w_50' catchtap='FixedMoney'>确定</view>
+        </view>
+    </view>
+</popup>
+
+<popup ismask="{{showSet}}" bindonSort="onSort" catchtap="mk">
+     <view class='protss f_36' catchtap='mk'>
+    <view>
+      <view>
+          <view class='protstile'>设置会员等级/身份</view>
+          <view>
+              <view class='protstileleft40'>等级:</view>
+                    <view class='pd_left105'> 
+                        <radio-group class="radio-group" bindchange="radioChange">
+                            <label class="radio" wx:for="{{items}}">
+                              <radio value="{{item.name}}" checked="{{item.checked}}" />
+                              {{item.value}}
+                            </label>
+                          </radio-group>
+                    </view>
+          </view>
+      </view>
+
+       <view>
+          <view>
+              <view class='protstileleft40'>身份:</view>
+                    <view class='pd_left105'> 
+                        <radio-group class="radio-group" bindchange="radioChangetwo">
+                            <label class="radio" wx:for="{{items2}}">
+                              <radio value="{{item.name}}" checked="{{item.checked}}" />
+                              {{item.value}}
+                            </label>
+                          </radio-group>
+                    </view>
+          </view>
+      </view>       
+    </view>  
+        <view class='flex_between center protsBtnTop40'>
+            <view class='w_50' catchtap='cancelMember'>取消</view>
+            <view class='w_50 protsRightBtn' catchtap='DetermineMember'>确定</view>
+        </view>
+    </view>
+</popup>  
+
+<view class='fxd flex_around'>
+  <navigator hover-class='none' url='/packageTwo/pages/Grade/Grade'>
+    <button style='font-size:30rpx;'>编辑会员等级/身份</button>
+  </navigator>
+  <navigator hover-class='none' url='/packageTwo/pages/setUp/setUp'>
+  <button style='font-size:30rpx;'>设置管理员</button>
+  </navigator>
+</view>
+
+</view>
+
+
+</view>
+
+<view wx:if="{{active==1}}">
+
+    <view class='menber_join bg_ff'>
+          <view class='border1eee pd_15_0'>
+                <view class='flex'>
+                  <view><image class='logo pr_top10' src='./../../../images/circle_img/bg.png'></image> </view>
+                  <view class='pr_top16'>管理员</view>
+                </view>
+      
+          </view>
+
+        <view class='border1eee pd_15_0 time_sty'>
+            <view class='time_sbtn20'>
+              <view class='time_sbtn20'>申请时间</view>
+              <view>验证信息：无 </view>
+            </view>
+          
+        </view>
+
+        <view class='flex_between center'>
+            <view class='w_50  afters' bindtap='refuse'>拒绝</view>
+            <view class='w_50 c_red'>同意加入</view>
+        </view>
+    </view>
+
+<popup ismask="{{show}}" bindonSort="onSort" catchtap="mk">
+     <view class='prot f_36' catchtap='mk'>
+        <view class='title center' >拒绝理由</view>
+        <view class='flex_center'> 
+            <input type='string' bindinput="input_val"  maxlength='15' class='f_30 c_939' placeholder='15个汉字以内'></input>
+        </view>
+        <view class='flex center'>
+            <view class='w_50' catchtap='cancel'>忽略</view>
+            <view class='c_ff0 w_50' catchtap='NextStep'>发送</view>
+        </view>
+    </view>
+</popup>
+
+</view>
+
+<view wx:if="{{active==2}}">
+
+    <view class='menber_join bg_ff'>
+          <view class='border1eee pd_15_0'>
+                <view class='flex'>
+                  <view><image class='logo pr_top10' src='./../../../images/circle_img/bg.png'></image> </view>
+                  <view class='pr_top16'>达浪达浪~</view>
+                </view>
+      
+          </view>
+
+        <view class='border1eee pd_15_0 time_sty'>
+            <view class='time_sbtn20 flex_between'>
+              <view>申请时间</view>
+              <view>2018-12-25 14：29 </view>
+            </view>
+            <view>拒绝理由：无</view>
+
+        </view>
+    </view>
+</view>

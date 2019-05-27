@@ -1,0 +1,7 @@
+
+  <view class="loginView">
+    <view class='loginContent'>登录汉服司</view>
+    <view class='loginBtn'>
+        <button class='confirmBtn' open-type='getUserInfo' bindgetuserinfo='bindgetuserinfotwo'>授权登录</button>
+    </view>
+  </view>

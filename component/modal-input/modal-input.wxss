@@ -1,0 +1,38 @@
+.fxd {
+  position: absolute;
+  top: 0rpx;
+  left: 0rpx;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+
+.mask {
+  background: #fff;
+  width: 560rpx;
+  height: 290rpx;
+  border-radius: 10rpx;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.mask .title {
+  font-size: 34rpx;
+  margin-top:50rpx;margin-bottom: 10rpx;text-align: center
+}
+
+.mask  input {
+  border: 1rpx solid #414339;
+  border-radius: 15rpx;
+  width: 330rpx;
+  height: 74rpx;
+  text-align: center
+}
+
+.flex{display: flex;padding:0rpx 90rpx;}
+.yuan{padding-top:20rpx;padding-left:10rpx;}
+.flex_t{display:flex;margin-top:24rpx;}
+.flex_t view{width:50%;text-align: center;padding:24rpx 0rpx;}
+.c_939{color:#939393 }

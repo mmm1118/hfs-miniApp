@@ -1,0 +1,14 @@
+<view class='page'>
+    <view class='details_hader'>{{noticeData.createTime}}</view>
+    <view class='details_text'>{{noticeData.notice}}</view>
+    <view>
+      <view><image class='details_img' src='./../../../images/circle_img/bg.png'></image></view>
+    </view>
+
+
+  <view class='fixd flex_around'>
+    <button class='btn_gray' catchtap='delect'>删除</button>
+    <button class='btn_red' catchtap='edit'>编辑</button>
+  </view>
+
+</view>

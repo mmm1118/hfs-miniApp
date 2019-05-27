@@ -1,0 +1,4 @@
+<!--components/touch-gesture/touch-gesture.wxml-->
+<view  bindtouchmove="_handletouchmove"  data-index="{{show}}" bindtouchstart = "_handletouchtart"  bindtouchend="_handletouchend">
+   <slot></slot>
+</view>

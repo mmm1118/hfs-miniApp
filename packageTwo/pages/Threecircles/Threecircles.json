@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "pin-picker": "./../../../component/bth-picker/bth-picker",
+    "popup": "./../../../component/popup/popup",
+    "touch-gesture": "./../../../component/touch-gesture/touch-gesture"
+  }
+}

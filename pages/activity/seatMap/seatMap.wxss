@@ -1,0 +1,72 @@
+page {
+  background: #fff;
+}
+
+.seatMapLayout {
+}
+
+.seatMapTop {
+  padding-top: 40rpx;
+  margin: 0 auto 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32rpx;
+  color: #000;
+}
+
+.seatMapTop image {
+  width: 66rpx;
+  height: 64rpx;
+}
+
+.mapList {
+  display: flex;
+  width: 670rpx;
+  margin: 0 auto;
+}
+
+.mapList image {
+  width: 35rpx;
+  height: 610rpx;
+}
+
+.mapList .mapRight {
+  flex: 1;
+  height: 610rpx;
+  margin-left: 25rpx;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.mapList .mapRight .imgLayout {
+  width: 10%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapList .mapRight .imgLayout image {
+  width: 52rpx;
+  height: 51rpx;
+}
+/* 轮播图 */
+.sowing_map{
+  height: 730rpx;
+}
+/* 底部提示语 */
+
+.bottomText {
+  width: 750rpx;
+  font-size: 26rpx;
+  color: #939393;
+  position: fixed;
+  bottom: 40rpx;
+  left: 0;
+}
+
+.bottomText view {
+  text-align: center;
+  line-height: 50rpx;
+}

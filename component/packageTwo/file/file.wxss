@@ -1,0 +1,47 @@
+.movableAreaItem {
+  border-radius: 20rpx;
+  overflow: hidden;
+  background: #fff;
+  position: relative;
+  margin-bottom: 30rpx;
+  padding: 20rpx 30rpx;
+}
+
+.movableDelPhoto {
+  position: absolute;
+  top: 20rpx;
+  right: 30rpx;
+  width: 40rpx;
+  height: 40rpx;
+}
+
+.movableMoveImg {
+  position: absolute;
+  bottom: 20rpx;
+  right: 30rpx;
+  width: 40rpx;
+  height: 27rpx;
+}
+
+.FileLayout {
+  display: flex;
+  align-items: center;
+}
+
+.leftImg {
+  width: 80rpx;
+  height: 80rpx;
+  margin-right: 30rpx;
+}
+
+.fileRight text {
+  font-size: 34rpx;
+  color: #000;
+  font-weight: bold;
+}
+
+.fileRight view {
+  font-size: 24rpx;
+  color: #939393;
+  margin-top: 30rpx;
+}

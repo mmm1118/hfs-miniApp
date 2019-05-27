@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "touch-gesture": "/component/touch-gesture/touch-gesture"
+  },
+  "navigationBarTitleText": "收货地址"
+}

@@ -1,0 +1,58 @@
+/* .bg_eee{background-color: #eeeef3;} */
+.f_34{font-size:34rpx;}
+
+.center{text-align: center;}
+
+.btn_titie{
+  padding:22rpx 0rpx;
+  text-align:center;
+  border-bottom:1px solid #eee;
+  background: #fff;
+  }
+
+  .btn_titie:nth-child(1){
+    border-top:1px solid #eee;
+  }
+
+.pxd_top0{width: 100%;position:fixed;bottom:0;left:0;}
+
+
+
+.pxd_bg{background:red;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+transition: all 0.2s
+}
+
+.cancel{
+  background: #fff;
+  padding:22rpx 0rpx;
+  text-align:center;
+  border-top:1px solid #eee;
+  margin-top:12rpx;
+}
+
+.up{
+  animation: up .7s;
+}
+.down{
+  animation: down 1s;
+}
+
+
+@keyframes up
+{
+  0% { transform: translateY(550rpx); }
+  100% { transform: translateY(0); }
+}
+@keyframes down
+{
+  0% { transform: translateY(0); }
+  100% { transform: translateY(550rpx); }
+}
+
+

@@ -1,0 +1,141 @@
+{
+  "pages": [
+    "pages/circleIndex/circleIndex",
+    "pages/load/load",
+    "pages/myIndex/myIndex",
+    "pages/index/index",
+    "pages/index/stateDetail/stateDetail",
+    "pages/memorialIndex/memorialIndex",
+    "pages/memorialIndex/webView/webView",
+    "pages/send/send",
+    "pages/share/share",
+    "pages/atFriends/atFriends",
+    "pages/addLocation/addLocation",
+    "pages/organization/organization",
+    "pages/activity/activity",
+    "pages/activity/activityDetail/activityDetail",
+    "pages/activity/peopleList/peopleList",
+    "pages/activity/seatMap/seatMap",
+    "pages/topic/topic",
+    "pages/topic/topicDetail/topicDetail"
+  ],
+  "subPackages": [
+    {
+      "root": "packageTwo",
+      "pages": [
+        "pages/Threecircles/Threecircles",
+        "pages/Search/Search",
+        "pages/details/details",
+        "pages/announcements/announcements",
+        "pages/AnDetails/AnDetails",
+        "pages/Editorsnotice/Editorsnotice",
+        "pages/Activitylist/Activitylist",
+        "pages/Editorial/Editorial",
+        "pages/Groupdetails/Groupdetails",
+        "pages/addMember/addMember",
+        "pages/postActivity/postActivity",
+        "pages/Ranking/Ranking",
+        "pages/thirdpartyIndex/thirdpartyIndex",
+        "pages/thirdpartyIndex/attenTion/attenTion",
+        "pages/thirdpartyIndex/fans/fans",
+        "pages/thirdpartyIndex/gift/gift",
+        "pages/Article/Article",
+        "pages/addArticle/addArticle",
+        "pages/managementGl/managementGl",
+        "pages/MemberManagement/MemberManagement",
+        "pages/Grade/Grade",
+        "pages/setUp/setUp",
+        "pages/myProfit/myProfit",
+        "pages/withdrawal/withdrawal",
+        "pages/circleSetup/circleSetup",
+        "pages/IndAuthen/IndAuthen",
+        "pages/Indcertification/Indcertification",
+        "pages/Socialattestation/Socialattestation",
+        "pages/ThirdPartyCircle/ThirdPartyCircle",
+        "pages/DevelopmentActivities/DevelopmentActivities",
+        "pages/NewlyBuild/NewlyBuild",
+        "pages/GroupDetails_two/GroupDetails_two",
+        "pages/newGrouping/newGrouping",
+        "pages/addPople/addPople",
+        "pages/Publishing/Publishing",
+        "pages/newActivities/newActivities"
+      ]
+    },
+    {
+      "root": "packageThere",
+      "pages": [
+        "pages/EditingMaterials/EditingMaterials",
+        "pages/setup/setup",
+        "pages/Blacklist/Blacklist",
+        "pages/Feedback/Feedback",
+        "pages/homepage/homepage",
+        "pages/Fans/Fans",
+        "pages/follow/follow",
+        "pages/Pouch/Pouch",
+        "pages/exchange/exchange",
+        "pages/spdetails/spdetails",
+        "pages/Myexchange/Myexchange",
+        "pages/Mygift/Mygift",
+        "pages/Confirmorder/Confirmorder",
+        "pages/address/address",
+        "pages/ReceivingAddress/ReceivingAddress",
+        "pages/Member/Member",
+        "pages/Collection/Collection",
+        "pages/activity/activity",
+        "pages/Official/Official",
+        "pages/stateDetail/stateDetail"
+      ]
+    }
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "汉服司",
+    "navigationBarTextStyle": "black"
+  },
+  "requiredBackgroundModes": [
+    "audio"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "推 荐",
+        "iconPath": "images/tabBar/recommend_unclick.png",
+        "selectedIconPath": "images/tabBar/recommend_click.png"
+      },
+      {
+        "pagePath": "pages/circleIndex/circleIndex",
+        "text": "圈 子",
+        "iconPath": "images/tabBar/un_circle.png",
+        "selectedIconPath": "images/tabBar/circle.png"
+      },
+      {
+        "pagePath": "pages/memorialIndex/memorialIndex",
+        "text": "奏 折",
+        "iconPath": "images/tabBar/memorial_unclick.png",
+        "selectedIconPath": "images/tabBar/memorial_click.png"
+      },
+      {
+        "pagePath": "pages/myIndex/myIndex",
+        "text": "我 的",
+        "iconPath": "images/tabBar/my_unclick.png",
+        "selectedIconPath": "images/tabBar/my_click.png"
+      }
+    ],
+    "color": "#939393",
+    "selectedColor": "#D61800",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json",
+  "navigateToMiniProgramAppIdList": [
+    "wxde5e6f69a98b9d90"
+  ]
+}

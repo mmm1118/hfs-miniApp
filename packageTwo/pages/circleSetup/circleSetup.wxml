@@ -1,0 +1,81 @@
+<view class='mg_31_0'>
+
+  <view>
+      <view class='f_36 pd_top20_btn12'>圈子名称</view>
+      <view>
+        <input type='text' class='inp_val' placeholder='明制少女'></input>
+      </view>  
+  </view>
+
+  <view>
+      <view class='f_36 pd_top20_btn12'>圈主介绍</view>
+      <view>
+        <input type='text' class='inp_val' placeholder='十八般武艺样样精通'></input>
+      </view>  
+  </view>
+
+  <view>
+      <view class='f_36 pd_top20_btn12'>我在本圈昵称</view>
+      <view>
+        <input type='text' class='inp_val' placeholder='水瓶座'></input>
+      </view>  
+  </view>
+
+  <view>
+      <view class='f_36 pd_top20_btn12'>圈子介绍</view>
+      <view>
+        <textarea class='inp_val' placeholder='请输入圈子介绍'></textarea>
+      </view>  
+  </view>
+
+  <view>
+    <view class='f_36 pd_top20_btn12'>入圈设置</view>
+    <view class='CircleSetup'>
+
+    <view>
+      <view class='CircleSetup_f28'>免费</view>
+      <view class="border_1ee">
+          <radio-group class="radio-group" bindchange="radioChange">
+            <label class="radio" wx:for="{{items}}">
+              <radio value="{{item.name}}" checked="{{item.checked}}" />
+              {{item.value}}
+              <label class='pd_left52'>{{item.text}}</label>
+            </label>
+          </radio-group>
+      </view>
+    </view>
+
+    <view>
+      <view class='flex pd_top29btn52'>
+          <view>成为付费会员</view>
+          <view class='pd_left49'><image class='w_h32' src='./../../../images/circle_img/Unknown.png'></image> </view>
+      </view>
+
+      <view class='flex' bindtap='against'>
+        <view>
+          <view wx:if="{{against}}"><van-icon name="circle" size="26px" color='#eee'></van-icon></view>
+          <view wx:else><van-icon name="checked" size='26px' color='#09bb07'></van-icon></view>      
+        </view>
+        <view class='cashxj pd_top5'>现金</view>
+        <view><input type='number' placeholder='输入数量元'></input>  </view>
+        <view class='pd_top5 c_939'>元</view>
+      </view>
+    </view>
+    
+    <view class='flex_between introduce'>
+      <view>自付费起</view>
+      <view>输入天数</view>
+      <view>天后到期</view>
+    </view>
+    
+    </view>
+  </view> 
+
+  <view class='btn_top138'>
+    <button class='btn_red mg_btn18'>保存</button>
+    <button class='btn_gray mg_btn52'>解散圈子</button>
+  </view>
+
+
+
+</view>

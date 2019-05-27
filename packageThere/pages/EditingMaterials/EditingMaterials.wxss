@@ -1,0 +1,38 @@
+/* pages/EditingMaterials/EditingMaterials.wxss */
+.header_img{height:335rpx;width:100%}
+.wh_150{width:150rpx;height:150rpx;border-radius:100%;}
+.top84{top:84rpx;}
+
+.text_right{text-align: right}
+
+.f_30{font-size:30rpx;}
+
+.c_010{color:#010101}
+.c_939{color: #939393}
+
+.w_56_h_56{width:56rpx;height:56rpx;}
+.w_100Center{width:100%;text-align:center;}
+
+.pd_36_41{padding:36rpx 41rpx;}
+.pd_22_36{padding:22rpx 36rpx;}
+.pd_right58{padding-right:58rpx;}
+.mg_top20{margin-top:20rpx;}
+
+
+.pr_top13{position:relative;top:13rpx;}
+
+.bg_color_ff{background:#fff;}
+
+.btn{
+  background:#D61800;
+  border:none;
+  color:#fff;
+  border-radius:20rpx;
+  width:428rpx;
+  height:80rpx;
+  font-size:30rpx;
+  margin-top:201rpx;
+  transition: all 0.15s
+  }
+
+  .textRight{text-align: right}

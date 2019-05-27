@@ -1,0 +1,40 @@
+<view class='page bg_ff f_28'>
+
+<view class='border_bthn1ee flex pd_20_0'>
+  <view class='pd_right30 pr_top12'>收货人</view>
+  <view> <input type='text' placeholder='请输入收货人' bindinput='name'  maxlength='11' class='bg_ee w_450' ></input></view>
+</view>
+
+<view class='  border_bthn1ee flex pd_20_0'>
+<view class='pd_right16 pr_top12'>手机号码</view>
+<view> <input type='number' placeholder='请输入手机号码' bindinput="phone"  maxlength='11' class='bg_ee w_450 '  ></input> </view>
+</view>
+
+<view class='  border_bthn1ee flex pd_20_0'>
+<view class='pr_top12'>所在地区</view>
+
+  <picker
+    mode="region"
+    bindchange="bindRegionChange"
+    value="{{region}}"
+    custom-item="{{customItem}}"
+    class='w_450 height66 bg_ee pr_top12left20'
+  >{{region}}</picker>
+<image class='w_12h_21 pr_top20left85'  src='./../../../images/my_img/orderblack.png'></image>
+</view>
+
+<view >
+  <textarea class='pd_top30 h_100 ' bindinput='adder' placeholder='详细地址：街道、楼号' ></textarea>
+</view>
+</view>
+
+<view class='page pd_4_40 bg_ff f_28 mg_top28 flex_between'> 
+<view class="body-view">
+  <switch bindchange="switch2Change" />
+</view>
+<view class='pd_top15'>设为默认地址</view>  
+</view>
+
+<view>
+  <button class='btn' bindtap='subtiy' style='font-size:36rpx;'>保存</button>
+</view>

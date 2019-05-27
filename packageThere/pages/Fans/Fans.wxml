@@ -1,0 +1,23 @@
+<view class='bg_ff '>
+
+
+  <view class='flex_between bor_btneee pd_0_30' wx:for="{{bussData}}">
+    <view class='flex pd_30_0'>
+      <view><image class='wh_101 b_radius100' src='{{item.avatarurl}}'></image></view>
+      <view class='f_30 pd_left32 pr_top42'>{{item.nickname}}</view>
+    </view>
+
+    <view class="pr" bindtap='follow' wx:if="{{item.isread==1}}" data-openid='{{item.openid}}'>
+          <image class='w_157_52 pr_top63' src='./../../../images/my_img/radui_green.png'></image>
+           <label class='po mutual'>相互关注</label>
+      
+    </view>
+    
+    <view class="pr" bindtap='delfollow' wx:if="{{item.isread==0}}"  data-openid='{{item.openid}}'>
+          <image class='w_157_52 pr_top63' src='./../../../images/my_img/radui_red.png'></image>
+          <label  class='po follow'>关注</label>
+    </view>
+  </view>
+
+
+</view>

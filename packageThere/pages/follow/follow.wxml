@@ -1,0 +1,27 @@
+<view class='bg_ff '>
+  <view class='flex_between bor_btneee pd_0_30 '>
+    <view class='flex pd_30_0'>
+      <view><image class='wh_101 b_radius100' src='./../../../images/my_img/logo.png'></image></view>
+      <view class='f_30 pd_left32 pr_top42'>白羊白羊座</view>
+    </view>
+
+    <view class="pr">
+          <image class='w_157_52 pr_top63' src='./../../../images/my_img/radui_green.png'></image>
+           <label class='po mutual'>相互关注</label>
+    </view>
+  </view>
+
+  <view class='flex_between bor_btneee pd_0_30 '>
+    <view class='flex pd_30_0'>
+      <view><image class='wh_101 b_radius100' src='./../../../images/my_img/logo.png'></image></view>
+      <view class='f_30 pd_left32 pr_top42'>天秤座</view>
+    </view>
+
+    <view class="pr">
+          <image class='w_157_52 pr_top63' src='./../../../images/my_img/radui_green.png'></image>
+           <label class='po follow'>已关注</label>
+    </view>
+  </view>
+
+
+</view>

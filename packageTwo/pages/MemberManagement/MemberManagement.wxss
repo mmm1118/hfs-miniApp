@@ -1,0 +1,119 @@
+.bg_ff{background:#fff;}
+.rank_title{padding:26rpx 0rpx;color:#939393;}
+.ran_btnbg{border-bottom:2px solid #D61800;color:#D61800;}
+.c_red{color:#D61800;}
+
+/*成员列表 */
+.search{margin:16rpx 16rpx;padding:17rpx 22rpx;border-radius:20rpx;}
+.secrch_log{width: 46rpx;height:46rpx;}
+.secrch_font{color:#939393;font-size:30rpx;padding-left:23rpx; }
+.secrch_font input{width:550rpx;}
+
+.menber_join{padding:0rpx 30rpx;margin-bottom:10rpx;}
+.pd_15_0{padding:15rpx 0rpx;}
+.border1eee{border-bottom:1rpx solid #eee;}
+.menber_join .logo{width:50rpx;height:50rpx;border-radius:100%;padding-right:9rpx;}
+.w_50{width:50%;padding: 27rpx 0rpx}
+.time_sty{color:#939393;font-size:26rpx;}
+.time_sbtn20{padding-bottom:21rpx;}
+
+.btn_lenth .btn{
+  border:1px solid #D61800;
+  color:#D61800;
+  border-radius:10rpx;
+  padding:14rpx 27rpx; 
+  font-size:26rpx;
+  margin-right:10rpx;
+  }
+.btn_d16{background:#D61800;color:#fff;border-radius:10rpx;
+  padding:14rpx 27rpx; 
+  font-size:26rpx;
+  margin-right:10rpx;}
+
+  .afters{border-right:1rpx solid #eee}
+  .btn_lenth .btn:nth-child(3){  margin-right:0rpx;}
+
+.pr_top16{position:relative;top:16rpx;}
+.pr_top10{position:relative;top:8rpx;}
+
+.fxd{position:fixed;bottom:0rpx;left:0rpx;width: 100%;background:#eeeef3;}
+.fxd button{width:333rpx;background:#D61800;color:#fff;margin-bottom:10rpx;}
+
+  .prot{
+    width: 560rpx;
+    height: 290rpx;
+    background:#fff;
+    border-radius:20rpx; 
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-left:-280rpx;
+    margin-top:-145rpx;
+    }
+
+  .prot .title{font-size:36rpx;padding-top:36rpx;padding-bottom:10rpx;}
+  .prot input{
+    border-radius:13rpx;
+    font-size:24rpx; 
+    border:1rpx solid #eee;
+    width:350rpx;
+    padding:10rpx 55rpx;
+    margin-bottom:30rpx;
+    }
+
+    .c_ff0{color:#FF0000;}
+
+    .addmember_img{
+  width:50rpx;
+  height:50rpx;
+  border-radius:100%;
+  border-radius:100%;
+  padding-left:15rpx;
+  padding-right:10rpx;
+}
+.addmenber_name{font-size:30rpx;position: relative;top:6rpx;left:9rpx;}
+.addmenber_cr{
+  font-size:26rpx;
+  width: 100%;
+  padding:24rpx 0rpx;
+}
+.addmember_time{color:#939393;font-size:26rpx;position: relative;top:6rpx;}
+.pr_top26{
+  position:relative;
+  top:26rpx;
+}
+
+.protss{
+    width: 540rpx;
+    background:#fff;
+    border-radius:20rpx; 
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-left:-270rpx;
+    margin-top:-367rpx;
+}
+
+.prots .title{font-size: 30rpx;}
+.prots .header{font-size: 28rpx;color:#939393;padding:10rpx 0rpx;}
+.pd_btn10_left40{padding-bottom:10rpx;padding-left:40rpx;}
+.pd_btn10_left40:nth-child(3){padding-bottom:0rpx;}
+.prots{
+    width: 520rpx;
+    background:#fff;
+    border-radius:20rpx; 
+    position:fixed;
+    top:50%;
+    left:50%;
+    margin-left:-281rpx;
+    margin-top:-280rpx;
+    padding:20rpx;
+    }
+  .prots .tuimomey{font-size:30rpx;color:#FF0000;padding-bottom:20rpx;}
+  .protstile{font-size:30rpx;text-align: center;padding-bottom:50rpx;padding-top:40rpx;}
+  .protstileleft40{padding-left:48rpx;padding-bottom:30rpx;}
+  .radio{margin-right:28rpx;padding-bottom:40rpx;}
+  .protsBtnTop40{padding-top:30rpx;}
+  .protss .pd_left105{padding-left:105rpx;}
+.radio-group{display:block;display:flex;flex-wrap:wrap;}
+ .protsRightBtn{background:#D61800;border-bottom-right-radius:20rpx;color:#fff;}

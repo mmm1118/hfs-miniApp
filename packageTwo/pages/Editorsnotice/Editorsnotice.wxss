@@ -1,0 +1,14 @@
+/* packageTwo/pages/Editorsnotice/Editorsnotice.wxss */
+.pd_0_30{padding:0rpx 30rpx;}
+.pd_top50{padding-top:50rpx;}
+.c_939{color:#939393;}
+.shareButton {
+  width: 460rpx;
+  height: 80rpx;
+  margin-top: 40rpx;
+  border-radius: 20rpx;
+  line-height: 80rpx;
+  color: #fff;
+  font-size: 32rpx;
+  background-color: #d61800;
+}

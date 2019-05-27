@@ -1,0 +1,87 @@
+<!-- 引入自定义组件 -->
+<nav-bar navbar-data='{{nvabarData}}'></nav-bar>
+
+<view class='detailTop' style='margin-top: {{height}}px'></view>
+
+<view class='detail'>
+  <view style='height:20rpx;'></view>
+  <!-- 有banner -->
+  <view class='bannerLayout'>
+    <image src='/images/index/swiper01.png' mode='widthFix'></image>
+  </view>
+  <view class='gongGao'>
+    <text>活动公告</text>
+    <image src='/images/index/rightTwo.png'></image>
+  </view>
+
+  <!-- 动态列表 -->
+  <block wx:for="{{dynamicList}}">
+    <!-- 动态组件 -->
+    <view class="dynamic">
+      <image class='setTopImg' src='/images/index/setTop.png'></image>
+      <view class="titleLayout">
+        <view class="imageLayout">
+          <image src="/images/index/meizi01.png"></image>
+          <view class="absoluteImg">
+            <image src="/images/index/guanzhu_s.png"></image>
+          </view>
+        </view>
+        <view class="contentLayout">
+          <view>
+            <view class="nickName">水瓶座
+              <text class="category">超级美少女</text>
+            </view>
+            <view class="time">10分钟前</view>
+          </view>
+          <view class="character">今天去深圳市大鹏所城拍了一组美照~</view>
+          <view class="imgList">
+            <image src="/images/index/meizi01.png"></image>
+            <image src="/images/index/meizi01.png"></image>
+            <image src="/images/index/meizi01.png"></image>
+            <image src="/images/index/meizi01.png"></image>
+            <image src="/images/index/meizi01.png"></image>
+            <image src="/images/index/meizi01.png"></image>
+          </view>
+          <view class="classifyTwo">
+            <text>#深圳·汉服#</text>
+          </view>
+          <view class="opration">
+            <view class="oprationItem">
+              <image src="/images/index/pinlun.png"></image>
+              <text>3</text>
+            </view>
+            <view class="oprationItem">
+
+              <!-- <block>
+              <image src="/images/index/dianzan.png"></image><text>311</text>
+            </block> -->
+
+              <block>
+                <image src="/images/index/dianzan_s.png"></image>
+                <text class="colorRed">311</text>
+              </block>
+
+            </view>
+            <view class="oprationItem" catchtap='toShare'>
+              <image src="/images/index/fenxiang.png"></image>
+            </view>
+            <view class="oprationItem">
+              <image src="/images/index/collect.png"></image>
+              <!-- <image src="/images/index/collect_s.png"></image> -->
+            </view>
+          </view>
+          <view class="comment">
+            <view>
+              <text>白羊白羊座：</text>仙女真好看~</view>
+            <view>
+              <text>双鱼座 回复 @白羊白羊座：</text>谢谢~</view>
+            <view>
+              <text>金牛：</text>好看~</view>
+          </view>
+        </view>
+      </view>
+      <view class="moreBtn">查看更多 >></view>
+    </view>
+  </block>
+
+</view>
